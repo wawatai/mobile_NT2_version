@@ -1,0 +1,356 @@
+//優惠選擇列
+.eventApplyType {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    position: fixed;
+    top: 45px;
+    left: 0px;
+    z-index: 10;
+    background: $backgroundColor_2;
+
+    ul {
+        display: flex;
+
+        li {
+            width: 50%;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border-bottom: solid 2px transparent;
+            font-size: 3.4vw;
+            font-weight: bold;
+            color: $font-color_2;
+
+            &:active,&.active {
+                border-color: $borderColor_3;
+                color: $font-color_12;
+            }
+        }
+    }
+}
+
+//優惠列表
+.applyList {
+    display: none;
+    width: 100%;
+    height: calc(100vh - 132px);
+    background: $backgroundColor_4;
+    overflow-y: scroll;
+    margin-top: 40px;
+
+    &.display {
+        display: block;
+    }
+
+    .listBox {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 10px 4% 0;
+
+        .list {
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 13px 2px $boxshadow_1;
+            background: $backgroundColor_2;
+
+            .title {
+                width: 100%;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: solid 1px $borderColor_3;
+                color: $font-color_12;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            .tips {
+                display: none;
+                width: 56vw;
+                border-radius: 5px;
+                margin: 6px auto 0;
+                background: $backgroundColor_5;
+                box-sizing: border-box;
+                padding: 7px 0;
+                text-align: center;
+                color: $font-color_5;
+                font-weight: bold;
+                font-size: 3vw;
+                position: relative;
+
+                &.display {
+                    display: block;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -6px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 4px 6px 4px;
+                    border-color: $backgroundColor_5 transparent;
+                }
+
+                em {
+                    color: $font-color_15;
+                    margin-right: 5px;
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    padding: 6px 13px;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: $font-color_8;
+                    align-items: center;
+
+                    &.cur {
+                        background: $backgroundColor_8;
+                    }
+
+                    p {
+                        font-size: 13px;
+                        color: $font-color_12;
+
+                        em {
+                            color: $font-color_3;
+
+                            &.sp {
+                                color: $font-color_10;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btnBox {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding: 15px 12px;
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    width: calc((100% - 10px) / 2);
+                    height: 32px;
+
+                    &.applyBtn {
+                        @include buttonStyle_2;
+                    }
+
+                    &.checkBtn {
+                        @include buttonStyle_3;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//優惠申請紀錄
+.applyRecord {
+    width: 100%;
+    height: calc(100vh - 132px);
+    background: $backgroundColor_4;
+    overflow-y: auto;
+    margin-top: 40px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    display: none;
+
+    &.display {
+        display: block;
+    }
+
+    .searchContain {
+        width: 100%;
+        height: auto;
+        background: $backgroundColor_2;
+        padding: 15px;
+        box-sizing: border-box;
+        
+        form {
+            width: 100%;
+            height: auto;
+
+            ul {
+                width: 100%;
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 20px;
+
+                    p {
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: $font-color_12;
+                        margin-bottom: 10px;
+                    }
+
+                    select {
+                        width: 100%;
+                        height: 42px;
+                        @include selectStyle_1;
+                    }
+
+                    .inputBox {
+                        width: 100%;
+                        height: 42px;
+                        border-radius: 5px;
+                        border: solid 1px $borderColor_1;
+                        box-sizing: border-box;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: $font-color_6;
+
+                        input {
+                            border: none;
+                            background: none;
+                            width: auto;
+                            height: 100%;
+                        }
+                    }
+
+                    .btnBox {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+
+                        button {
+                            width: 25%;
+                            height: 38px;
+                            @include buttonStyle_9;
+
+                            &:nth-of-type(1) {
+                                border-radius: 5px 0 0 5px;
+                            }
+                        
+                            &:last-child {
+                                border-radius: 0 5px 5px 0;
+                            }
+                        }
+                    }
+
+                    &.bigBtn {
+                        margin: 0;
+
+                        button {
+                            width: 100%;
+                            height: 42px;
+                            @include buttonStyle_2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .reviewBody {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 10px 4% 0;
+
+        .noData {
+            display: none;
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 80px;
+            color: $font-color_1;
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+
+            &.display {
+                display: block;
+            }
+        }
+
+        .recordBox {
+            display: none;
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            background: $backgroundColor_2;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 0 $boxshadow_2;
+
+            &.display {
+                display: block;
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+
+                .title {
+                    width: 100%;
+                    height: 38px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+                    padding: 0 20px;
+                    border-bottom: solid 2px $borderColor_3;
+
+                    p {
+                        color: $font-color_12;
+                        font-weight: bold;
+                        font-size: 14px;
+                    }
+                }
+
+                ul {
+                    box-sizing: border-box;
+                    padding: 2.67vw 4vw;
+
+                    li {
+                        width: 100%;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+
+                        &:last-child {
+                            margin: 0;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: $font-color_8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

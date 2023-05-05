@@ -1,0 +1,57 @@
+//ad
+.ad {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    flex-shrink: 0;
+
+    .single-item {
+        border-radius: 1.5vw;
+        overflow: hidden;
+        margin: 0;
+
+        .slick-list {
+            height: 100%;
+
+            .slick-track {
+                height: 100%;
+
+                img {
+                    outline: none;
+                }
+            }
+        }
+        
+        .slick-dots {
+            bottom: 0;
+
+            li {
+                
+                button {
+
+                    &::before {
+                        width: 25px;
+                        height: 2px;
+                        background: $backgroundColor_2;
+                        opacity: 1;
+                        color: transparent;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                &.slick-active {
+
+                    button {
+
+                        &::before {
+                            background: $backgroundColor_1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

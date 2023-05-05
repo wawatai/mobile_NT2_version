@@ -1,19 +1,16 @@
 //投注紀錄
 .bettingWrap {
-    width: 100%;
-    height: calc(100vh - 95px);
-    background: $backgroundColor_4;
-    overflow-y: auto;
-    padding-top: 10px;
-    box-sizing: border-box;
+    @include bgStyle_1;
+    display: flex;
+    flex-direction: column;
 
+    //上搜尋列
     .searchContent {
         width: 100%;
         height: auto;
-        box-sizing: border-box;
-        padding: 13px 14px;
-        background: $backgroundColor_2;
-        margin-bottom: 10px;
+        background: $mainBG_1;
+        padding: 16px;
+        flex-shrink: 0;
 
         .top {
             width: 100%;
@@ -25,62 +22,78 @@
                 width: 50%;
 
                 p {
-                    margin-bottom: 5px;
+                    color: $mainWord_1;
                     font-size: 14px;
                     font-weight: bold;
                     letter-spacing: 1px;
-                    color: $font-color_12;
+                    margin-bottom: 10px;
                 }
     
                 button {
-                    width: 44vw;
+                    width: 90%;
                     height: 42px;
-                    @include buttonStyle_10;
+                    @include fakeSelect;
                 }
             }
 
             .full {
                 width: 100%;
 
+                &.second {
+                    margin-top: 10px;
+                }
+
                 p {
-                    margin: 10px 0;
+                    color: $mainWord_1;
                     font-size: 14px;
                     font-weight: bold;
                     letter-spacing: 1px;
-                    color: $font-color_12;
+                    margin-bottom: 10px;
                 }
 
                 .inputBox {
                     width: 100%;
                     height: 42px;
-                    border: solid 1px $borderColor_1;
-                    border-radius: 3px;
+                    @include bgStyle_2;
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
-                    color: $font-color_12;
-                    font-size: 16px;
+                    color: $money;
+                    font-size: 4vw;
                     font-weight: bold;
 
-                    input {
+                    label {
                         width: auto;
                         height: 100%;
-                        border: none;
-                        background: none;
-                        color: $font-color_12;
-                        font-size: 14px;
-                        font-weight: bold;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+
+                        input {
+                            width: auto;
+                            height: 100%;
+                            @include memberInput;
+                            padding-right: 20px;
+                        }
+
+                        i {
+                            width: 16px;
+                            height: 16px;
+                            position: absolute;
+                            right: 0;
+                            pointer-events: none;
+                        }
                     }
                 }
 
                 .selectBox {
                     width: 100%;
-                    height: auto;
+                    height: 42px;
 
                     select {
                         width: 100%;
-                        height: 42px;
-                        @include selectStyle_1;
+                        height: 100%;
+                        @include mainSelect;
                     }
                 }
             }
@@ -95,7 +108,9 @@
             button {
                 width: 25%;
                 height: 38px;
-                @include buttonStyle_9;
+                @include secondBtn;
+                border-radius: 0;
+                border-right-width: 0;
 
                 &:nth-of-type(1) {
                     border-radius: 5px 0 0 5px;
@@ -103,6 +118,7 @@
             
                 &:last-child {
                     border-radius: 0 5px 5px 0;
+                    border-right-width: 1px;
                 }
             }
         }
@@ -110,40 +126,34 @@
         .check {
             width: 100%;
             height: 42px;
-            @include buttonStyle_2;
+            @include mainBtn;
         }
     }
 
+    //列表
     .list {
         width: 100%;
-        height: auto;
-        box-sizing: border-box;
-        padding: 10px 14px;
+        height: 100%;
+        padding: 10px 16px;
+        overflow-y: auto;
 
+        //無資料
         .noData {
-            display: none;
-            width: 100%;
-            height: auto;
-            box-sizing: border-box;
-            padding: 80px;
-            color: $font-color_1;
-            font-weight: bold;
-            text-align: center;
-            font-size: 14px;
-
-            &.display {
-                display: block;
-            }
+            @include noData;
         }
 
+        //列表內容
         .recordBox {
             display: none;
             width: 100%;
             height: auto;
-            border-radius: 5px;
-            border: solid 1px $borderColor_1;
-            background: $backgroundColor_2;
+            @include bgStyle_2;
             margin-bottom: 10px;
+            overflow: hidden;
+
+            &:last-child {
+                margin: 0;
+            }
 
             &.display {
                 display: block;
@@ -151,52 +161,283 @@
 
             .title {
                 width: 100%;
-                height: 38px;
-                border-bottom: solid 1px $borderColor_3;
-                color: $font-color_12;
-                font-size: 14px;
-                font-weight: bold;
+                height: 42px;
+                @include titleBG_1;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                box-sizing: border-box;
-                padding: 0 18px;
+                padding: 0 16px;
+
+                p {
+                    color: $title_1;
+                    font-size: 4vw;
+                    font-weight: bold;
+                }
                 
                 .date {
-                    font-size: 13px;
-                    color: $font-color_8;
+                    color: $mainWord_2;
+                    font-size: 2vw;
+                    font-weight: bold;
+                }
+
+                button {
+                    width: auto;
+                    height: 28px;
+                    @include mainBtn;
+                    font-size: 3.4vw;
                 }
             }
 
             ul {
                 width: 100%;
                 height: auto;
-                box-sizing: border-box;
-                padding: 0 18px;
+                padding: 16px;
 
                 li {
                     width: 100%;
-                    height: 38px;
+                    height: auto;
+                    color: $mainWord_1;
+                    font-size: 3.4vw;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    color: $font-color_12;
-                    font-size: 14px;
-                    font-weight: bold;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
 
                     p {
-                        font-size: 13px;
+                        width: 70%;
+                        font-size: 3.4vw;
+                        @include wordHidden;
+                        text-align: right;
 
                         &.num {
-                            color: $font-color_6;
+                            color: $money;
     
                             &.win {
-                                color: $font-color_3;
+                                color: $remind_Sp;
                             }
-    
                             &.lose {
-                                color: $font-color_10;
+                                color: $remind;
                             }
+                            &.result {
+                                color: $title_1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .innerBox {
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+
+                &.active {
+                    height: auto;
+                    border-top: solid 1px $mainBorder_1;
+                    padding: 16px;
+                }
+
+                .box {
+                    width: 100%;
+                    height: auto;
+                    @include bgStyle_2;
+                    background: $mainBG_1;
+                    overflow: hidden;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    .smallTitle {
+                        width: 100%;
+                        height: 42px;
+                        @include titleBG_1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0 16px;
+
+                        p {
+                            color: $title_1;
+                            font-size: 4vw;
+                            font-weight: bold;
+                        }
+
+                        .date {
+                            color: $mainWord_2;
+                            font-size: 2vw;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            .open {
+                width: 100%;
+                height: 42px;
+                border-top: solid 1px $mainBorder_1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &.active {
+
+                    i {
+                        transform: scaleY(-1);
+                    }
+                }
+
+                p {
+                    color: $mainWord_1;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                }
+
+                i {
+                    width: 3.7vw;
+                    height: 3.7vw;
+                    margin-left: 10px;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+    }
+}
+
+//交易紀錄上選項
+.recordTop {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+
+    ul {
+        width: 100%;
+        height: auto;
+        @include chooseStyle_1;
+
+        li {
+            width: 50%;
+            height: 40px;
+        }
+    }
+}
+
+//流水紀錄
+.waterBox {
+    width: 100%;
+    height: auto;
+    padding: 0 16px;
+
+    .noData {
+        @include noData;
+    }
+
+    ul {
+        width: 100%;
+        height: auto;
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        li {
+            width: 100%;
+            height: auto;
+            @include bgStyle_2;
+            margin-bottom: 10px;
+            overflow: hidden;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            .title {
+                width: 100%;
+                height: 42px;
+                @include titleBG_1;
+                padding: 0 16px;
+                display: flex;
+                align-items: center;
+
+                p {
+                    color: $title_1;
+                    font-size: 4vw;
+                    font-weight: bold;
+                }
+            }
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 0 16px;
+
+                .row {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+
+                    &:nth-of-type(1) {
+                        margin-top: 10px;
+                    }
+    
+                    .smallTitle {
+                        color: $mainWord_1;
+                        font-size: 3.4vw;
+                        font-weight: bold;
+                    }
+
+                    .num {
+                        color: $money;
+                        font-size: 3.4vw;
+                        font-weight: bold;
+
+                        &.change {
+                            color: $remind;
+                        }
+                    }
+                }
+
+                .remindBox {
+                    width: 100%;
+                    height: 42px;
+                    background: $mainBG_1;
+                    display: flex;
+                    align-items: center;
+                    padding: 16px;
+
+                    p {
+                        color: $mainWord_2;
+                        font-size: 2vw;
+                        font-weight: bold;
+                    }
+                }
+
+                .btnBox {
+                    width: 100%;
+                    height: auto;
+                    padding: 24px 0;
+                    display: flex;
+                    justify-content: space-between;
+
+                    button {
+                        width: 48%;
+                        height: 37px;
+
+                        &.checkMoney {
+                            @include secondBtn;
+                        }
+                        &.checkList {
+                            @include mainBtn;
                         }
                     }
                 }

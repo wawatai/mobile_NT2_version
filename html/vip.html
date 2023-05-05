@@ -5,22 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
-    <script src="../js/javascript.js"></script>
-    <link rel="shortcut icon" href="../images/myIco.ico" type="image/x-icon">
+    <script type="module" src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
 </head>
 <body>
     <!--header-->
     <header>
         <!--content-->
-        <div class="content">
+        <div class="content inner">
             <i class="back_arrow" onclick="window.location.href='./member.html'"></i>
             <div class="title">VIP會員</div>
-            <button class="detailBtn" onclick="window.location.href='./vip_page.html'">VIP詳情</button>
+            <button class="detailBtn display" onclick="window.location.href='./vip_page.html'">VIP詳情</button>
         </div>
     </header>
     <!--main-->
@@ -33,44 +29,38 @@
                     <div class="content">
                         <p class="account">工程測試階級</p>
                         <div class="textBox">
-                            當前存款
-                            <span>$0</span>
-                            (101/500)
+                            當前存款:
+                            <span class="num">$0</span>
+                            <span class="limit">(101/500)</span>
                         </div>
                         <div class="textBox">
-                            當前積分
-                            <span>$24</span>
-                            (101/500)
+                            當前積分:
+                            <span class="num">$24</span>
+                            <span class="limit">(101/500)</span>
                         </div>
-                        <div class="medal">
-                            <p>工程測試階級</p>
-                        </div>
+                        <div class="medal vip0"></div>
                     </div>
                     <div class="exBar">
                         <div class="level">
-                            <p class="cur">尊爵</p>
-                            <p>黃金</p>
+                            <p class="cur">尊龍</p>
+                            <p>白銀</p>
                         </div>
                         <div class="bar">
                             <div class="cur">
                                 <div class="percent">20%</div>
                             </div>
                         </div>
-                        <div class="btnBox">
-                            <button class="check">查看積分</button>
-                            <button>申請晉級</button>
-                        </div>
                     </div>
                 </div>
                 <div class="levelBox">
                     <div><hr></div>
                     <ul>
-                        <li>尊龍</li>
-                        <li class="cur">尊爵</li>
+                        <li class="cur">尊龍</li>
+                        <li>尊爵</li>
                         <li>黃金</li>
                         <li>白金</li>
                         <li>鑽石</li>
-                        <li>翡翠</li>
+                        <li>王冠</li>
                     </ul>
                 </div>
                 <div class="cardBox">
@@ -78,37 +68,122 @@
                     <div class="card">
                         <ul>
                             <li>
-                                <div class="medal">
-                                    <p>尊龍</p>
-                                </div>
-                                <div class="textBox">
-                                    累積存款
-                                    <p>1000</p>
-                                </div>
-                                <div class="textBox">
-                                    流水要求
-                                    <p>5000</p>
-                                </div>
-                                <div class="textBox">
-                                    保級流水三個月
-                                    <p>10000</p>
+                                <i class="medal"></i>
+                                <div>
+                                    <div class="textBox">
+                                        累計存款
+                                        <p>1000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        流水要求
+                                        <p>5000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        保級流水三個月
+                                        <p>10000</p>
+                                    </div>
                                 </div>
                             </li>
-                            <li class="cur">
-                                <div class="medal">
-                                    <p>尊爵</p>
+                            <li class="vip2">
+                                <i class="medal vip2"></i>
+                                <div>
+                                    <div class="textBox">
+                                        累計存款
+                                        <p>1000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        流水要求
+                                        <p>5000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        保級流水三個月
+                                        <p>10000</p>
+                                    </div>
                                 </div>
-                                <div class="textBox">
-                                    累積存款
-                                    <p>1000</p>
+                            </li>
+                            <li class="vip3">
+                                <i class="medal vip3"></i>
+                                <div>
+                                    <div class="textBox">
+                                        累計存款
+                                        <p>1000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        流水要求
+                                        <p>5000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        保級流水三個月
+                                        <p>10000</p>
+                                    </div>
                                 </div>
-                                <div class="textBox">
-                                    流水要求
-                                    <p>5000</p>
+                            </li>
+                            <li class="vip4">
+                                <i class="medal vip4"></i>
+                                <div>
+                                    <div class="textBox">
+                                        累計存款
+                                        <p>1000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        流水要求
+                                        <p>5000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        保級流水三個月
+                                        <p>10000</p>
+                                    </div>
                                 </div>
-                                <div class="textBox">
-                                    保級流水三個月
-                                    <p>10000</p>
+                            </li>
+                            <li class="vip5">
+                                <i class="medal vip5"></i>
+                                <div>
+                                    <div class="textBox">
+                                        累計存款
+                                        <p>1000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        流水要求
+                                        <p>5000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        保級流水三個月
+                                        <p>10000</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="vip6">
+                                <i class="medal vip6"></i>
+                                <div>
+                                    <div class="textBox">
+                                        累計存款
+                                        <p>1000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        流水要求
+                                        <p>5000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        保級流水三個月
+                                        <p>10000</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="vip7">
+                                <i class="medal vip7"></i>
+                                <div>
+                                    <div class="textBox">
+                                        累計存款
+                                        <p>1000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        流水要求
+                                        <p>5000</p>
+                                    </div>
+                                    <div class="textBox">
+                                        保級流水三個月
+                                        <p>10000</p>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -118,35 +193,26 @@
             </div>
             <!--會員權利-->
             <div class="enjoyBox">
-                <p class="title">尊爵獨享</p>
+                <p class="title">普通會員尊享</p>
                 <ul>
                     <li>
                         每日最高存款額度
-                        <p>5</p>
+                        <p>不限制</p>
                     </li>
                     <li>
                         每日最低存款額度
-                        <p>5</p>
+                        <p>200,000,000</p>
                     </li>
                     <li>
-                        升級禮金
-                        <p>5000000</p>
+                        每周免費提款次數 
+                        <p>2</p>
                     </li>
-                    <li>
-                        生日禮金
-                        <p>300000</p>
-                    </li>
-                    <li>
-                        每月紅包
-                        <p>0</p>
-                    </li>
-                    <s></s>
                 </ul>
             </div>
             <!--查看VIP詳情-->
             <div class="checkBtn" onclick="window.location.href='./vip_page.html'">
                 <p>查看VIP詳情</p>
-                <i class="arrow"></i>
+                <i class="arrow_ic"></i>
             </div>
         </div>
     </main>
@@ -154,82 +220,30 @@
     <footer>
         <ul>
             <li onclick="window.location.href='./index_inner.html'">
-                <i class="menu_ic"></i>
+                <i class="list_ic menu"></i>
                 <p>首頁</p>
             </li>
             <li onclick="window.location.href='./event.html'">
-                <i class="event_ic"></i>
+                <i class="list_ic event"></i>
                 <p>優惠</p>
             </li>
             <li onclick="window.location.href='./wallet.html'">
-                <i class="wallet_ic"></i>
+                <i class="list_ic wallet"></i>
                 <p>存轉提</p>
             </li>
             <li onclick="window.location.href='./help_often_contact.html'">
-                <i class="service_ic"></i>
+                <i class="list_ic service"></i>
                 <p>客服</p>
             </li>
-            <li onclick="window.location.href='./member.html'">
-                <i class="center_ic"></i>
+            <li class="active" onclick="window.location.href='./member.html'">
+                <i class="list_ic center"></i>
                 <p>會員中心</p>
             </li>
         </ul>
     </footer>
     <!--彈窗-->
-    <div class="filter">
-        <!--查看積分-->
-        <div class="jumpWindow checkPoint">
-            <div class="title">
-                查看積分
-                <i class="close"></i>
-            </div>
-            <div class="total">
-                <p class="smallTitle">當前積分</p>
-                <p class="point">8,980,000</p>
-            </div>
-            <ul>
-                <li>
-                    <div class="name">BNG老虎機</div>
-                    <div class="point">
-                        350,000
-                        <div class="info">1投注 = 3.5積分</div>
-                    </div>
-                    <button>比例查看</button>
-                </li>
-                <li>
-                    <div class="name">BNG老虎機</div>
-                    <div class="point">
-                        350,000
-                        <div class="info">1投注 = 3.5積分</div>
-                    </div>
-                    <button>比例查看</button>
-                </li>
-                <li>
-                    <div class="name">BNG老虎機</div>
-                    <div class="point">
-                        350,000
-                        <div class="info">1投注 = 3.5積分</div>
-                    </div>
-                    <button>比例查看</button>
-                </li>
-                <li>
-                    <div class="name">BNG老虎機</div>
-                    <div class="point">
-                        350,000
-                        <div class="info">1投注 = 3.5積分</div>
-                    </div>
-                    <button>比例查看</button>
-                </li>
-                <li>
-                    <div class="name">BNG老虎機</div>
-                    <div class="point">
-                        350,000
-                        <div class="info">1投注 = 3.5積分</div>
-                    </div>
-                    <button>比例查看</button>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <div class="filter"></div>
+    <!--背景-->
+    <div class="bg"></div>
 </body>
 </html>

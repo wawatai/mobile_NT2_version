@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
-    <script src="../js/javascript.js"></script>
-    <link rel="shortcut icon" href="../images/myIco.ico" type="image/x-icon">
+    <script type="module" src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
 </head>
 <body>
     <!--header-->
     <header>
         <!--content-->
-        <div class="content">
+        <div class="content inner">
             <div class="title">綁定銀行卡</div>
             <i class="back_arrow" onclick="window.location.href='./member.html'"></i>
         </div>
@@ -28,12 +24,12 @@
         <div class="cardList">
             <div class="cardBox">
                 <p class="title">
-                    卡片數量<span> 0</span> / 5
+                    卡片數量<span> 0 / 5</span>
                 </p>
                 <ul>
                     <li class="empty">
                         <div class="add"></div>
-                        <p class="status">請先綁定一張銀行卡，用於收款</p>
+                        <p class="emptyWord">請先綁定一張銀行卡，用於收款</p>
                     </li>
                     <li class="wait">
                         <p class="innerTitle">中央信託</p>
@@ -76,7 +72,7 @@
                     <input type="text" name="" id="">
                     <p class="remind">請認真校對銀行帳號，帳號錯誤資金將無法到賬!</p>
                 </li>
-                <button>確認</button>
+                <button class="check">確認</button>
             </ul>
         </div>
     </main>
@@ -84,43 +80,47 @@
     <footer>
         <ul>
             <li onclick="window.location.href='./index_inner.html'">
-                <i class="menu_ic"></i>
+                <i class="list_ic menu"></i>
                 <p>首頁</p>
             </li>
             <li onclick="window.location.href='./event.html'">
-                <i class="event_ic"></i>
+                <i class="list_ic event"></i>
                 <p>優惠</p>
             </li>
             <li onclick="window.location.href='./wallet.html'">
-                <i class="wallet_ic"></i>
+                <i class="list_ic wallet"></i>
                 <p>存轉提</p>
             </li>
             <li onclick="window.location.href='./help_often_contact.html'">
-                <i class="service_ic"></i>
+                <i class="list_ic service"></i>
                 <p>客服</p>
             </li>
-            <li onclick="window.location.href='./member.html'">
-                <i class="center_ic"></i>
+            <li class="active" onclick="window.location.href='./member.html'">
+                <i class="list_ic center"></i>
                 <p>會員中心</p>
             </li>
         </ul>
     </footer>
     <!--彈窗-->
-    <div class="filter display">
+    <div class="filter">
         <div class="jumpWindow plsGo display">
-            <div class="title">提示</div>
-            <div class="content">請至個人頁面綁定資料</div>
-            <div class="btnBox">
-                <button class="close">確認</button>
+            <div class="title">
+                <p>提示</p>
+                <i class="close"></i>
             </div>
+            <div class="content">請至個人頁面綁定資料</div>
+            <button class="close">確認</button>
         </div>
         <div class="jumpWindow plsGo2">
-            <div class="title">提示</div>
-            <div class="content">已有資料審核中</div>
-            <div class="btnBox">
-                <button class="close">確認</button>
+            <div class="title">
+                <p>提示</p>
+                <i class="close"></i>
             </div>
+            <div class="content">已有資料審核中</div>
+            <button class="close">確認</button>
         </div>
     </div>
+    <!--背景-->
+    <div class="bg"></div>
 </body>
 </html>

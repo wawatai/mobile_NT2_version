@@ -1,125 +1,68 @@
 //我的錢包
 .walletWrap {
-    width: 100%;
-    min-height: calc(100vh - 92px);
-    height: auto;
-    background: $backgroundColor_4;
-    padding-bottom: 10px;
+    @include bgStyle_1;
 
     //上半
-    .walletBox {
+    .top {
         width: 100%;
         height: auto;
-        padding-bottom: 15px;
-        margin-bottom: 10px;
-        background: $backgroundColor_2;
+        padding: 15px 0 20px;
 
-        //漸層
-        .gradient {
-            background: $linear_4;
-            width: 100%;
+        //框內容
+        .content {
+            width: 92vw;
             height: auto;
+            @include bgStyle_2;
+            margin: 0 auto 20px;
 
-            .content {
-                width: 92vw;
+            //資金
+            .amount {
+                width: 100%;
                 height: auto;
-                margin: 0 auto 16px;
-                background: $backgroundColor_2;
-                border-radius: 1.5vw;
-                box-shadow: 0 0 5px 0 $boxshadow_2;
+                border-bottom: solid 1px $mainBorder_1;
+                display: flex;
+                justify-content: space-between;
+                padding: 16px;
 
-                .amount {
-                    width: 100%;
+                .half {
+                    width: 48%;
                     height: auto;
-                    display: flex;
-                    border-bottom: solid 1px $borderColor_1;
 
-                    .half {
-                        width: 50%;
+                    .title {
+                        width: 100%;
                         height: auto;
-                        box-sizing: border-box;
-                        padding: 12px 0 12px 15px;
+                        color: $mainWord_1;
+                        font-size: 3.4vw;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        margin-bottom: 10px;
+                    }
 
-                        .title {
-                            display: flex;
-                            align-items: center;
-                            margin-bottom: 10px;
-                            color: $font-color_8;
-                            font-size: 15px;
-                            font-weight: bold;
-                            letter-spacing: 2px;
-                            
-                            &.all {
-                                color: $font-color_10;
-                            }
-
-                            .icon {
-                                width: 4.27vw;
-                                height: 4.27vw;
-                                margin-left: 6px;
-                            }
-                        }
-
-                        .money {
-                            color: $font-color_12;
-                            font-size: 25px;
-                            font-weight: bold;
-                            display: flex;
-                            align-items: center;
-                            height: 33px;
-                            width: 100%;
-                        }
+                    .money {
+                        color: $money;
+                        font-size: 7vw;
+                        font-weight: bold;
                     }
                 }
+            }
 
-                .details {
-                    width: 100%;
-                    height: auto;
-                    display: flex;
-                    border-bottom: solid 1px $borderColor_1;
+            //流水限制
+            .limits {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                padding: 16px 12px;
+                
+                p {
+                    color: $mainWord_1;
+                    font-size: 3.4vw;
+                    font-weight: bold;
                     
-                    .items {
-                        display: flex;
-                        width: 50%;
-                        align-items: center;
-                        box-sizing: border-box;
-                        padding: 0 6px;
-                        height: 10.67vw;
-                        border-right: solid 1px $borderColor_1;
-
-                        &:nth-of-type(2) {
-                            border: none;
-                        }
-
-                        p {
-                            font-size: 15px;
-                            font-weight: bold;
-                            color: $font-color_14;
-                            white-space: nowrap;
-
-                            &:nth-of-type(1) {
-                                width: 40%;
-                                font-size: 14px;
-                                text-align: center;
-                            }
-
-                            &:nth-of-type(2) {
-                                width: 60%;
-                                text-align: right;
-                                box-sizing: border-box;
-                                padding: 0 5px;
-                            }
-
-                            &.mainWallet {
-                                color: $font-color_3;
-                            }
-                            &.limit {
-                                color: $font-color_8;
-                            }
-                            &.activeWallet {
-                                color: $font-color_11;
-                            }
-                        }
+                    &.num {
+                        color: $money;
+                        font-size: 4vw;
+                        margin-left: 10px;
                     }
                 }
             }
@@ -129,7 +72,6 @@
         ul {
             width: 100%;
             height: auto;
-            box-sizing: border-box;
             display: flex;
             justify-content: space-between;
             padding: 0 12.8vw;
@@ -143,37 +85,25 @@
                     display: block;
                     width: 11.47vw;
                     height: 11.47vw;
+
+                    &.deposit {
+                        background-position-x: 0;
+                    }
+                    &.transfer {
+                        background-position-x: 50%;
+                    }
+                    &.withdrawal {
+                        background-position-x: 100%;
+                    }
                 }
 
                 p {
-                    font-size: 13px;
+                    color: $mainWord_1;
+                    font-size: 3.4vw;
+                    font-weight: bold;
                     letter-spacing: 1px;
-                    color: $font-color_8;
-                    padding-top: 6px;
+                    padding-top: 1.5vw;
                 }
-            }
-        }
-    }
-
-    //按鈕列
-    .btnBox {
-        width: 100%;
-        height: auto;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        padding: 0 5px 10px;
-
-        button {
-            width: 46.4vw;
-            height: 10.67vw;
-            @include buttonStyle_6;
-
-            &:nth-of-type(1) {
-                border-radius: 1.5vw 0 0 1.5vw;
-            }
-            &:last-child {
-                border-radius: 0 1.5vw 1.5vw 0;
             }
         }
     }
@@ -182,278 +112,142 @@
     .walletList {
         width: 100%;
         height: auto;
-        background: $backgroundColor_2;
+        @include bgStyle_2;
+        margin-bottom: 10px;
 
-        .forActive,
-        .forHistory {
-            padding-bottom: 15px;
-            display: none;
+        .title {
+            width: 100%;
+            height: auto;
+            color: $mainWord_2;
+            font-size: 2vw;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 11px;
+            padding: 8px 16px;
 
-            &.display {
-                display: block;
+            button {
+                width: auto;
+                height: 8vw;
+                @include mainBtn;
+                padding: 0 20px;
+                font-size: 3.6vw;
+            }
+        }
+
+        ul {
+            width: 100%;
+            height: auto;
+            max-height: 58vw;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 1.5vw;
+            padding: 0 16px;
+            overflow: hidden;
+
+            &.active {
+                max-height: none;
             }
 
-            .title {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
+            li {
+                width: auto;
                 height: auto;
-                box-sizing: border-box;
-                padding: 8px 15px 0;
-                margin-bottom: 11px;
-                font-size: 13px;
-                letter-spacing: 1px;
-                color: $font-color_4;
-                font-weight: bold;
+                @include secondBtn;
+                padding: 12px;
+                pointer-events: none;
 
-                .refresh_ic {
-                    display: block;
-                    width: 18px;
-                    height: 18px;
-                }
-            }
-
-            .pointBox {
-                width: 92.27vw;
-                height: auto;
-                padding-bottom: 30px;
-                margin: 0 auto 14px;
-                background: $backgroundColor_2;
-                box-shadow: 0 0 5px 0 $boxshadow_2;
-
-                .smallTitle {
-                    display: flex;
-                    align-items: center;
-                    box-sizing: border-box;
-                    height: 40px;
-                    border-bottom: solid 1px $borderColor_3;
-                    font-size: 14px;
+                div {
+                    color: $mainWord_1;
+                    font-size: 3vw;
                     font-weight: bold;
-                    color: $font-color_12;
-                    padding: 0 17px;
+                    letter-spacing: 1px;
+                    line-height: 4vw;
                 }
 
-                .barBox {
-                    width: 88vw;
-                    height: auto;
-                    box-sizing: border-box;
-                    padding: 10px 20px 15px;
-                    background: $backgroundColor_8;
-                    border-radius: 3px;
-                    margin: 10px auto 0;
-                    display: flex;
-                    flex-direction: column;
-
-                    .not {
-                        font-size: 12px;
-                        font-weight: bold;
-                        letter-spacing: 1px;
-                        color: $font-color_2;
-                    }
-                }
-
-                ul {
-                    width: 100%;
-                    height: auto;
-
-                    li {
-                        width: 100%;
-                        height: auto;
-                        box-sizing: border-box;
-                        padding: 12px 0 0 16px;
-                        display: flex;
-                        
-                        p {
-                            font-size: 13px;
-                            letter-spacing: 1px;
-                            color: $font-color_8;
-                            font-weight: bold;
-
-                            &:nth-of-type(1) {
-                                margin-right: 20px;
-                            }
-                        }
-                    }
-                }
-
-                .pointBtnBox {
-                    display: flex;
-                    justify-content: space-between;
-                    box-sizing: border-box;
-                    width: 100%;
-                    height: auto;
-                    padding: 20px 14px 10px;
-
-                    button {
-                        width: 41.33vw;
-                        height: 8.27vw;
-                        @include buttonStyle_2;
-                        font-size: 13px;
-                        
-                        &.check {
-                            @include buttonStyle_3;
-                            font-size: 13px;
-                        }
-                    }
+                p {
+                    color: $money;
+                    font-size: 5vw;
+                    font-weight: bold;
+                    margin-top: 10px;
                 }
             }
         }
 
-        .forPlatform {
-            padding-bottom: 15px;
-            display: none;
+        .openBtn {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            padding: 16px 0;
 
-            &.display {
-                display: block;
+            &.active {
+
+                i {
+                    transform: scaleY(-1);
+                }
             }
 
-            .title {
+            div {
+                color: $mainWord_1;
+                font-size: 3.7vw;
+                font-weight: bold;
+                letter-spacing: 1px;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-                width: 100%;
-                height: auto;
-                box-sizing: border-box;
-                padding: 8px 15px 0;
-                margin-bottom: 11px;
-                font-size: 13px;
-                letter-spacing: 1px;
-                color: $font-color_4;
-                font-weight: bold;
 
-                button {
-                    width: 18.93vw;
-                    height: 6.13vw;
-                    @include buttonStyle_2;
-                    font-size: 12px;
+                i {
+                    width: 3.7vw;
+                    height: 3.7vw;
+                    margin-left: 10px;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+    }
+
+    //下長按鈕
+    .optionBox {
+        width: 100%;
+        height: auto;
+
+        button {
+            width: 92vw;
+            height: 50px;
+            @include secondBtn;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:active,&.active {
+
+                .arrow_ic {
+                    background-position-y: 100%;
                 }
             }
 
-            ul {
+            p {
                 display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                box-sizing: border-box;
-                max-height: 67.16vw;
-                padding: 0 3.6vw;
-                overflow: hidden;
-
-                &.active {
-                    max-height: none;
-                }
-
-                li {
-                    width: 30.66vw;
-                    min-height: 16.53vw;
-                    box-sizing: border-box;
-                    padding: 10px 0 0 11px;
-                    margin: 0 0.26vw 0.26vw 0;
-                    border: solid 1px $borderColor_1;
-                    border-radius: 1.5vw;
-
-                    &:nth-of-type(3n) {
-                        margin-right: 0;
-                    }
-
-                    div {
-                        font-size: 12px;
-                        letter-spacing: 1px;
-                        color: $font-color_8;
-                        font-weight: bold;
-                        display: flex;
-                        align-items: center;
-
-                        .smallInfo {
-                            display: block;
-                            width: 18px;
-                            height: 18px;
-                            margin-left: 5px;
-                            position: relative;
-                            opacity: 0;
-                            pointer-events: none;
-
-                            &.display {
-                                opacity: 1;
-                                pointer-events: visible;
-                            }
-
-                            &:hover,&:active,&.active {
-
-                                .inner {
-                                    display: block;
-                                }
-                            }
-
-                            .inner {
-                                display: none;
-                                width: auto;
-                                height: auto;
-                                padding: 6px 18px;
-                                color: $font-color_5;
-                                background: $backgroundColor_6;
-                                border-radius: 3px;
-                                position: absolute;
-                                left: 50%;
-                                transform: translateX(-50%);
-                                bottom: -30px;
-                                white-space: nowrap;
-
-                                &::before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 50%;
-                                    transform: translateX(-50%);
-                                    top: -6px;
-                                    width: 0;
-                                    height: 0;
-                                    border-style: solid;
-                                    border-width: 0 4px 6px 4px;
-                                    border-color: $backgroundColor_6 transparent;
-                                }
-                            }
-                        }
-                    }
-
-                    p {
-                        margin-top: 10px;
-                        font-size: 17px;
-                        color: $font-color_12;
-                        font-weight: bold;
-                    }
-                }
+                align-items: center;
             }
 
-            .openBtn {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                height: auto;
-                margin-top: 15px;
+            .options_ic {
+                width: 18px;
+                height: 18px;
+                margin-right: 2vw;
+            }
 
-                div {
-                    font-size: 13px;
-                    letter-spacing: 1px;
-                    font-weight: bold;
-                    color: $font-color_12;
-                    display: flex;
-                    align-items: center;
-
-                    &.active {
-
-                        .db_arrow {
-                            transform: rotate(180deg);
-                        }
-                    }
-
-                    .db_arrow {
-                        display: block;
-                        width: 12px;
-                        height: 12px;
-                        margin-left: 9px;
-                        transition: all 0.5s ease;
-                    }
-                }
+            .arrow_ic {
+                width: 10px;
+                height: 17px;
+                transform: scaleX(-1);
+                margin-right: 2vw;
             }
         }
     }

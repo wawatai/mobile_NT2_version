@@ -6,61 +6,68 @@ header {
     z-index: 100;
     width: 100%;
     height: auto;
+    flex-shrink: 0;
 
     //content
     .content {
-        display: flex;
-        align-items: center;
         width: 100%;
         height: 45px;
-        background: $backgroundColor_1;
+        display: flex;
+        align-items: center;
         padding: 0 14px;
-        box-sizing: border-box;
         position: relative;
+        overflow: hidden;
+
+        &.inner {
+            background: $header_BG;
+            border-bottom: solid 1px $header_Border;
+        }
 
         .title {
             width: 70%;
             height: auto;
-            text-align: center;
+            color: $header_Title;
             font-size: 20px;
-            letter-spacing: 2px;
-            color: $font-color_5;
             font-weight: bold;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
+            text-align: center;
+            letter-spacing: 2px;
             margin: 0 auto;
+            @include wordHidden;
         }
 
         .back_arrow {
-            position: absolute;
             width: 10px;
-            height: 20px;
-            display: block;
-            top: 50%;
-            transform: translateY(-50%);
+            height: 17px;
+            position: absolute;
             left: 14px;
         }
 
-        .refresh_ic {
+        .refresh_ic,
+        .msg_ic,
+        .edit_ic {
             width: 21px;
             height: 21px;
             position: absolute;
             right: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
 
-        .detailBtn {
-            width: auto;
-            height: 27px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 14px;
-            @include buttonStyle_3_2;
+            &.msg_ic {
 
-            &.edit {
+                &.active {
+
+                    span {
+                        display: block;
+                        width: 8px;
+                        height: 8px;
+                        background: $header_Msg_remindColor;
+                        border-radius: 50%;
+                        position: absolute;
+                        right: -2px;
+                        top: 0;
+                    }
+                }
+            }
+
+            &.edit_ic {
                 display: none;
 
                 &.display {
@@ -69,13 +76,13 @@ header {
             }
         }
 
-        .editBtn {
-            width: 21px;
-            height: 21px;
+        .detailBtn {
+            width: auto;
+            height: 27px;
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
             right: 14px;
+            @include mainBtn;
+            font-size: 3.4vw;
             display: none;
 
             &.display {

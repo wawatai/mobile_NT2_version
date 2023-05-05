@@ -5,23 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
-    <script src="../js/javascript.js"></script>
-    <link rel="shortcut icon" href="../images/myIco.ico" type="image/x-icon">
+    <script type="module" src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
 </head>
 <body>
     <!--header-->
     <header>
         <!--content-->
-        <div class="content">
+        <div class="content inner">
             <i class="back_arrow" onclick="window.location.href='./member.html'"></i>
             <div class="title">站內信</div>
-            <button class="editBtn display"></button>
-            <button class="detailBtn edit">完成</button>
+            <button class="edit_ic display"></button>
+            <button class="detailBtn">完成</button>
         </div>
     </header>
     <!--main-->
@@ -29,14 +25,14 @@
         <!--站內信上選項-->
         <div class="topList">
             <ul>
-                <li class="active">通知</li>
-                <li>公告</li>
+                <li class="normalBtn active">通知</li>
+                <li class="postBtn">公告</li>
             </ul>
         </div>
+        <!--通知-->
         <div class="mailBody normal display">
-
             <!--中選項-->
-            <div class="subClass">
+            <div class="subClass second">
                 <ul>
                     <li class="active">系統消息</li>
                     <li>個人消息</li>
@@ -54,57 +50,59 @@
                 </div>
             </div>
             <!--內容-->
-            <div class="mailBox system display">
+            <div class="mailBox normal display">
                 <ul>
                     <li onclick="window.location.href='./mail_page.html'">
-                        <div class="title">標題標題標題標題標題</div>
+                        <div class="title">
+                            <p>標題標題標題標題標題</p>
+                            <span class="date">2021/06/16</span>
+                        </div>
                         <div class="textBox">
                             <p>內文內文內文內文內文內文內文內文內文內文內文</p>
-                            <span class="date">2021/06/16</span>
                         </div>
                         <div class="inputBox"><input type="checkbox"></div>
                     </li>
                     <li onclick="window.location.href='./mail_page.html'">
-                        <div class="title">標題標題標題標題標題</div>
-                        <div class="textBox">
-                            <p>內文內文內文內文內文內文內文</p>
+                        <div class="title">
+                            <p>標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題</p>
                             <span class="date">2021/06/16</span>
+                        </div>
+                        <div class="textBox">
+                            <p>內文內文內文內文內文內文內文內文內文內文內文</p>
                         </div>
                         <div class="inputBox"><input type="checkbox"></div>
                     </li>
                     <li onclick="window.location.href='./mail_page.html'">
-                        <div class="title">標題標題標題標題標題</div>
-                        <div class="textBox">
-                            <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
+                        <div class="title">
+                            <p>標題標題標題標題標題</p>
                             <span class="date">2021/06/16</span>
+                        </div>
+                        <div class="textBox">
+                            <p>內文內文內文內文內文內文內文內文內文內文內文</p>
                         </div>
                         <div class="inputBox"><input type="checkbox"></div>
                     </li>
                 </ul>
             </div>
-            <div class="mailBox personal">
+            <div class="mailBox normal">
                 <ul>
                     <li class="read" onclick="window.location.href='./mail_page.html'">
-                        <div class="title">標題標題標題標題標題</div>
+                        <div class="title">
+                            <p>標題標題標題標題標題</p>
+                            <span class="date">2021/06/16</span>
+                        </div>
                         <div class="textBox">
                             <p>內文內文內文內文內文內文內文內文內文內文內文</p>
-                            <span class="date">2021/06/16</span>
                         </div>
                         <div class="inputBox"><input type="checkbox"></div>
                     </li>
                     <li class="read" onclick="window.location.href='./mail_page.html'">
-                        <div class="title">標題標題標題標題標題</div>
-                        <div class="textBox">
-                            <p>內文內文內文內文內文內文內文</p>
+                        <div class="title">
+                            <p>標題標題標題標題標題</p>
                             <span class="date">2021/06/16</span>
                         </div>
-                        <div class="inputBox"><input type="checkbox"></div>
-                    </li>
-                    <li class="read" onclick="window.location.href='./mail_page.html'">
-                        <div class="title">標題標題標題標題標題</div>
                         <div class="textBox">
-                            <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
-                            <span class="date">2021/06/16</span>
+                            <p>內文內文內文內文內文內文內文內文內文內文內文</p>
                         </div>
                         <div class="inputBox"><input type="checkbox"></div>
                     </li>
@@ -112,9 +110,8 @@
             </div>
         </div>
         <div class="mailBody post">
-
             <!--中選項-->
-            <div class="subClass">
+            <div class="subClass third">
                 <ul>
                     <li class="active">熱門</li>
                     <li>一般</li>
@@ -122,33 +119,28 @@
                 </ul>
             </div>
             <!--內容-->
-            <div class="mailBox hot display">
+            <div class="mailBox post display">
                 <ul>
                     <li onclick="window.location.href='./mail_page.html'">
-                        <p>熱門公告測試</p>
-                    </li>
-                    <li onclick="window.location.href='./mail_page.html'">
-                        <p>熱門公告測試</p>
-                    </li>
-                    <li onclick="window.location.href='./mail_page.html'">
-                        <p>熱門公告測試</p>
-                    </li>
-                    <li onclick="window.location.href='./mail_page.html'">
-                        <p>熱門公告測試熱門公告測試熱門公告測試熱門公告測試熱門公告測試熱門公告測試</p>
+                        <div class="title">標題標題標題標題標題</div>
                     </li>
                 </ul>
             </div>
-            <div class="mailBox nor display">
+            <div class="mailBox post">
                 <ul>
                     <li onclick="window.location.href='./mail_page.html'">
-                        <p>熱門公告測試熱門公告測試熱門公告測試熱門公告測試熱門公告測試熱門公告測試</p>
+                        <div class="title">標題標題標題標題標題</div>
+                    </li>
+                    <li onclick="window.location.href='./mail_page.html'">
+                        <div class="title">標題標題標題標題標題</div>
+                    </li>
+                    <li onclick="window.location.href='./mail_page.html'">
+                        <div class="title">標題標題標題標題標題</div>
                     </li>
                 </ul>
             </div>
-            <div class="mailBox dep display">
-                <ul>
-
-                </ul>
+            <div class="mailBox post">
+                <ul></ul>
             </div>
         </div>
     </main>
@@ -156,28 +148,29 @@
     <footer>
         <ul>
             <li onclick="window.location.href='./index_inner.html'">
-                <i class="menu_ic"></i>
+                <i class="list_ic menu"></i>
                 <p>首頁</p>
             </li>
             <li onclick="window.location.href='./event.html'">
-                <i class="event_ic"></i>
+                <i class="list_ic event"></i>
                 <p>優惠</p>
             </li>
             <li onclick="window.location.href='./wallet.html'">
-                <i class="wallet_ic"></i>
+                <i class="list_ic wallet"></i>
                 <p>存轉提</p>
             </li>
             <li onclick="window.location.href='./help_often_contact.html'">
-                <i class="service_ic"></i>
+                <i class="list_ic service"></i>
                 <p>客服</p>
             </li>
-            <li onclick="window.location.href='./member.html'">
-                <i class="center_ic"></i>
+            <li class="active" onclick="window.location.href='./member.html'">
+                <i class="list_ic center"></i>
                 <p>會員中心</p>
             </li>
         </ul>
     </footer>
     <!--彈窗-->
     <div class="filter"></div>
+    <div class="bg"></div>
 </body>
 </html>

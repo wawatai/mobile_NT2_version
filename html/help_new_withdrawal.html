@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
-    <script src="../js/javascript.js"></script>
-    <link rel="shortcut icon" href="../images/myIco.ico" type="image/x-icon">
+    <script type="module" src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
 </head>
 <body>
     <!--header-->
     <header>
         <!--content-->
-        <div class="content helpPage q3 display">
+        <div class="content inner helpPage display">
             <i class="back_arrow" onclick="window.location.href='./help_new.html'"></i>
             <div class="title">提款</div>
         </div>
@@ -29,13 +25,15 @@
             <ul class="q3 display">
                 <li>
                     <div class="title">
-                        <i class="icon new"></i>
-                        <p>我怎麼在我的帳戶提取資金?</p>
+                        <p>
+                            <i class="list_ic new q3"></i>
+                            我怎麼在我的帳戶提取資金?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
                         <p>※首次取款需要通過資料驗證※</p>
-                        <p>登入通博帳戶，即可在通博主頁右上角【財務中心】，接著選擇【提款】。</p>
+                        <p>登入BGW帳戶，即可在BGW主頁右上角【財務中心】，接著選擇【提款】。</p>
                         <p>填入提款金額即可進行提款。</p>
                         <p>申請提款後，提款金額將會鎖定。若無通過帳戶驗證，提款金額將回到中心錢包。</p>
                         <p>提款前請確認帳戶資訊正確以避免提款失敗。</p>
@@ -44,8 +42,10 @@
                 </li>
                 <li>
                     <div class="title">
-                        <i class="icon new"></i>
-                        <p>提款常見問題</p>
+                        <p>
+                            <i class="list_ic new q3"></i>
+                            提款常見問題
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
@@ -55,8 +55,10 @@
                 </li>
                 <li>
                     <div class="title">
-                        <i class="icon new"></i>
-                        <p>申請提款需要注意些什麽？</p>
+                        <p>
+                            <i class="list_ic new q3"></i>
+                            申請提款需要注意些什麼?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
@@ -69,8 +71,10 @@
                 </li>
                 <li>
                     <div class="title">
-                        <i class="icon new"></i>
-                        <p>遊戲賬戶裏有錢爲什麽無法提款？</p>
+                        <p>
+                            <i class="list_ic new q3"></i>
+                            遊戲帳戶裡有錢為什麼無法提款?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
@@ -79,8 +83,10 @@
                 </li>
                 <li>
                     <div class="title">
-                        <i class="icon new"></i>
-                        <p>可以綁定多張銀行卡嗎？</p>
+                        <p>
+                            <i class="list_ic new q3"></i>
+                            可以綁定多張銀行卡嗎?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
@@ -89,8 +95,10 @@
                 </li>
                 <li>
                     <div class="title">
-                        <i class="icon new"></i>
-                        <p>提款爲什麽還需要審核？</p>
+                        <p>
+                            <i class="list_ic new q3"></i>
+                            提款為什麼還需要審核?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
@@ -104,28 +112,29 @@
     <footer>
         <ul>
             <li onclick="window.location.href='./index_inner.html'">
-                <i class="menu_ic"></i>
+                <i class="list_ic menu"></i>
                 <p>首頁</p>
             </li>
             <li onclick="window.location.href='./event.html'">
-                <i class="event_ic"></i>
+                <i class="list_ic event"></i>
                 <p>優惠</p>
             </li>
             <li onclick="window.location.href='./wallet.html'">
-                <i class="wallet_ic"></i>
+                <i class="list_ic wallet"></i>
                 <p>存轉提</p>
             </li>
-            <li class="active" onclick="window.location.href='./help_often_contact.html'">
-                <i class="service_ic"></i>
+            <li onclick="window.location.href='./help_often_contact.html'">
+                <i class="list_ic service"></i>
                 <p>客服</p>
             </li>
-            <li onclick="window.location.href='./member.html'">
-                <i class="center_ic"></i>
+            <li class="active" onclick="window.location.href='./member.html'">
+                <i class="list_ic center"></i>
                 <p>會員中心</p>
             </li>
         </ul>
     </footer>
     <!--彈窗-->
     <div class="filter"></div>
+    <div class="bg"></div>
 </body>
 </html>

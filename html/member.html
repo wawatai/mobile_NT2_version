@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
-    <script src="../js/javascript.js"></script>
-    <link rel="shortcut icon" href="../images/myIco.ico" type="image/x-icon">
+    <script type="module" src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
 </head>
 <body>
     <!--header-->
     <header>
         <!--content-->
-        <div class="content">
+        <div class="content inner">
             <div class="title">會員中心</div>
         </div>
     </header>
@@ -27,113 +23,118 @@
         <div class="memberWrap">
             <!--玩家資訊-->
             <div class="user">
-                <div class="info" onclick="window.location.href='./member_info.html'">
+                <!--上列-->
+                <div class="info">
+                    <!--左-->
                     <div>
                         <div class="account">
-                            <div class="lv">工程測試階級</div>
+                            <div class="lv">測試等級</div>
                             user898
                         </div>
-                        <p class="date">加入通博第 485 天</p>
+                        <p class="date">加入第 485 天</p>
                     </div>
-                    <i class="arrow_ic"></i>
+                    <!--右-->
+                    <button class="infoBtn" onclick="window.location.href='./member_info.html'">個人資料</button>
                 </div>
-                <div class="wallet">
+                <!--存款提示框-->
+                <div class="walletBox">
                     <p>中心錢包: $ 9883</p>
-                    <button>立即存款</button>
+                    <button onclick="window.location.href='./deposit.html'">立即存款</button>
                 </div>
+                <!--大按鈕列-->
                 <div class="btnBox">
                     <button onclick="window.location.href='./wallet.html'">
-                        <i class="wallet_ic"></i>
+                        <i class="bigList_ic wallet"></i>
                         <div class="text">
                             我的錢包
                             <p>MY PURSE</p>
                         </div>
                     </button>
                     <button onclick="window.location.href='./vip.html'">
-                        <i class="vip_ic"></i>
+                        <i class="bigList_ic vip"></i>
                         <div class="text">
                             VIP 特權
                             <p>VIP</p>
                         </div>
                     </button>
                 </div>
+                <!--其他選單列-->
                 <ul>
                     <li onclick="window.location.href='./bettingRecord.html'">
-                        <i class="bet_ic"></i>
+                        <i class="list_ic bettingRecord"></i>
                         <p>投注紀錄</p>
                     </li>
                     <li onclick="window.location.href='./dealRecord.html'">
-                        <i class="deal_ic"></i>
+                        <i class="list_ic dealRecord"></i>
                         <p>交易紀錄</p>
                     </li>
                     <li onclick="window.location.href='./mail.html'">
-                        <i class="mail_ic"></i>
+                        <i class="list_ic mail"></i>
                         <p>站內信</p>
                         <em class="bubble">3</em>
                     </li>
                     <li onclick="window.location.href='./card.html'">
-                        <i class="card_ic"></i>
+                        <i class="list_ic card"></i>
                         <p>綁定銀行卡</p>
                     </li>
                 </ul>
             </div>
             <!--選項條-->
-            <div class="options" onclick="window.location.href='./event.html'">
-                <div>
-                    <i class="event_ic"></i>
-                    <p>優惠</p>
-                </div>
+            <div class="options" onclick="window.location.href='./invite.html'">
+                <p>
+                    <i class="option_ic invite"></i>
+                    邀請會員
+                </p>
+                <i class="arrow_ic"></i>
+            </div>
+            <div class="options" onclick="window.location.href='./searchPoint.html'">
+                <p>
+                    <i class="option_ic point"></i>
+                    查詢紅利
+                </p>
                 <i class="arrow_ic"></i>
             </div>
             <div class="options" onclick="window.location.href='./eventApply.html'">
-                <div>
-                    <i class="eventApply_ic"></i>
-                    <p>優惠申請</p>
-                </div>
+                <p>
+                    <i class="option_ic eventApply"></i>
+                    優惠申請
+                </p>
                 <i class="arrow_ic"></i>
             </div>
             <div class="options" onclick="window.location.href='./help_often.html'">
-                <div>
-                    <i class="help_ic"></i>
-                    <p>幫助中心</p>
-                </div>
+                <p>
+                    <i class="option_ic help"></i>
+                    幫助中心
+                </p>
                 <i class="arrow_ic"></i>
             </div>
             <div class="options" onclick="window.location.href='./help_about.html'">
-                <div>
-                    <i class="about_ic"></i>
-                    <p>關於我們</p>
-                </div>
+                <p>
+                    <i class="option_ic about"></i>
+                    關於我們
+                </p>
                 <i class="arrow_ic"></i>
             </div>
-            <div class="options" onclick="window.location.href='./joinUs.html'">
-                <div>
-                    <i class="join_ic"></i>
-                    <p>加入我們</p>
-                </div>
-                <i class="arrow_ic"></i>
-            </div>
-            <div class="options" onclick="window.location.href='./app.html'">
-                <div>
-                    <i class="app_ic"></i>
-                    <p>APP下載</p>
-                </div>
-                <i class="arrow_ic"></i>
+            <div class="options" onclick="window.location.href='./help_app.html'">
+                <p>
+                    <i class="option_ic app"></i>
+                    APP下載
+                </p>
+                <i></i>
             </div>
             <div class="options opLang">
-                <div>
-                    <i class="lang_ic"></i>
-                    <p class="lang_tw active">繁體中文</p>
-                    <p class="lang_ch">简体中文</p>
-                </div>
+                <p>
+                    <i class="option_ic lang"></i>
+                    <span>繁體中文</span>
+                </p>
                 <i class="arrow_ic"></i>
             </div>
             <div class="options" onclick="window.location.href='../index.html'">
-                <div>
-                    <i class="logout_ic"></i>
-                    <p>登出</p>
-                </div>
-                <i class="arrow_ic"></i>
+                <p>
+                    <i class="option_ic logout"></i>
+                    登出
+                </p>
+                <i></i>
             </div>
         </div>
     </main>
@@ -141,23 +142,23 @@
     <footer>
         <ul>
             <li onclick="window.location.href='./index_inner.html'">
-                <i class="menu_ic"></i>
+                <i class="list_ic menu"></i>
                 <p>首頁</p>
             </li>
             <li onclick="window.location.href='./event.html'">
-                <i class="event_ic"></i>
+                <i class="list_ic event"></i>
                 <p>優惠</p>
             </li>
             <li onclick="window.location.href='./wallet.html'">
-                <i class="wallet_ic"></i>
+                <i class="list_ic wallet"></i>
                 <p>存轉提</p>
             </li>
             <li onclick="window.location.href='./help_often_contact.html'">
-                <i class="service_ic"></i>
+                <i class="list_ic service"></i>
                 <p>客服</p>
             </li>
             <li class="active" onclick="window.location.href='./member.html'">
-                <i class="center_ic"></i>
+                <i class="list_ic center"></i>
                 <p>會員中心</p>
             </li>
         </ul>
@@ -166,6 +167,7 @@
     <div class="filter">
         <div class="jumpWindow langWindow">
             <div class="title">
+                選擇語言
                 <i class="close"></i>
             </div>
             <ul>
@@ -174,5 +176,7 @@
             </ul>
         </div>
     </div>
+    <!--背景-->
+    <div class="bg"></div>
 </body>
 </html>

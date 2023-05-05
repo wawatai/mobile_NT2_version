@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
+</head>
+<body>
+    <!--header-->
+    <header>
+        <!--content-->
+        <div class="content inner helpPage display">
+            <i class="back_arrow" onclick="window.location.href='./member.html'"></i>
+            <div class="title">APP下載</div>
+        </div>
+        <div class="content inner helpPage">
+            <i class="back_arrow"></i>
+            <div class="title">歐博真人娛樂</div>
+        </div>
+        <div class="content inner helpPage">
+            <i class="back_arrow"></i>
+            <div class="title">DG真人娛樂</div>
+        </div>
+        <div class="content inner helpPage">
+            <i class="back_arrow"></i>
+            <div class="title">沙龍真人娛樂</div>
+        </div>
+    </header>
+    <!--main-->
+    <main>
+        <!--幫助中心外層-->
+        <div class="helpWrap display">
+            <!--開頭選單-->
+            <div class="helpHeader">
+                <div class="selectBox">
+                    <p>
+                        <i class="topList_ic app"></i>
+                        APP下載
+                    </p>
+                    <i class="arrow_ic"></i>
+                    <select onchange="window.location.href=this.options[this.selectedIndex].value">
+                        <option value="" disabled>請選擇</option>
+                        <option value="./help_new.html">新手幫助</option>
+                        <option value="./help_often.html">常見問題</option>
+                        <option value="./help_about.html">關於我們</option>
+                        <option value="./help_app.html"select>APP下載</option>
+                    </select>
+                </div>
+            </div>
+            <!--內容-->
+            <div class="helpBody">
+                <ul>
+                    <li>
+                        <i class="list_ic app q1"></i>
+                        歐博真人娛樂
+                    </li>
+                    <li>
+                        <i class="list_ic app q2"></i>
+                        DG真人娛樂
+                    </li>
+                    <li>
+                        <i class="list_ic app q3"></i>
+                        沙龍真人娛樂
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--幫助中心內層-->
+        <div class="helpInner">
+            <ul class="q1">
+                <li class="active">
+                    <div class="textBox app">
+                        <p class="smallTitle">相關說明</p>
+                        <p>下載歐博APP，首次需先進入歐博大廳操作下載，APP只需一次性登入</p>
+                        <p>IOS:可參考下載教學說明安裝到主屏幕</p>
+                        <p>安卓:需進入大廳下載APP</p>
+                        <p>詳細說明請點擊"下載教學說明"查看教學影片</p>
+                        <button class="downloadBtn">下載教學說明</button>
+                    </div>
+                </li>
+            </ul>
+            <ul class="q2">
+                <li class="active">
+                    <div class="textBox app">
+                        <p>DG真人娛樂(Dream Gaming)遊戲除了提供線上flash版本外，您也可以下載行動裝置版本，在您的手機盡情遊戲；或是下載安裝至您的電腦。當您要透過行動裝置或下載板，連到DG真人娛樂遊戲遊玩時，請注意，必須使用DG真人娛樂專屬的遊戲帳號才能進行登入。</p>
+                        <p class="smallTitle">隱私政策</p>
+                        <p>請至會員中心→個人資料→平臺帳號密碼→DG真人複製玩家ID及密碼登入</p>
+                        <p class="smallTitle">如何查詢專用帳號？</p>
+                        <p>1. 請先於本站台找到DG真人遊戲，並進入他的遊戲畫面，在畫面上找到「移動客戶端」後，並點擊該項目。</p>
+                        <div class="img dg_1"></div>
+                        <p>2. 在此查詢您的手機登入用戶名，並在手機進行登入。</p>
+                        <p>3. 此外，您也可以透過網址輸入以及掃描QR CODE，進入通博手機下載頁面。</p>
+                        <p>4. 畫面上也提供安裝的各項步驟，讓您安心體驗遊戲。</p>
+                        <div class="img dg_2"></div>
+                        <button class="downloadBtn">下載APP</button>
+                    </div>
+                </li>
+            </ul>
+            <ul class="q3">
+                <li class="active">
+                    <div class="textBox app">
+                        <p class="smallTitle">如何登入</p>
+                        <p>請至會員中心→個人資料→平臺帳號密碼→沙龍真人複製玩家ID及密碼登入</p>
+                        <p>使用專屬您的二維條碼登入(網頁版-沙龍平台左下方點選【移動平台】出現的二維條碼)</p>
+                        <p class="smallTitle">網頁下載說明</p>
+                        <div class="img sa_1"></div>
+                        <p class="smallTitle">手機安卓版下載說明</p>
+                        <div class="img sa_2"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <!--footer-->
+    <footer>
+        <ul>
+            <li onclick="window.location.href='./index_inner.html'">
+                <i class="list_ic menu"></i>
+                <p>首頁</p>
+            </li>
+            <li onclick="window.location.href='./event.html'">
+                <i class="list_ic event"></i>
+                <p>優惠</p>
+            </li>
+            <li onclick="window.location.href='./wallet.html'">
+                <i class="list_ic wallet"></i>
+                <p>存轉提</p>
+            </li>
+            <li onclick="window.location.href='./help_often_contact.html'">
+                <i class="list_ic service"></i>
+                <p>客服</p>
+            </li>
+            <li class="active" onclick="window.location.href='./member.html'">
+                <i class="list_ic center"></i>
+                <p>會員中心</p>
+            </li>
+        </ul>
+    </footer>
+    <!--彈窗-->
+    <div class="filter"></div>
+    <div class="bg"></div>
+</body>
+</html>

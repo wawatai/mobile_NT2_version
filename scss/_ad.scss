@@ -4,12 +4,9 @@
     height: auto;
     display: flex;
     justify-content: center;
-    padding-top: 8px;
     flex-shrink: 0;
 
     .single-item {
-        border-radius: 1.5vw;
-        overflow: hidden;
         margin: 0;
 
         .slick-list {
@@ -28,17 +25,20 @@
             bottom: 0;
 
             li {
+                margin: 0;
                 
                 button {
 
                     &::before {
-                        width: 25px;
-                        height: 2px;
-                        background: $backgroundColor_2;
-                        opacity: 1;
+                        width: 8px;
+                        height: 8px;
+                        background: $ad_Dot_BG;
+                        border-radius: 50%;
                         color: transparent;
                         top: 50%;
-                        transform: translateY(-50%);
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        opacity: 1;
                     }
                 }
 
@@ -47,10 +47,43 @@
                     button {
 
                         &::before {
-                            background: $backgroundColor_1;
+                            background: $ad_Dot_Active;
+                            border: solid 1px $ad_Dot_Border;
                         }
                     }
                 }
+            }
+        }
+
+        .slick-prev,.slick-next {
+            top: 0;
+            transform: translate(0);
+            width: 13vw;
+            height: 45vw;
+            z-index: 1;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border-style: solid;
+                border-width: 0 0 6px 6px;
+                border-color: $mainBG_1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%) rotate(45deg);
+            }
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+        .slick-next {
+            right: 0;
+
+            &::before {
+                transform: translate(-50%,-50%) rotate(-45deg) scaleX(-1);
             }
         }
     }

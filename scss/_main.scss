@@ -9,16 +9,25 @@ html {
         box-sizing: border-box;
 
         main {
-            padding: 45px 0 48px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 45px 0 60px;
 
             &.index {
+                height: auto;
                 display: flex;
                 flex-direction: column;
-                width: 100%;
-                height: 100%;
-                box-sizing: border-box;
-                padding: 45px 0 50px;
             }
+        }
+
+        .bg {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -999;
         }
 
         @import "./header";
@@ -26,22 +35,20 @@ html {
         @import "./home";
         @import "./footer";
         @import "./jumpWindow";
-        @import "./rwd";
         @import "./slotPage";
         @import "./event";
         @import "./wallet";
         @import "./member";
-        @import "./app";
-        @import "./joinUs";
         @import "./help";
         @import "./eventApply";
         @import "./vip";
         @import "./mail";
         @import "./card";
         @import "./record";
-        @import "./wallet";
         @import "./deposit";
         @import "./transfer";
         @import "./withdrawal";
+        @import "./invite";
+        @import "./rwd";
     }
 }

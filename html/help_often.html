@@ -5,28 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
-    <script src="../js/javascript.js"></script>
-    <link rel="shortcut icon" href="../images/myIco.ico" type="image/x-icon">
+    <script type="module" src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
 </head>
 <body>
     <!--header-->
     <header>
         <!--content-->
-        <div class="content helpPage display">
+        <div class="content inner helpPage display">
             <i class="back_arrow" onclick="window.location.href='./member.html'"></i>
             <div class="title">常見問題</div>
         </div>
-        <div class="content helpPage q1">
-            <i class="back_arrow" onclick="backToPage()"></i>
+        <div class="content inner helpPage">
+            <i class="back_arrow"></i>
             <div class="title">常見問題</div>
         </div>
-        <div class="content helpPage q2">
-            <i class="back_arrow" onclick="backToPage()"></i>
+        <div class="content inner helpPage">
+            <i class="back_arrow"></i>
             <div class="title">遠端協助</div>
         </div>
     </header>
@@ -37,22 +33,31 @@
             <!--開頭選單-->
             <div class="helpHeader">
                 <div class="selectBox">
-                    <p>常見問題</p>
+                    <p>
+                        <i class="topList_ic often active"></i>
+                        常見問題
+                    </p>
                     <i class="arrow_ic"></i>
                     <select onchange="window.location.href=this.options[this.selectedIndex].value">
                         <option value="" disabled>請選擇</option>
                         <option value="./help_new.html">新手幫助</option>
                         <option value="./help_often.html" selected>常見問題</option>
                         <option value="./help_about.html">關於我們</option>
+                        <option value="./help_app.html">APP下載</option>
                     </select>
                 </div>
             </div>
             <!--內容-->
             <div class="helpBody">
                 <ul>
-                    <li>常見問題</li>
-                    <li>遠端協助</li>
-                    <li onclick="window.location.href='./help_often_contact.html'">聯絡我們</li>
+                    <li>
+                        <i class="list_ic often q1"></i>
+                        常見問題
+                    </li>
+                    <li>
+                        <i class="list_ic often q2"></i>
+                        遠端協助
+                    </li>
                 </ul>
             </div>
         </div>
@@ -61,22 +66,26 @@
             <ul class="q1">
                 <li>
                     <div class="title">
-                        <i class="icon often"></i>
-                        <p>如何註冊帳號</p>
+                        <p>
+                            <i class="list_ic often q1"></i>
+                            如何註冊帳號?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
-                        <p>加入通博(tb588)娛樂城，您必須年滿18歲並且同意遵守 條款及條件和 隱私權政策。大多數國家於於法律上對於線上遊戲都有訂定相關的詳細規範，請您務必詳細閱讀並遵守您所在當地的法律條文。</p>
+                        <p>加入BGW娛樂城，您必須年滿18歲並且同意遵守 條款及條件和 隱私權政策。大多數國家於於法律上對於線上遊戲都有訂定相關的詳細規範，請您務必詳細閱讀並遵守您所在當地的法律條文。</p>
                     </div>
                 </li>
                 <li>
                     <div class="title">
-                        <i class="icon often"></i>
-                        <p>我該如何存款?</p>
+                        <p>
+                            <i class="list_ic often q1"></i>
+                            我該如何存款?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
-                        <p>資金存入您的通博(tb588)成員帳戶可使用以下方法：</p>
+                        <p>資金存入您的BGW成員帳戶可使用以下方法：</p>
                         <p>1. 銀行轉帳存款(網路銀行ATM轉帳或實體自動櫃員機ATM轉帳)。</p>
                         <p>2. 虛擬ATM存款(實體自動櫃員機ATM轉帳)。</p>
                         <p>3. 超商支付。</p>
@@ -86,18 +95,22 @@
                 </li>
                 <li>
                     <div class="title">
-                        <i class="icon often"></i>
-                        <p>我的個人資料安全嗎?</p>
+                        <p>
+                            <i class="list_ic often q1"></i>
+                            我的個人資料安全嗎?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
-                        <p>在這裡我們可確保您的個人資料是安全無虞的，通博(tb588)娛樂城堅持使用最高等級安全措施及最安全的通訊協定（SSL 128位加密標準），並存儲在最安全的作業環境，並且通博(tb588)娛樂城永遠不會向任何第三方人員透露您的各項個人資料，敬請放心。</p>
+                        <p>在這裡我們可確保您的個人資料是安全無虞的，BGW娛樂城堅持使用最高等級安全措施及最安全的通訊協定（SSL 128位加密標準），並存儲在最安全的作業環境，並且BGW娛樂城永遠不會向任何第三方人員透露您的各項個人資料，敬請放心。</p>
                     </div>
                 </li>
                 <li>
                     <div class="title">
-                        <i class="icon often"></i>
-                        <p>太久沒登入忘記密碼了怎麼辦?</p>
+                        <p>
+                            <i class="list_ic often q1"></i>
+                            太久沒登入忘記密碼了怎麼辦?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
@@ -106,8 +119,10 @@
                 </li>
                 <li>
                     <div class="title">
-                        <i class="icon often"></i>
-                        <p>通博(tb588)娛樂城支援幾種貨幣呢?</p>
+                        <p>
+                            <i class="list_ic often q1"></i>
+                            BGW娛樂城支援幾種貨幣呢?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
@@ -116,8 +131,10 @@
                 </li>
                 <li>
                     <div class="title">
-                        <i class="icon often"></i>
-                        <p>通博(tb588)娛樂城最低投注額是多少?</p>
+                        <p>
+                            <i class="list_ic often q1"></i>
+                            BGW娛樂城最低投注額是多少?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
@@ -126,8 +143,10 @@
                 </li>
                 <li>
                     <div class="title">
-                        <i class="icon often"></i>
-                        <p>加投注後進行派彩需要多久?</p>
+                        <p>
+                            <i class="list_ic often q1"></i>
+                            加投注後進行派彩需要多久?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
@@ -136,24 +155,21 @@
                 </li>
                 <li>
                     <div class="title">
-                        <i class="icon often"></i>
-                        <p>申請點數出售交易需要多久完成?</p>
+                        <p>
+                            <i class="list_ic often q1"></i>
+                            申請點數出售交易需要多久完成?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
-                        <p>通博(tb588)娛樂城提供24小時，全年無休點數出售交易，並將於您提出交易需求後30分鐘內快速完成。</p>
+                        <p>BGW娛樂城提供24小時，全年無休點數出售交易，並將於您提出交易需求後30分鐘內快速完成。</p>
                     </div>
                 </li>
             </ul>
             <ul class="q2">
                 <li class="active">
-                    <div class="title">
-                        <i class="icon often"></i>
-                        <p>遠端協助</p>
-                        <i class="arrow_ic"></i>
-                    </div>
-                    <div class="textBox">
-                        <p>步驟一 : 前往<a href="#">Team-Viewer</a> 官網,下載遠端協助網址。</p>
+                    <div class="textBox app">
+                        <p>步驟一 : 前往 <a href="#">Team-Viewer</a> 官網,下載遠端協助網址。</p>
                         <p>下載後並執行</p>
                         <div class="img tv"></div>
                         <p>步驟二 : 進行安裝，安裝教學流程可參照,遠端協助程式安裝教學。</p>
@@ -172,28 +188,29 @@
     <footer>
         <ul>
             <li onclick="window.location.href='./index_inner.html'">
-                <i class="menu_ic"></i>
+                <i class="list_ic menu"></i>
                 <p>首頁</p>
             </li>
             <li onclick="window.location.href='./event.html'">
-                <i class="event_ic"></i>
+                <i class="list_ic event"></i>
                 <p>優惠</p>
             </li>
             <li onclick="window.location.href='./wallet.html'">
-                <i class="wallet_ic"></i>
+                <i class="list_ic wallet"></i>
                 <p>存轉提</p>
             </li>
-            <li class="active" onclick="window.location.href='./help_often_contact.html'">
-                <i class="service_ic"></i>
+            <li onclick="window.location.href='./help_often_contact.html'">
+                <i class="list_ic service"></i>
                 <p>客服</p>
             </li>
-            <li onclick="window.location.href='./member.html'">
-                <i class="center_ic"></i>
+            <li class="active" onclick="window.location.href='./member.html'">
+                <i class="list_ic center"></i>
                 <p>會員中心</p>
             </li>
         </ul>
     </footer>
     <!--彈窗-->
     <div class="filter"></div>
+    <div class="bg"></div>
 </body>
 </html>

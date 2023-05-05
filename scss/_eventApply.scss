@@ -2,141 +2,94 @@
 .eventApplyType {
     width: 100%;
     height: auto;
-    overflow-x: auto;
-    position: fixed;
-    top: 45px;
-    left: 0px;
-    z-index: 10;
-    background: $backgroundColor_2;
+    margin-bottom: 15px;
 
     ul {
-        display: flex;
+        width: 100%;
+        height: auto;
+        @include chooseStyle_1;
 
         li {
-            width: 50%;
+            width: 34%;
             height: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
-            border-bottom: solid 2px transparent;
-            font-size: 3.4vw;
-            font-weight: bold;
-            color: $font-color_2;
-
-            &:active,&.active {
-                border-color: $borderColor_3;
-                color: $font-color_12;
-            }
         }
     }
 }
 
 //優惠列表
 .applyList {
+    @include bgStyle_1;
+    height: calc(100vh - 160px);
     display: none;
-    width: 100%;
-    height: calc(100vh - 132px);
-    background: $backgroundColor_4;
-    overflow-y: scroll;
-    margin-top: 40px;
 
     &.display {
         display: block;
     }
 
+    &.record {
+        overflow: hidden;
+    }
+
     .listBox {
         width: 100%;
         height: auto;
-        box-sizing: border-box;
-        padding: 10px 4% 0;
+        padding: 0 16px;
 
         .list {
-            margin-bottom: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 13px 2px $boxshadow_1;
-            background: $backgroundColor_2;
+            width: 100%;
+            height: auto;
+            @include bgStyle_2;
+            margin-bottom: 10px;
+            overflow: hidden;
 
             .title {
                 width: 100%;
-                height: 40px;
+                height: 42px;
+                @include titleBG_1;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border-bottom: solid 1px $borderColor_3;
-                color: $font-color_12;
-                font-size: 16px;
-                font-weight: bold;
-            }
 
-            .tips {
-                display: none;
-                width: 56vw;
-                border-radius: 5px;
-                margin: 6px auto 0;
-                background: $backgroundColor_5;
-                box-sizing: border-box;
-                padding: 7px 0;
-                text-align: center;
-                color: $font-color_5;
-                font-weight: bold;
-                font-size: 3vw;
-                position: relative;
-
-                &.display {
-                    display: block;
-                }
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: -6px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 0;
-                    height: 0;
-                    border-style: solid;
-                    border-width: 0 4px 6px 4px;
-                    border-color: $backgroundColor_5 transparent;
-                }
-
-                em {
-                    color: $font-color_15;
-                    margin-right: 5px;
+                p {
+                    color: $title_1;
+                    font-size: 4vw;
+                    font-weight: bold;
                 }
             }
 
             ul {
                 width: 100%;
                 height: auto;
+                padding-top: 16px;
 
                 li {
                     width: 100%;
                     height: auto;
-                    box-sizing: border-box;
-                    padding: 6px 13px;
-                    display: flex;
-                    justify-content: space-between;
-                    font-size: 14px;
+                    color: $mainWord_1;
+                    font-size: 3.4vw;
                     font-weight: bold;
-                    color: $font-color_8;
+                    display: flex;
                     align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                    padding: 0 16px;
 
                     &.cur {
-                        background: $backgroundColor_8;
+                        background: $currentBG;
+                        padding: 8px 16px;
                     }
 
-                    p {
-                        font-size: 13px;
-                        color: $font-color_12;
+                    .num {
+                        color: $money;
+                        font-size: 3.4vw;
+                        font-weight: bold;
 
-                        em {
-                            color: $font-color_3;
-
-                            &.sp {
-                                color: $font-color_10;
-                            }
+                        &.noLimit {
+                            color: $remind;
+                        }
+                        
+                        .total {
+                            color: $title_1;
                         }
                     }
                 }
@@ -145,208 +98,231 @@
             .btnBox {
                 width: 100%;
                 height: auto;
-                box-sizing: border-box;
-                padding: 15px 12px;
+                padding: 16px;
                 display: flex;
                 justify-content: space-between;
 
                 button {
-                    width: calc((100% - 10px) / 2);
+                    width: 48%;
                     height: 32px;
 
+                    &.hidden {
+                        opacity: 0;
+                        pointer-events: none
+                    }
+
                     &.applyBtn {
-                        @include buttonStyle_2;
+                        @include mainBtn;
+                        font-size: 3.4vw;
                     }
 
                     &.checkBtn {
-                        @include buttonStyle_3;
-                        font-size: 16px;
+                        @include secondBtn;
+                        font-size: 3.4vw;
                     }
                 }
             }
         }
     }
-}
 
-//優惠申請紀錄
-.applyRecord {
-    width: 100%;
-    height: calc(100vh - 132px);
-    background: $backgroundColor_4;
-    overflow-y: auto;
-    margin-top: 40px;
-    box-sizing: border-box;
-    padding-top: 10px;
-    display: none;
-
-    &.display {
-        display: block;
-    }
-
-    .searchContain {
+    //上搜尋列
+    .searchContent {
         width: 100%;
         height: auto;
-        background: $backgroundColor_2;
-        padding: 15px;
-        box-sizing: border-box;
-        
-        form {
+        background: $mainBG_1;
+        padding: 16px;
+        flex-shrink: 0;
+
+        .top {
             width: 100%;
             height: auto;
+            display: flex;
+            flex-wrap: wrap;
 
-            ul {
+            .full {
                 width: 100%;
-                height: auto;
 
-                li {
+                &.second {
+                    margin-top: 10px;
+                }
+
+                p {
+                    color: $mainWord_1;
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    margin-bottom: 10px;
+                }
+
+                .inputBox {
                     width: 100%;
-                    height: auto;
-                    margin-bottom: 20px;
+                    height: 42px;
+                    @include bgStyle_2;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    color: $money;
+                    font-size: 4vw;
+                    font-weight: bold;
 
-                    p {
-                        font-size: 14px;
-                        font-weight: bold;
-                        color: $font-color_12;
-                        margin-bottom: 10px;
+                    label {
+                        width: auto;
+                        height: 100%;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+
+                        input {
+                            width: auto;
+                            height: 100%;
+                            @include memberInput;
+                            padding-right: 20px;
+                        }
+
+                        i {
+                            width: 16px;
+                            height: 16px;
+                            position: absolute;
+                            right: 0;
+                            pointer-events: none;
+                        }
                     }
+                }
+
+                .selectBox {
+                    width: 100%;
+                    height: 42px;
 
                     select {
                         width: 100%;
-                        height: 42px;
-                        @include selectStyle_1;
-                    }
-
-                    .inputBox {
-                        width: 100%;
-                        height: 42px;
-                        border-radius: 5px;
-                        border: solid 1px $borderColor_1;
-                        box-sizing: border-box;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-around;
-                        font-size: 15px;
-                        font-weight: bold;
-                        color: $font-color_6;
-
-                        input {
-                            border: none;
-                            background: none;
-                            width: auto;
-                            height: 100%;
-                        }
-                    }
-
-                    .btnBox {
-                        width: 100%;
-                        height: auto;
-                        display: flex;
-
-                        button {
-                            width: 25%;
-                            height: 38px;
-                            @include buttonStyle_9;
-
-                            &:nth-of-type(1) {
-                                border-radius: 5px 0 0 5px;
-                            }
-                        
-                            &:last-child {
-                                border-radius: 0 5px 5px 0;
-                            }
-                        }
-                    }
-
-                    &.bigBtn {
-                        margin: 0;
-
-                        button {
-                            width: 100%;
-                            height: 42px;
-                            @include buttonStyle_2;
-                        }
+                        height: 100%;
+                        @include mainSelect;
                     }
                 }
             }
         }
-    }
 
-    .reviewBody {
-        width: 100%;
-        height: auto;
-        box-sizing: border-box;
-        padding: 10px 4% 0;
-
-        .noData {
-            display: none;
+        .date {
             width: 100%;
             height: auto;
-            box-sizing: border-box;
-            padding: 80px;
-            color: $font-color_1;
-            font-weight: bold;
-            text-align: center;
-            font-size: 14px;
+            display: flex;
+            margin: 20px 0;
 
-            &.display {
-                display: block;
+            button {
+                width: 25%;
+                height: 38px;
+                @include secondBtn;
+                border-radius: 0;
+                border-right-width: 0;
+
+                &:nth-of-type(1) {
+                    border-radius: 5px 0 0 5px;
+                }
+            
+                &:last-child {
+                    border-radius: 0 5px 5px 0;
+                    border-right-width: 1px;
+                }
             }
         }
 
+        .check {
+            width: 100%;
+            height: 42px;
+            @include mainBtn;
+        }
+    }
+
+    //列表
+    .recordList {
+        width: 100%;
+        height: calc(100vh - 454px);
+        padding: 10px 16px;
+        overflow-y: auto;
+
+        //無資料
+        .noData {
+            @include noData;
+        }
+
+        //列表內容
         .recordBox {
             display: none;
             width: 100%;
             height: auto;
+            @include bgStyle_2;
             margin-bottom: 10px;
-            background: $backgroundColor_2;
-            border-radius: 5px;
-            box-shadow: 0 0 5px 0 $boxshadow_2;
+            overflow: hidden;
+
+            &:last-child {
+                margin: 0;
+            }
 
             &.display {
                 display: block;
             }
 
-            ul {
+            .title {
                 width: 100%;
-                height: auto;
+                height: 42px;
+                @include titleBG_1;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 16px;
 
-                .title {
-                    width: 100%;
-                    height: 38px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    box-sizing: border-box;
-                    padding: 0 20px;
-                    border-bottom: solid 2px $borderColor_3;
+                p {
+                    color: $title_1;
+                    font-size: 4vw;
+                    font-weight: bold;
+                }
+                
+                .date {
+                    color: $mainWord_2;
+                    font-size: 2vw;
+                    font-weight: bold;
 
-                    p {
-                        color: $font-color_12;
-                        font-weight: bold;
-                        font-size: 14px;
+                    span {
+                        color: $money;
                     }
                 }
 
-                ul {
-                    box-sizing: border-box;
-                    padding: 2.67vw 4vw;
+                button {
+                    width: auto;
+                    height: 28px;
+                    @include mainBtn;
+                    font-size: 3.4vw;
+                }
+            }
 
-                    li {
-                        width: 100%;
-                        height: 25px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-bottom: 10px;
+            ul {
+                width: 100%;
+                height: auto;
+                padding: 16px;
 
-                        &:last-child {
-                            margin: 0;
-                        }
+                li {
+                    width: 100%;
+                    height: auto;
+                    color: $mainWord_1;
+                    font-size: 3.4vw;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
 
-                        p {
-                            font-size: 14px;
-                            font-weight: bold;
-                            color: $font-color_8;
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    p {
+                        width: 70%;
+                        font-size: 3.4vw;
+                        @include wordHidden;
+                        text-align: right;
+
+                        &.num {
+                            color: $money;
                         }
                     }
                 }

@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
-    <script src="../js/javascript.js"></script>
-    <link rel="shortcut icon" href="../images/myIco.ico" type="image/x-icon">
+    <script type="module" src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/64X64.ico" type="image/x-icon">
 </head>
 <body>
     <!--header-->
     <header>
         <!--content-->
-        <div class="content helpPage q4 display">
+        <div class="content inner helpPage display">
             <i class="back_arrow" onclick="window.location.href='./help_new.html'"></i>
             <div class="title">轉帳</div>
         </div>
@@ -29,8 +25,10 @@
             <ul class="q4 display">
                 <li>
                     <div class="title">
-                        <i class="icon new"></i>
-                        <p>如何轉帳?</p>
+                        <p>
+                            <i class="list_ic new q4"></i>
+                            如何轉帳?
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
@@ -40,8 +38,10 @@
                 </li>
                 <li>
                     <div class="title">
-                        <i class="icon new"></i>
-                        <p>轉帳常見問題</p>
+                        <p>
+                            <i class="list_ic new q4"></i>
+                            轉帳常見問題
+                        </p>
                         <i class="arrow_ic"></i>
                     </div>
                     <div class="textBox">
@@ -58,28 +58,29 @@
     <footer>
         <ul>
             <li onclick="window.location.href='./index_inner.html'">
-                <i class="menu_ic"></i>
+                <i class="list_ic menu"></i>
                 <p>首頁</p>
             </li>
             <li onclick="window.location.href='./event.html'">
-                <i class="event_ic"></i>
+                <i class="list_ic event"></i>
                 <p>優惠</p>
             </li>
             <li onclick="window.location.href='./wallet.html'">
-                <i class="wallet_ic"></i>
+                <i class="list_ic wallet"></i>
                 <p>存轉提</p>
             </li>
-            <li class="active" onclick="window.location.href='./help_often_contact.html'">
-                <i class="service_ic"></i>
+            <li onclick="window.location.href='./help_often_contact.html'">
+                <i class="list_ic service"></i>
                 <p>客服</p>
             </li>
-            <li onclick="window.location.href='./member.html'">
-                <i class="center_ic"></i>
+            <li class="active" onclick="window.location.href='./member.html'">
+                <i class="list_ic center"></i>
                 <p>會員中心</p>
             </li>
         </ul>
     </footer>
     <!--彈窗-->
     <div class="filter"></div>
+    <div class="bg"></div>
 </body>
 </html>

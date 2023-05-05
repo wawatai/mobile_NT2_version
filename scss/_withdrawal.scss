@@ -1,227 +1,136 @@
 //提款
 .withWrap {
-    width: 100%;
-    min-height: calc(100vh - 92px);
-    height: auto;
-    background: $backgroundColor_4;
-    padding-bottom: 10px;
+    @include bgStyle_1;
 
     //上半
     .walletBox {
         width: 100%;
         height: auto;
-        padding-bottom: 15px;
-        margin-bottom: 10px;
-        background: $backgroundColor_2;
+        background: $mainBG_1;
+        padding-top: 24px;
 
-        //漸層
-        .gradient {
-            background: $linear_4;
-            width: 100%;
+        //內容
+        .content {
+            width: 92vw;
             height: auto;
+            @include bgStyle_2;
+            padding: 16px;
+            margin: 0 auto;
 
-            .content {
-                width: 92vw;
-                height: 80px;
-                margin: 0 auto 16px;
-                background: $backgroundColor_2;
-                border-radius: 5px;
-                box-shadow: 0 0 5px 0 $boxshadow_2;
+            .title {
+                color: $mainWord_1;
+                font-size: 3.4vw;
+                font-weight: bold;
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                box-sizing: border-box;
-                padding: 10px 14px;
+                align-items: center;
+                margin-bottom: 4vw;
 
-                .title {
-                    color: $font-color_3;
-                    font-size: 14px;
-                    font-weight: bold;
-                    display: flex;
-                    align-items: center;
-
-                    i {
-                        display: block;
-                        margin-left: 10px;
-                        width: 4.27vw;
-                        height: 4.27vw;
-                    }
-                }
-
-                .amount {
-                    font-size: 29px;
-                    color: $font-color_12;
-                    font-weight: bold;
+                i {
+                    margin-left: 10px;
+                    width: 4vw;
+                    height: 4vw;
                 }
             }
 
-            .detail {
-                width: 100%;
-                height: 50px;
-                box-sizing: border-box;
-                padding: 0 25px;
-                border-bottom: solid 1px $borderColor_1;
+            .amount {
+                color: $money;
+                font-size: 7vw;
+                font-weight: bold;
+            }
+        }
+
+        .detail {
+            width: 100%;
+            height: auto;
+            border-bottom: solid 1px $mainBorder_2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+
+            p {
+                color: $mainWord_1;
+                font-size: 3.7vw;
+                font-weight: bold;
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
+                flex-direction: column;
 
-                p {
-                    color: $font-color_8;
-                    font-size: 14px;
-                    font-weight: bold;
+                &.num {
+                    color: $money;
+                    font-size: 4vw;
+                }
 
-                    &.num {
-                        color: $font-color_12;
-                        font-size: 17px;
-                    }
+                button {
+                    width: auto;
+                    height: 24px;
+                    @include mainBtn;
+                    font-size: 2vw;
+                    margin-top: 1.5vw;
                 }
             }
         }
 
+        //查看錢包明細
         .walletDetail {
             width: 100%;
-            height: 42px;
-            overflow: hidden;
-            margin-top: 10px;
-
-            &.active {
-                height: auto;
-            }
+            height: auto;
+            padding: 12px 16px;
 
             .check {
-                display: block;
-                margin: 0 auto;
-                width: 92.8vw;
+                width: 100%;
                 height: 42px;
-                @include buttonStyle_2;
+                @include mainBtn;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 6px 4px 0 4px;
+                    border-color: $secondBtn_Word transparent;
+                    margin-left: 8px;
+                }
             }
 
             .detailBox {
-                padding-bottom: 15px;
-                margin-top: 10px;
-    
-                ul {
-                    display: flex;
-                    flex-wrap: wrap;
-                    width: 100%;
-                    box-sizing: border-box;
-                    max-height: 67.16vw;
-                    padding: 0 3.6vw;
-                    overflow: hidden;
-    
-                    &.active {
-                        max-height: none;
-                    }
-    
-                    li {
-                        width: 30.66vw;
-                        min-height: 16.53vw;
-                        box-sizing: border-box;
-                        padding: 10px 0 0 11px;
-                        margin: 0 0.26vw 0.26vw 0;
-                        border: solid 1px $borderColor_1;
-                        border-radius: 1.5vw;
-    
-                        &:nth-of-type(3n) {
-                            margin-right: 0;
-                        }
-    
-                        div {
-                            font-size: 12px;
-                            letter-spacing: 1px;
-                            color: $font-color_8;
-                            font-weight: bold;
-                            display: flex;
-                            align-items: center;
+                width: 100%;
+                height: 0;
+                overflow: hidden;
 
-                            .smallInfo {
-                                display: block;
-                                width: 18px;
-                                height: 18px;
-                                margin-left: 5px;
-                                position: relative;
-                                opacity: 0;
-                                pointer-events: none;
-        
-                                &.display {
-                                    opacity: 1;
-                                    pointer-events: visible;
-                                }
-        
-                                &:hover,&:active,&.active {
-        
-                                    .inner {
-                                        display: block;
-                                    }
-                                }
-        
-                                .inner {
-                                    display: none;
-                                    width: auto;
-                                    height: auto;
-                                    padding: 6px 18px;
-                                    color: $font-color_5;
-                                    background: $backgroundColor_6;
-                                    border-radius: 3px;
-                                    position: absolute;
-                                    left: 50%;
-                                    transform: translateX(-50%);
-                                    bottom: -30px;
-                                    white-space: nowrap;
-        
-                                    &::before {
-                                        content: "";
-                                        position: absolute;
-                                        left: 50%;
-                                        transform: translateX(-50%);
-                                        top: -6px;
-                                        width: 0;
-                                        height: 0;
-                                        border-style: solid;
-                                        border-width: 0 4px 6px 4px;
-                                        border-color: $backgroundColor_6 transparent;
-                                    }
-                                }
-                            }
-                        }
-    
-                        p {
-                            margin-top: 10px;
-                            font-size: 17px;
-                            color: $font-color_12;
-                            font-weight: bold;
-                        }
-                    }
+                &.active {
+                    height: auto;
+                    margin-top: 10px;
                 }
     
-                .openBtn {
+                ul {
                     width: 100%;
-                    display: flex;
-                    justify-content: center;
                     height: auto;
-                    margin-top: 15px;
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
+                    grid-gap: 1.5vw;
     
-                    div {
-                        font-size: 13px;
-                        letter-spacing: 1px;
-                        font-weight: bold;
-                        color: $font-color_12;
-                        display: flex;
-                        align-items: center;
-    
-                        &.active {
-    
-                            .db_arrow {
-                                transform: rotate(180deg);
-                            }
+                    li {
+                        width: auto;
+                        height: auto;
+                        @include secondBtn;
+                        padding: 12px;
+                        pointer-events: none;
+        
+                        div {
+                            color: $mainWord_1;
+                            font-size: 2vw;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                            line-height: 4vw;
                         }
-    
-                        .db_arrow {
-                            display: block;
-                            width: 12px;
-                            height: 12px;
-                            margin-left: 9px;
-                            transition: all 0.5s ease;
+        
+                        p {
+                            color: $money;
+                            font-size: 5vw;
+                            font-weight: bold;
+                            margin-top: 10px;
                         }
                     }
                 }
@@ -233,80 +142,94 @@
     .withContent {
         width: 100%;
         height: auto;
-        background: $backgroundColor_2;
-        padding: 10px 14px;
-        box-sizing: border-box;
+        padding: 16px;
 
-        .remind {
+        .innerRemind {
             width: 100%;
             height: auto;
-            box-sizing: border-box;
-            padding: 10px;
-            background: $backgroundColor_8;
-            border: solid 1px $borderColor_5;
+            background: $mainBG_2;
+            border: solid 1px $mainBorder_2;
             border-radius: 5px;
-            color: $font-color_8;
-            font-size: 13px;
-            line-height: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
+            display: flex;
+            padding: 12px;
+            margin-bottom: 24px;
+
+            i {
+                width: 4vw;
+                height: 4vw;
+                margin-right: 12px;
+            }
+
+            p {
+                color: $mainWord_2;
+                font-size: 3.4vw;
+                font-weight: bold;
+                line-height: 4vw;
+            }
         }
 
         select {
             width: 100%;
             height: 42px;
-            @include selectStyle_1;
+            @include mainSelect;
         }
         
         .smallRemind {
-            margin-top: 5px;
-            color: $font-color_1;
-            font-size: 12px;
+            color: $mainWord_2;
+            font-size: 2vw;
             font-weight: bold;
+            margin-top: 5px;
+
+            span {
+                color: $remind;
+                padding-left: 2vw;
+            }
         }
 
         input {
             width: 100%;
             height: 42px;
-            margin-top: 25px;
-            @include inputStyle_1;
+            @include mainInput;
+            margin-top: 12px;
         }
 
         .check {
             width: 100%;
             height: 42px;
-            @include buttonStyle_2;
-            margin-top: 10px;
+            @include mainBtn;
+            margin-top: 12px;
         }
     }
 
     //提醒
     .remindBox {
-        width: 92.27vw;
+        width: 92vw;
         height: auto;
-        box-sizing: border-box;
-        padding: 14px 15px;
-        border-radius: 3px;
-        background: $backgroundColor_8;
-        border: solid 1px $borderColor_5;
-        margin: 10px auto 0;
+        @include bgStyle_2;
+        padding: 16px;
+        margin: 0 auto;
 
         p {
-            font-size: 12px;
-            color: $font-color_6;
+            color: $mainWord_1;
+            font-size: 3.4vw;
             font-weight: bold;
-            line-height: 18px;
+            line-height: 4vw;
             margin-bottom: 8px;
 
+            &:last-child {
+                margin: 0;
+            }
+
             &.title {
-                margin-bottom: 10px;
-                font-size: 14px;
+                color: $title_1;
+                font-size: 4vw;
+                font-weight: bold;
                 letter-spacing: 1px;
-                color: $font-color_13;
+                margin-bottom: 16px;
             }
 
             .sp {
-                color: $font-color_3;
+                color: $remind;
             }
         }
     }

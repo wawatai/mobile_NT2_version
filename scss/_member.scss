@@ -1,29 +1,26 @@
 //會員中心
 .memberWrap {
-    width: 100%;
-    height: auto;
-    min-height: calc(100% - 92px);
-    background: $backgroundColor_4;
-    padding-bottom: 10px;
+    @include bgStyle_1;
 
     //玩家資訊
     .user {
         width: 100%;
         height: auto;
+        background: $mainBG_1;
+        padding-bottom: 16px;
         margin-bottom: 10px;
-        background: $backgroundColor_2;
-        padding-bottom: 13px;
 
+        //上列
         .info {
+            width: 100%;
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
             position: relative;
-            padding: 15px 15px 10px;
-            box-sizing: border-box;
-            width: 100%;
-            height: auto;
+            padding: 20px 15px;
 
+            //左
             div {
 
                 .account {
@@ -32,23 +29,14 @@
                     margin-bottom: 6px;
                     font-size: 16px;
                     letter-spacing: 2px;
-                    color: $font-color_12;
+                    color: $mainWord_1;
                     font-weight: bold;
 
                     .lv {
-                        min-width: 50px;
-                        width: auto;
-                        height: 18px;
-                        padding: 0 5px;
+                        width: 21vw;
+                        height: 5vw;
                         margin-right: 9px;
-                        border-radius: 1vw;
-                        background: $backgroundColor_6;
-                        font-size: 14px;
-                        letter-spacing: 1px;
-                        font-weight: bold;
-                        color: $font-color_5;
-                        display: flex;
-                        align-items: center;
+                        @include LVstyle;
                     }
                 }
 
@@ -56,137 +44,129 @@
                     font-size: 13px;
                     letter-spacing: 1px;
                     font-weight: bold;
-                    color: $font-color_1;
+                    color: $mainWord_2;
                 }
             }
 
-            .arrow_ic {
-                display: block;
-                width: 1.7vw;
-                height: 3.2vw;
-                transform: scaleX(-1);
+            //右
+            .infoBtn {
+                width: auto;
+                height: auto;
+                @include mainBtn;
+                font-size: 3.7vw;
+                padding: 3px 15px;
             }
         }
 
-        .wallet {
+        //存款提示框
+        .walletBox {
+            width: 100%;
+            height: 8.27vw;
             display: flex;
-            justify-content: center;
+            padding: 0 15px;
             margin-bottom: 12px;
 
             p {
-                display: flex;
-                align-items: center;
-                width: 64.53vw;
-                height: 8.27vw;
-                box-sizing: border-box;
-                padding-left: 16px;
-                background: $backgroundColor_4;
-                border-style: solid;
-                border-width: 1px 0 1px 1px;
-                border-color: $borderColor_5;
-                border-radius: 5vw 0 0 5vw;
-                font-size: 15px;
-                letter-spacing: 1px;
-                color: $font-color_4;
-                font-weight: bold;
+                width: 100%;
+                height: 100%;
+                @include member_WalletBox;
             }
 
             button {
                 width: 27.73vw;
-                height: 8.27vw;
-                @include buttonStyle_2;
+                height: 100%;
+                @include mainBtn;
                 border-radius: 0 5vw 5vw 0;
-                font-size: 15px;
+                font-size: 3.7vw;
             }
         }
 
+        //大按鈕列
         .btnBox {
-            display: flex;
-            width: 92.26vw;
+            width: 100%;
             height: auto;
-            margin: 0 auto;
+            display: flex;
             justify-content: space-between;
+            padding: 0 15px;
 
             button {
-                width: 45.07vw;
+                width: 49%;
                 height: 18.4vw;
-                @include buttonStyle_7;
+                @include secondBtn;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-                .wallet_ic {
-                    display: block;
-                    width: 8.8vw;
-                    height: 8.8vw;
+                &:active,&.active {
+
+                    .text {
+
+                        p {
+                            color: $secondBtn_Word;
+                        }
+                    }
                 }
 
-                .vip_ic {
-                    display: block;
-                    width: 10vw;
-                    height: 10vw;
+                i {
+                    width: 28px;
+                    height: 28px;
                 }
 
                 .text {
-                    margin-left: 3.47vw;
-                    font-size: 18px;
+                    font-size: 4.5vw;
                     font-weight: bold;
                     letter-spacing: 2px;
-                    color: $font-color_8;
+                    margin-left: 3vw;
 
                     p {
-                        font-size: 12px;
+                        color: $mainWord_2;
+                        font-size: 2vw;
+                        font-weight: bold;
                         letter-spacing: 1px;
-                        color: $font-color_1;
                         text-align: left;
                     }
                 }
             }
         }
 
+        //其他選單列
         ul {
+            width: 100%;
+            height: auto;
             display: flex;
             justify-content: space-between;
-            width: 92.26vw;
-            margin: 15px auto 0;
+            padding: 0 15px;
+            margin-top: 16px;
 
             li {
+                width: 20vw;
+                height: auto;
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                width: 20.53vw;
-                height: auto;
-                position: relative;
 
                 i {
                     display: block;
-                    width: 10.4vw;
-                    height: 9.33vw;
+                    width: 8vw;
+                    height: 8vw;
                 }
 
                 p {
-                    font-size: 13px;
+                    color: $mainWord_1;
+                    font-size: 2vw;
                     font-weight: bold;
                     letter-spacing: 1px;
-                    margin-top: 5px;
-                    color: $font-color_12;
+                    margin-top: 1vw;
                 }
 
                 .bubble {
-                    position: absolute;
-                    width: auto;
-                    height: auto;
                     min-width: 20px;
                     min-height: 20px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 12px;
-                    padding: 0 2px 2px;
                     top: -7px;
                     right: 10px;
-                    border-radius: 50%;
-                    color: $font-color_5;
-                    background: $backgroundColor_6;
-                    box-sizing: border-box;
+                    @include member_Bubble;
                 }
             }
         }
@@ -194,94 +174,68 @@
 
     //選項條
     .options {
-        width: 100%;
+        width: 92vw;
         height: 50px;
-        box-sizing: border-box;
-        padding: 0 14px 0 23px;
+        @include secondBtn;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background: $backgroundColor_2;
-        margin-bottom: 10px;
+        margin: 0 auto 16px;
 
-        &.opLang {
-                
-            p {
-                display: none;
+        &:last-child {
+            margin-bottom: 0;
+        }
 
-                &.active {
-                    display: block;
-                }
+        &:active,&.active {
+
+            .arrow_ic {
+                background-position-y: 100%;
             }
         }
 
-        div {
+        .option_ic {
+            width: 18px;
+            height: 18px;
+            margin-right: 2vw;
+        }
+
+        p {
+            width: auto;
+            height: auto;
             display: flex;
             align-items: center;
-
-            i {
-                display: block;
-                margin-right: 18px;
-                width: 5.6vw;
-                height: 5.6vw;
-            }
-
-            p {
-                font-size: 15px;
-                letter-spacing: 2px;
-                font-weight: bold;
-                color: $font-color_8;
-            }
         }
 
         .arrow_ic {
-            display: block;
-            width: 1.7vw;
-            height: 3.2vw;
+            width: 10px;
+            height: 17px;
             transform: scaleX(-1);
+            margin-right: 2vw;
         }
     }
 }
 
 //會員中心內頁滑軸
 .memberList {
-    background: $backgroundColor_2;
     width: 100%;
     height: auto;
 
     ul {
         width: 100%;
         height: auto;
-        display: flex;
+        @include chooseStyle_1;
 
         li {
             width: 50%;
             height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-sizing: border-box;
-            border-bottom: solid 2px transparent;
-            font-size: 3.4vw;
-            font-weight: bold;
-            color: $font-color_2;
-
-            &:active,&.active {
-                color: $font-color_12;
-                border-color: $borderColor_3;
-            }
         }
     }
 }
 
 //會員中心內頁基本情報
 .memberInfo {
-    overflow-y: auto;
-    width: 100%;
-    height: calc(100vh - 136px);
-    padding: 10px 0;
-    box-sizing: border-box;
-    background: $backgroundColor_4;
+    @include bgStyle_1;
+    height: calc(100vh - 146px);
 
     form {
         width: 100%;
@@ -290,181 +244,129 @@
         ul {
             width: 100%;
             height: auto;
-            background: $backgroundColor_2;
-            padding-bottom: 12px;
 
             li {
                 width: 100%;
-                height: 50px;
-                display: flex;
-                align-items: center;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                box-sizing: border-box;
-                padding: 0 17px;
-                border-bottom: solid 1px $borderColor_1;
+                height: auto;
+                padding: 0 16px;
+                border-bottom: solid 1px $mainBorder_2;
 
-                &.active {
-                    height: 103px;
-
-                    button {
-                        display: block;
-                    }
-                }
-
-                em {
-                    position: relative;
-
-                    &::before {
-                        content: "※ ";
-                        color: $font-color_3;
-                        padding: 0 5px 0 0;
-                        font-size: 14px;
-                    }
-                }
-
-                span {
-                    width: 20vw;
-                    font-weight: bold;
-                    font-size: 14px;
-                    color: $font-color_8;
-                }
-
-                input {
-                    width: 64vw;
-                    height: 42px;
-                    @include inputStyle_3;
-                }
-
-                button {
-                    display: none;
-                    @include buttonStyle_2;
+                &>div {
                     width: 100%;
-                    height: 42px;
-                    margin-bottom: 2px;
-                }
-            }
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
 
-            .saveBtn {
-                display: block;
-                width: 92vw;
-                height: 42px;
-                margin: 12px auto 0;
-                @include buttonStyle_2;
-            }
-        }
-    }
-
-    .info_1,.info_2 {
-        width: 100%;
-        height: auto;
-        margin: 10px 0;
-
-        &.info_2 {
-
-            span {
-                display: flex;
-                align-items: center;
-
-                &:nth-of-type(1) {
-                    width: 30vw;
-                }
-            }
-        }
-
-        ul {
-            width: 100%;
-            height: auto;
-            background: $backgroundColor_2;
-            
-            li {
-                width: 100%;
-                height: 50px;
-                padding: 0px 17px;
-                box-sizing: border-box;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                border-bottom: solid 1px $borderColor_1;
-
-                span {
-                    font-size: 14px;
-                    font-weight: bold;
-                    color: $font-color_14;
-
-                    &.empty {
-                        color: $font-color_3;
+                    &.autoBox {
+                        height: auto;
+                        padding: 12px 0;
+                    }
+                    &.btnBox {
+                        align-items: flex-start;
+                        justify-content: flex-end;
                     }
 
-                    &:nth-of-type(1) {
-                        width: 20vw;
+                    p {
+                        width: 26vw;
+                        color: $mainWord_1;
+                        font-size: 3.4vw;
+                        font-weight: bold;
+                        flex-shrink: 0;
+
+                        em {
+                            margin-right: 2vw;
+                            position: relative;
+
+                            &.noCheck {
+                                
+                                &::before {
+                                    top: 56%;
+                                }
+                            }
+
+                            &::before {
+                                content: "";
+                                width: 4vw;
+                                height: 4vw;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%,-50%);
+                            }
+                        }
+                    }
+
+                    label {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+
+                        input[type="date"] {
+                            padding-right: 5px;
+                        }
+
+                        .date_ic {
+                            width: 16px;
+                            height: 16px;
+                            position: absolute;
+                            right: 0;
+                            pointer-events: none;
+                        }
                     }
 
                     input {
-                        background: none;
-                        border: none;
+                        width: 100%;
+                        height: 42px;
+                        @include memberInput;
                     }
 
-                    .copy {
-                        width: 47px;
-                        height: 29px;
-                        @include buttonStyle_3;
-                        margin-left: 15px;
+                    .remind {
+                        display: block;
+                        color: $remind;
+                        font-size: 2vw;
+                        font-weight: bold;
                     }
 
-                    .check,.noCheck {
-                        display: inline-block;
-                        width: 17px;
-                        height: 17px;
-                        margin-right: 10px;
+                    button {
+                        width: 30%;
+                        height: 32px;
+                        @include mainBtn;
+
+                        &.saveBtn {
+                            width: 92vw;
+                            height: 42px;
+                        }
                     }
 
-                    .changePhoneBtn,.changePwdBtn {
-                        background: none;
+                    .security {
+                        width: 92vw;
+                        height: 42px;
+                        @include bgStyle_2;
+                        background: $mainBG_1;
                         display: flex;
                         align-items: center;
-                        font-size: 14px;
-                        font-weight: bold;
-                        color: $font-color_14;
-                        margin-left: 10px;
+                        padding: 0 32px;
 
-                        i {
-                            display: block;
-                            width: 9px;
-                            height: 16px;
-                            transform: scaleX(-1);
-                            margin-left: 8px;
-                        }
-                    }
-                }
+                        p {
+                            width: 100%;
+                            color: $member_Security_Title;
+                            font-size: 3.7vw;
+                            font-weight: bold;
 
-                .security {
-                    width: 100%;
-                    height: 40px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    background: $backgroundColor_8;
-                    border: solid 1px $borderColor_5;
-                    box-sizing: border-box;
-                    padding: 0 20px;
-                    border-radius: 5px;
-                    font-size: 14px;
-                    font-weight: bold;
+                            span {
+                                padding-left: 1vw;
 
-                    span {
-                        margin-left: 5px;
-
-                        &.low {
-                            color: $font-color_9;
-                        }
-
-                        &.middle {
-                            color: $font-color_11;
-                        }
-
-                        &.high {
-                            color: $font-color_10;
+                                &.low {
+                                    color: $member_Security_Low;
+                                }
+                                &.middle {
+                                    color: $member_Security_Middle;
+                                }
+                                &.high {
+                                    color: $member_Security_High;
+                                }
+                            }
                         }
                     }
                 }
@@ -475,62 +377,79 @@
 
 //會員中心平台帳戶資訊
 .memberPlatform {
-    width: 100%;
-    overflow-y: auto;
-    height: calc(100vh - 136px);
-    padding: 10px 4vw;
-    box-sizing: border-box;
-    background: $backgroundColor_4;
+    @include bgStyle_1;
+    height: calc(100vh - 146px);
 
     .platformBox {
-        width: 100%;
+        width: 92vw;
         height: auto;
-        box-sizing: border-box;
-        border: solid 1px $borderColor_1;
-        border-radius: 5px;
-        background: $backgroundColor_2;
-        margin-bottom: 10px;
+        @include bgStyle_2;
+        overflow: hidden;
+        margin: 0 auto 12px;
+
+        &:first-child {
+            margin-top: 24px;
+        }
 
         .title {
             width: 100%;
-            height: 38px;
-            border-bottom: solid 1px $borderColor_3;
-            box-sizing: border-box;
-            padding: 0 17px;
-            color: $font-color_8;
-            font-size: 14px;
-            font-weight: bold;
+            height: 42px;
+            @include titleBG_1;
             display: flex;
             align-items: center;
+            padding: 0 16px;
+
+            p {
+                color: $title_1;
+                font-size: 4vw;
+                font-weight: bold;
+            }
         }
 
         .content {
             width: 100%;
             height: auto;
-            box-sizing: border-box;
-            padding: 0 17px;
+            padding: 5px 16px;
 
             li {
                 width: 100%;
-                height: 38px;
+                height: auto;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                margin-bottom: 2px;
+
+                &:last-child {
+                    margin: 0;
+                }
 
                 p {
-                    color: $font-color_8;
-                    font-size: 14px;
+                    width: 100%;
+                    color: $mainWord_1;
+                    font-size: 3.4vw;
                     font-weight: bold;
 
+                    &:first-child {
+                        width: 20%;
+                        flex-shrink: 0;
+                    }
+                    &:nth-of-type(2) {
+                        display: flex;
+                    }
+
                     span {
-                        font-size: 13px;
+                        width: 100%;
+                        color: $money;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
 
                     button {
-                        width: 49px;
-                        height: 28px;
-                        margin-left: 10px;
-                        @include buttonStyle_3;
+                        width: auto;
+                        height: 25px;
+                        @include secondBtn;
+                        font-size: 2vw;
+                        flex-shrink: 0;
 
                         &.un {
                             opacity: 0;

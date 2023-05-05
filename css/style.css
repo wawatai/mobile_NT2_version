@@ -8,6 +8,16 @@ button:disabled {
   pointer-events: none;
 }
 
+input:-moz-read-only {
+  background: #f0f0f0 !important;
+  border: none !important;
+}
+
+input:read-only {
+  background: #f0f0f0 !important;
+  border: none !important;
+}
+
 .marqueeBox .marquee_ic {
   background: url("../images/icon/svg/marquee.svg") no-repeat;
   background-size: 100%;
@@ -15,6 +25,11 @@ button:disabled {
 
 .loginBtn .login_ic {
   background: url("../images/icon/svg/sign_in.svg") no-repeat;
+  background-size: 100%;
+}
+
+.gameList .hotBtn .hot_ic {
+  background: url("../images/icon/svg/hot.svg") no-repeat;
   background-size: 100%;
 }
 
@@ -155,6 +170,11 @@ footer li.active .center_ic {
   background-position-y: 100%;
 }
 
+header .recFbtn {
+  background: url(../images/recommendBTN.gif) no-repeat;
+  background-size: 153%;
+}
+
 header .back_arrow {
   background: url("../images/icon/svg/arrow_w.svg") no-repeat;
   background-size: 100%;
@@ -175,7 +195,8 @@ header .refresh_ic {
   background-size: 100%;
 }
 
-.slotHeader li .love_ic {
+.slotHeader li .love_ic,
+.gameBox.hotBox .love {
   background: url("../images/icon/svg/favorite.svg") no-repeat;
   background-size: 100%;
 }
@@ -190,7 +211,8 @@ header .refresh_ic {
   background-size: 100%;
 }
 
-.slotHeader li.active .love_ic {
+.slotHeader li.active .love_ic,
+.gameBox.hotBox .love.active {
   background: url("../images/icon/svg/favorite2.svg") no-repeat;
   background-size: 100%;
 }
@@ -320,6 +342,31 @@ header .refresh_ic {
   background-size: 100%;
 }
 
+.memberWrap .point_ic {
+  background: url("../images/icon/svg/point.svg") no-repeat;
+  background-size: contain;
+}
+
+.memberWrap .fix_ic {
+  background: url("../images/icon/svg/fixing.svg") no-repeat;
+  background-size: contain;
+}
+
+.memberWrap .special_ic {
+  background: url("../images/icon/svg/special.svg") no-repeat;
+  background-size: contain;
+}
+
+.memberWrap .partner_ic {
+  background: url("../images/icon/svg/partner.svg") no-repeat;
+  background-size: contain;
+}
+
+.memberWrap .recFriend_ic {
+  background: url("../images/icon/svg/innerNav_recFriend.svg") no-repeat;
+  background-size: contain;
+}
+
 .appWrap .download_ic {
   background: url("../images/icon/svg/download.svg") no-repeat;
   background-size: 100%;
@@ -415,11 +462,6 @@ header .refresh_ic {
   background-size: contain;
 }
 
-.helpInner .img.depositWay {
-  background: url("../images/explain/withdraw.png") no-repeat;
-  background-size: 100%;
-}
-
 .helpInner .img.deposit_water {
   background: url("../images/explain/online01.png") no-repeat;
   background-size: 100%;
@@ -445,6 +487,411 @@ header .refresh_ic {
   background-size: 100%;
 }
 
+.helpInner .img.download01 {
+  background: url("../images/explain/download01.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.helpInner .img.download02 {
+  background: url("../images/explain/download02.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.helpInner .img.download03 {
+  background: url("../images/explain/download03.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.helpInner .img.download04 {
+  background: url("../images/explain/download04.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.helpInner .img.download05 {
+  background: url("../images/explain/download05.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.helpInner .img.download06 {
+  background: url("../images/explain/download06.jpg") no-repeat;
+  background-size: 100%;
+}
+
+.helpInner .q1-01 {
+  background: url("../images/help/01.jpg") no-repeat;
+}
+
+.helpInner .q1-02 {
+  background: url("../images/help/02.jpg") no-repeat;
+}
+
+.helpInner .q1-03 {
+  background: url("../images/help/03.jpg") no-repeat;
+}
+
+.helpInner .q2-01 {
+  background: url("../images/help/08.jpg") no-repeat;
+}
+
+.helpInner .q2-02 {
+  background: url("../images/help/09.jpg") no-repeat;
+}
+
+.helpInner .q2-03 {
+  background: url("../images/help/10.jpg") no-repeat;
+}
+
+.helpInner .q2-04 {
+  background: url("../images/help/11.jpg") no-repeat;
+}
+
+.helpInner .q2-05 {
+  background: url("../images/help/12.jpg") no-repeat;
+}
+
+.helpInner .q3-01 {
+  background: url("../images/help/17.jpg") no-repeat;
+}
+
+.helpInner .q3-02 {
+  background: url("../images/help/18.jpg") no-repeat;
+}
+
+.helpInner .q3-03 {
+  background: url("../images/help/19.jpg") no-repeat;
+}
+
+.helpInner .q3-04 {
+  background: url("../images/help/100.jpg") no-repeat;
+}
+
+.helpInner .q3-05 {
+  background: url("../images/help/20.jpg") no-repeat;
+}
+
+.helpInner .q4-01 {
+  background: url("../images/help/26.jpg") no-repeat;
+}
+
+.helpInner .q4-02 {
+  background: url("../images/help/27.jpg") no-repeat;
+}
+
+.helpInner .q4-03 {
+  background: url("../images/help/28.jpg") no-repeat;
+}
+
+.helpInner .q4-04 {
+  background: url("../images/help/29.jpg") no-repeat;
+}
+
+.helpInner .q4-05 {
+  background: url("../images/help/30.jpg") no-repeat;
+}
+
+.helpInner .q5-01 {
+  background: url("../images/help/34.jpg") no-repeat;
+}
+
+.helpInner .q5-02 {
+  background: url("../images/help/35.jpg") no-repeat;
+}
+
+.helpInner .q5-03 {
+  background: url("../images/help/36.jpg") no-repeat;
+}
+
+.helpInner .q5-04 {
+  background: url("../images/help/37.jpg") no-repeat;
+}
+
+.helpInner .q5-05 {
+  background: url("../images/help/38.jpg") no-repeat;
+}
+
+.helpInner .q6-01 {
+  background: url("../images/help/42.jpg") no-repeat;
+}
+
+.helpInner .q6-02 {
+  background: url("../images/help/43.jpg") no-repeat;
+}
+
+.helpInner .q6-03 {
+  background: url("../images/help/44.jpg") no-repeat;
+}
+
+.helpInner .q6-04 {
+  background: url("../images/help/45.jpg") no-repeat;
+}
+
+.helpInner .q6-05 {
+  background: url("../images/help/46.jpg") no-repeat;
+}
+
+.helpInner .q7-01 {
+  background: url("../images/help/73.jpg") no-repeat;
+}
+
+.helpInner .q7-02 {
+  background: url("../images/help/74.jpg") no-repeat;
+}
+
+.helpInner .q7-03 {
+  background: url("../images/help/75.jpg") no-repeat;
+}
+
+.helpInner .q7-04 {
+  background: url("../images/help/76.jpg") no-repeat;
+}
+
+.helpInner .q8-01 {
+  background: url("../images/help/50.jpg") no-repeat;
+}
+
+.helpInner .q8-02 {
+  background: url("../images/help/51.jpg") no-repeat;
+}
+
+.helpInner .q8-03 {
+  background: url("../images/help/52.jpg") no-repeat;
+}
+
+.helpInner .q8-04 {
+  background: url("../images/help/53.jpg") no-repeat;
+}
+
+.helpInner .q8-05 {
+  background: url("../images/help/54.jpg") no-repeat;
+}
+
+.helpInner .q8-06 {
+  background: url("../images/help/55.jpg") no-repeat;
+}
+
+.helpInner .q9-01 {
+  background: url("../images/help/86.jpg") no-repeat;
+}
+
+.helpInner .q9-02 {
+  background: url("../images/help/87.jpg") no-repeat;
+}
+
+.helpInner .q10-01 {
+  background: url("../images/help/59.jpg") no-repeat;
+}
+
+.helpInner .q10-02 {
+  background: url("../images/help/60.jpg") no-repeat;
+}
+
+.helpInner .q10-03 {
+  background: url("../images/help/61.jpg") no-repeat;
+}
+
+.helpInner .q10-04 {
+  background: url("../images/help/62.jpg") no-repeat;
+}
+
+.helpInner .q11-01 {
+  background: url("../images/help/66.jpg") no-repeat;
+}
+
+.helpInner .q11-02 {
+  background: url("../images/help/67.jpg") no-repeat;
+}
+
+.helpInner .q11-03 {
+  background: url("../images/help/68.jpg") no-repeat;
+}
+
+.helpInner .q11-04 {
+  background: url("../images/help/69.jpg") no-repeat;
+}
+
+.helpInner .q12-01 {
+  background: url("../images/help/80.jpg") no-repeat;
+}
+
+.helpInner .q12-02 {
+  background: url("../images/help/81.jpg") no-repeat;
+}
+
+.helpInner .q12-03 {
+  background: url("../images/help/82.jpg") no-repeat;
+}
+
+.helpInner .q13-01 {
+  background: url("../images/help/90.jpg") no-repeat;
+}
+
+.helpInner .q13-02 {
+  background: url("../images/help/91.jpg") no-repeat;
+}
+
+.helpInner .q13-03 {
+  background: url("../images/help/92.jpg") no-repeat;
+}
+
+.helpInner .q13-04 {
+  background: url("../images/help/93.jpg") no-repeat;
+}
+
+.helpInner .q13-05 {
+  background: url("../images/help/94.jpg") no-repeat;
+}
+
+.helpInner .q13-06 {
+  background: url("../images/help/95.jpg") no-repeat;
+}
+
+.helpInner .usdt-01 {
+  background: url("../images/help/usdt-01.jpg") no-repeat;
+}
+
+.helpInner .usdt-02 {
+  background: url("../images/help/usdt-02.jpg") no-repeat;
+}
+
+.helpInner .usdt-03 {
+  background: url("../images/help/usdt-03.jpg") no-repeat;
+}
+
+.helpInner .android.img_1 {
+  background: url("../images/download_new/1-1.png") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .android.img_2 {
+  background: url("../images/download_new/1-2.png") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .android.img_3 {
+  background: url("../images/download_new/1-3.png") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .android.img_4 {
+  background: url("../images/download_new/1-4.png") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .android.img_5 {
+  background: url("../images/download_new/1-5.png") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .android.img_6 {
+  background: url("../images/download_new/1-6.png") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .android.img_7 {
+  background: url("../images/download_new/1-7.png") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .android.img_8 {
+  background: url("../images/download_new/1-8.png") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .android.img_9 {
+  background: url("../images/download_new/1-9.png") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .android.img_10 {
+  background: url("../images/download_new/1-10.png") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_1 {
+  background: url("../images/download_new/2-1.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_2 {
+  background: url("../images/download_new/2-2.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_3 {
+  background: url("../images/download_new/2-3.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_4 {
+  background: url("../images/download_new/2-4.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_5 {
+  background: url("../images/download_new/2-5.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_6 {
+  background: url("../images/download_new/2-6.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_7 {
+  background: url("../images/download_new/2-7.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_8 {
+  background: url("../images/download_new/2-8.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_9 {
+  background: url("../images/download_new/2-9.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_10 {
+  background: url("../images/download_new/2-10.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_11 {
+  background: url("../images/download_new/2-11.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_12 {
+  background: url("../images/download_new/2-12.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_13 {
+  background: url("../images/download_new/2-13.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_14 {
+  background: url("../images/download_new/2-14.jpg") no-repeat;
+  background-size: contain;
+}
+
+.helpInner .ios.img_15 {
+  background: url("../images/download_new/2-15.jpg") no-repeat;
+  background-size: contain;
+}
+
+.csPage .cs_IC {
+  background: url("../images/icon/svg/cs_new.svg");
+  background-size: 100%;
+}
+
+.csPage .line_IC {
+  background: url("../images/icon/svg/line.svg");
+  background-size: 100%;
+}
+
 .memberInfo .info_2 .check {
   background: url("../images/icon/svg/check.svg") no-repeat;
   background-size: 100%;
@@ -465,6 +912,36 @@ header .refresh_ic {
   background-size: contain;
 }
 
+.vipWrap .medal.v2 {
+  background: url("../images/medal_2.png") no-repeat center;
+  background-size: contain;
+}
+
+.vipWrap .medal.v3 {
+  background: url("../images/medal_3.png") no-repeat center;
+  background-size: contain;
+}
+
+.vipWrap .medal.v4 {
+  background: url("../images/medal_4.png") no-repeat center;
+  background-size: contain;
+}
+
+.vipWrap .medal.v5 {
+  background: url("../images/medal_5.png") no-repeat center;
+  background-size: contain;
+}
+
+.vipWrap .medal.v6 {
+  background: url("../images/medal_6.png") no-repeat center;
+  background-size: contain;
+}
+
+.vipWrap .medal.v7 {
+  background: url("../images/medal_7.png") no-repeat center;
+  background-size: contain;
+}
+
 .vipWrap .cardBox i {
   background: url("../images/icon/svg/arrow_r.svg") no-repeat;
   background-size: contain;
@@ -482,22 +959,12 @@ header .refresh_ic {
 
 .vipWrap .cardBox .card li {
   background: url("../images/vip_card.png") no-repeat;
-  background-size: cover;
-}
-
-.vipWrap .cardBox .card li.cur {
-  background: url("../images/vip_card_a.png") no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 header .editBtn {
   background: url("../images/icon/svg/edit.svg") no-repeat;
   background-size: 100%;
-}
-
-.cardList .cardBox .add {
-  background: url("../images/icon/svg/add.svg") no-repeat center;
-  background-size: 20%;
 }
 
 .depositWrap .card_ic {
@@ -506,7 +973,17 @@ header .editBtn {
 }
 
 .depositWrap .atm_ic {
-  background: url("../images/icon/svg/shop.svg") no-repeat center;
+  background: url("../images/icon/svg/atm.svg") no-repeat center;
+  background-size: contain;
+}
+
+.depositWrap .usdt_ic {
+  background: url("../images/icon/svg/usdt.svg") no-repeat;
+  background-size: contain;
+}
+
+.depositWrap .shop_ic {
+  background: url("../images/icon/svg/shop.svg") no-repeat;
   background-size: contain;
 }
 
@@ -535,6 +1012,12 @@ header .editBtn {
   background-size: 100%;
 }
 
+.withWrap .detail.last div .problem,
+.walletWrap .details .problem {
+  background: url("../images/icon/svg/problem_red.svg") no-repeat;
+  background-size: 93%;
+}
+
 .jumpWindow.loading .img {
   background: url("../images/icon/svg/loading_b.svg") no-repeat;
   background-size: 100%;
@@ -557,13 +1040,43 @@ header .editBtn {
   background-size: contain;
 }
 
+.operate .deposit_ic {
+  background: url("../images/icon/svg/ope_deposit.svg") no-repeat;
+  background-size: contain;
+}
+
+.operate .transfer_ic {
+  background: url("../images/icon/svg/ope_transfer.svg") no-repeat;
+  background-size: contain;
+}
+
+.operate .withdrawal_ic {
+  background: url("../images/icon/svg/ope_withdrawal.svg") no-repeat;
+  background-size: contain;
+}
+
+.operate .vip_ic {
+  background: url("../images/icon/ope_vip.png") no-repeat;
+  background-size: contain;
+}
+
+header {
+  background: url("../images/headerBG.png") no-repeat;
+  background-size: cover;
+}
+
+.specialWrap .arrow_ic {
+  background: url("../images/special/arrow.png") no-repeat;
+  background-size: contain;
+}
+
 header .logo {
   width: 58px;
   height: 26px;
 }
 
 .single-item {
-  width: 97vw;
+  width: 100%;
   height: 43.73vw;
 }
 .single-item img {
@@ -573,9 +1086,13 @@ header .logo {
      object-fit: cover;
 }
 
+aside .sharetoEarnBTN {
+  background: url(../images/sharetoEarn.png) no-repeat center;
+  background-size: 100%;
+}
+
 .homeCenter .gameBox img {
-  width: 28.27vw;
-  height: 17.4vw;
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -589,24 +1106,23 @@ header .logo {
 
 .eventList .eventImg {
   width: 100%;
-  height: 38.28vw;
+  height: auto;
 }
 .eventList .eventImg img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 5px;
 }
 
 .eventDetail .eventImg {
   width: 100%;
-  height: 41vw;
+  height: auto;
 }
 .eventDetail .eventImg img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .appWrap img {
@@ -619,6 +1135,12 @@ header .logo {
 .eventWindow img {
   width: 100%;
   height: auto;
+}
+
+.specialWrap img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -713,7 +1235,12 @@ html body {
           box-sizing: border-box;
 }
 html body main {
-  padding: 45px 0 48px;
+  width: 100%;
+  height: 100%;
+  padding: 45px 0 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-y: auto;
 }
 html body main.index {
   display: -webkit-box;
@@ -723,11 +1250,6 @@ html body main.index {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
-  height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 45px 0 50px;
 }
 html body header {
   position: fixed;
@@ -746,11 +1268,20 @@ html body header .content {
           align-items: center;
   width: 100%;
   height: 45px;
-  background: #e11515;
   padding: 0 14px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+html body header .content button {
+  width: 101px;
+  height: 28px;
+  border-radius: 5px;
+  background-position-x: 49%;
+  background-position-y: 39%;
 }
 html body header .content .title {
   width: 70%;
@@ -837,13 +1368,10 @@ html body .ad {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 8px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 html body .ad .single-item {
-  border-radius: 1.5vw;
-  overflow: hidden;
   margin: 0;
 }
 html body .ad .single-item .slick-list {
@@ -902,8 +1430,8 @@ html body .marqueeBox .marquee pre {
   display: inline-block;
   font-size: 13px;
   color: #999999;
-  -webkit-animation: marquee 30s linear 0s infinite;
-          animation: marquee 30s linear 0s infinite;
+  -webkit-animation: marquee 50s linear 0s infinite;
+          animation: marquee 50s linear 0s infinite;
   padding-left: 100%;
 }
 @-webkit-keyframes marquee {
@@ -946,7 +1474,7 @@ html body .memberArea .loginBtn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #f2f3f3;
+  background: #f8f8f8;
   width: 37.4vw;
   height: 100%;
   border-radius: 1.5vw 0 0 1.5vw;
@@ -974,7 +1502,7 @@ html body .memberArea .alLogin {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 1.33vw 0 2vw;
-  background: #f2f3f3;
+  background: #f8f8f8;
   width: 37.4vw;
   height: 100%;
   border-radius: 1.5vw 0 0 1.5vw;
@@ -1029,12 +1557,12 @@ html body .memberArea .alLogin ul li .lv {
   width: auto;
   height: 20px;
   padding: 0 5px;
-  background: linear-gradient(120deg, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  font-size: 0.75rem;
+  background: #b90b0a;
+  font-size: 3vw;
   font-weight: bold;
   color: #ffffff;
   border-radius: 1.5vw;
-  border: solid 1px #cca172;
+  border: solid 1px #b90b0a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1042,11 +1570,11 @@ html body .memberArea .alLogin ul li .lv {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin-left: 5px;
+  margin-left: 8px;
   white-space: nowrap;
 }
 html body .memberArea .operate {
-  background: #f2f3f3;
+  background: #f8f8f8;
   border-radius: 0 1.5vw 1.5vw 0;
   width: 54.6vw;
   height: 100%;
@@ -1059,7 +1587,7 @@ html body .memberArea .operate {
 }
 html body .memberArea .operate .btnBox {
   width: 100%;
-  height: 60px;
+  height: 40px;
   border-left: solid 1px #e6e6e6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1070,24 +1598,23 @@ html body .memberArea .operate .btnBox {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 5%;
+  padding: 0 8%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 html body .memberArea .operate .btnBox button {
-  width: 40px;
-  height: 40px;
-  background: radial-gradient(circle, #cca172 40%, #f1d7b7 100%);
-  -webkit-box-shadow: 1px 2px 4px 1px #96969666;
-          box-shadow: 1px 2px 4px 1px #96969666;
-  border: solid 1px #cca172;
-  font-size: 21px;
-  font-weight: bold;
-  color: #ffffff;
-  border-radius: 50%;
-}
-html body .memberArea .operate .btnBox button.vipBtn {
+  width: auto;
+  height: auto;
+  background: none;
   font-size: 15px;
+  font-weight: bold;
+  color: #808080;
+}
+html body .memberArea .operate .btnBox button i {
+  display: block;
+  width: 8vw;
+  height: 8vw;
+  margin-bottom: 1vw;
 }
 html body .homeCenter {
   width: 100%;
@@ -1101,27 +1628,19 @@ html body .homeCenter {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 15px 5px;
-  margin-top: 8px;
   overflow: hidden;
+  margin-top: 8px;
 }
 html body .homeCenter .gameList {
   width: auto;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  overflow-y: auto;
 }
 html body .homeCenter .gameList li {
-  width: 25.6vw;
-  height: 20%;
-  margin-bottom: 3px;
+  width: 20vw;
+  height: 18vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1135,69 +1654,217 @@ html body .homeCenter .gameList li {
   border-radius: 1.5vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin-bottom: 3px;
 }
 html body .homeCenter .gameList li.slotBtn div, html body .homeCenter .gameList li.fishBtn div {
   padding: 0 9px 0px 8px;
 }
+html body .homeCenter .gameList li.active div {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e60000), to(#800808));
+  background: linear-gradient(to bottom, #e60000 0%, #800808 100%);
+}
 html body .homeCenter .gameList li.active div p {
-  color: #ad8047;
+  color: #ffffff;
+}
+html body .homeCenter .gameList li.active div .hot_ic {
+  -webkit-filter: brightness(2);
+          filter: brightness(2);
 }
 html body .homeCenter .gameList li div {
   width: 94%;
-  height: 88%;
+  height: 94%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 16px 0 11px;
+  padding: 0 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-radius: 1.5vw;
   border: solid 1px #e6e6e6;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f2f2f2));
   background: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%);
 }
 html body .homeCenter .gameList li div p {
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: bold;
   color: #999999;
 }
 html body .homeCenter .gameList li div i {
   display: block;
-  width: 6.4vw;
-  height: 6.4vw;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 2vw;
+}
+html body .homeCenter .gameList li div i.hot_ic {
+  width: 24px;
+  height: 25px;
+  margin-bottom: 1vw;
 }
 html body .homeCenter .gameList li div i.slot_ic {
-  width: 30px;
-  height: 16px;
+  width: 35px;
+  height: 19px;
+}
+html body .homeCenter .gameList li div i.live_ic {
+  width: 23px;
+  height: 23px;
+  margin-bottom: 1vw;
 }
 html body .homeCenter .gameList li div i.fish_ic {
-  width: 8vw;
-  height: 4.27vw;
+  width: 35px;
+  height: 16px;
 }
 html body .homeCenter .gameBox {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 63.3vw;
-  height: auto;
+  width: 100%;
+  height: 100%;
   display: none;
+  overflow-y: auto;
+  -ms-grid-columns: (1fr)[1];
+  grid-template-columns: repeat(1, 1fr);
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  overflow-y: auto;
+  font-size: 0;
 }
 html body .homeCenter .gameBox.display {
+  display: -ms-grid;
+  display: grid;
+}
+html body .homeCenter .gameBox.twins {
+  -ms-grid-columns: 1fr 0 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 6vw 0;
+}
+html body .homeCenter .gameBox.twins li p {
+  right: 0;
+  bottom: -4vw;
+  width: 100%;
+  font-size: 3.7vw;
+  text-align: center;
+}
+html body .homeCenter .gameBox.hotBox {
+  display: none;
+  -ms-grid-columns: 2fr 8px 2fr;
+  grid-template-columns: repeat(2, 2fr);
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 8px;
+  padding-left: 3px;
+}
+html body .homeCenter .gameBox.hotBox.display {
+  display: -ms-grid;
+  display: grid;
+}
+html body .homeCenter .gameBox.hotBox li {
+  width: auto;
+  height: auto;
+  border: solid 1px #c3c3c3;
+  border-radius: 1.5vw;
+  position: relative;
+}
+html body .homeCenter .gameBox.hotBox li img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+html body .homeCenter .gameBox.hotBox li div {
+  width: 100%;
+  height: 8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10px;
+  text-shadow: none;
+}
+html body .homeCenter .gameBox.hotBox li div p {
+  width: 75%;
+  color: #333333;
+  font-size: 3.7vw;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body .homeCenter .gameBox.hotBox li div .love {
+  width: 15px;
+  height: 13px;
+}
+html body .homeCenter .gameBox.hotBox li .btnBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0 5px 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html body .homeCenter .gameBox.hotBox li .btnBox button {
+  width: 100%;
+  height: 7vw;
+  background: -webkit-gradient(linear, left bottom, left top, from(#8c1212), to(#ff4a4a));
+  background: linear-gradient(to top, #8c1212 0%, #ff4a4a 100%);
+  border: solid 1px #dc0000;
+  border-radius: 1vw;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3vw;
+}
+html body .homeCenter .gameBox.hotBox li .btnBox button:active, html body .homeCenter .gameBox.hotBox li .btnBox button.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#8c1212), to(#ff4a4a));
+  background: linear-gradient(to bottom, #8c1212 0%, #ff4a4a 100%);
+}
+html body .homeCenter .gameBox.hotBox li .btnBox button.try {
+  background: -webkit-gradient(linear, left bottom, left top, from(#384c79), to(#2b87e6));
+  background: linear-gradient(to top, #384c79 0%, #2b87e6 100%);
+  border: solid 1px #0f4eb7;
+  border-radius: 1vw;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3vw;
+  margin-left: 3px;
+}
+html body .homeCenter .gameBox.hotBox li .btnBox button.try:active, html body .homeCenter .gameBox.hotBox li .btnBox button.try.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#384c79), to(#2b87e6));
+  background: linear-gradient(to bottom, #384c79 0%, #2b87e6 100%);
+}
+html body .homeCenter .gameBox li {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+html body .homeCenter .gameBox li.fixing {
+  pointer-events: none;
+}
+html body .homeCenter .gameBox li.fixing .fixBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-html body .homeCenter .gameBox li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+html body .homeCenter .gameBox li .fixBox {
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1205,24 +1872,104 @@ html body .homeCenter .gameBox li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: solid 1px #e6e6e6;
-  border-radius: 1.5vw;
-  width: 30.4vw;
-  height: 23.2vw;
-  padding-top: 3px;
-  margin: 0 4px 5px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
 }
-html body .homeCenter .gameBox li:nth-of-type(2n) {
-  margin-right: 0;
+html body .homeCenter .gameBox li .fixBox .title {
+  color: #ffffff;
+  font-size: 7vw;
+  font-weight: bold;
+  margin-bottom: 3vw;
 }
-html body .homeCenter .gameBox li img {
-  border-radius: 1.5vw;
-  border: solid 1px #e6e6e6;
+html body .homeCenter .gameBox li .fixBox .timeBox {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-html body .homeCenter .gameBox li p {
-  font-size: 12px;
-  color: #808080;
-  padding-top: 0.9vw;
+html body .homeCenter .gameBox li .fixBox .timeBox div span {
+  display: block;
+  color: #ffffff;
+  font-size: 4vw;
+  font-weight: bold;
+  margin-bottom: 3vw;
+}
+html body .homeCenter .gameBox li .fixBox .timeBox div p {
+  color: #ffffff;
+  font-size: 7vw;
+  font-weight: bold;
+}
+html body .homeCenter .gameBox li > p {
+  position: absolute;
+  right: 9vw;
+  bottom: 8vw;
+  width: auto;
+  color: #ebd495;
+  font-size: 5vw;
+  font-weight: bold;
+  text-shadow: 2px 3px 3px #332116, 2px -2px 3px #332116;
+}
+html body aside {
+  display: none;
+  position: relative;
+}
+html body aside.display {
+  display: block;
+}
+html body aside .sharetoEarnBTN {
+  width: 90px;
+  height: 90px;
+  border: none;
+  position: absolute;
+  bottom: 100px;
+  right: 6px;
+  z-index: 5;
+}
+html body aside .closeBtn {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 185px;
+  right: 5px;
+  z-index: 100;
+}
+html body aside .closeBtn:before {
+  content: "";
+  width: 21px;
+  height: 3px;
+  background: #ffffff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  top: 14px;
+  right: 4px;
+}
+html body aside .closeBtn:after {
+  content: "";
+  width: 21px;
+  height: 3px;
+  background: #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 14px;
+  left: 5px;
 }
 html body footer {
   width: 100%;
@@ -1265,7 +2012,7 @@ html body footer ul li {
   border-right: solid 1px #cccccc;
 }
 html body footer ul li.active p {
-  color: #ad8047;
+  color: #e11515;
 }
 html body footer ul li i {
   display: block;
@@ -1275,6 +2022,7 @@ html body footer ul li i {
 html body footer ul li p {
   font-size: 12px;
   color: #999999;
+  font-weight: bold;
   padding-top: 2px;
 }
 html body .filter {
@@ -1283,7 +2031,7 @@ html body .filter {
   position: fixed;
   top: 0;
   left: 0;
-  background: #00000066;
+  background: rgba(0, 0, 0, 0.4);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1316,6 +2064,7 @@ html body .filter .title {
   color: #ffffff;
   background: #e11515;
   position: relative;
+  border-radius: 1.5vw 1.5vw 0 0;
 }
 html body .filter .title i {
   width: 4.73vw;
@@ -1326,7 +2075,8 @@ html body .filter .title i {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-html body .filter .plsGo, html body .filter .plsGo2 {
+html body .filter .plsGo,
+html body .filter .plsGo2 {
   width: 92%;
   height: auto;
   background: #ffffff;
@@ -1334,10 +2084,12 @@ html body .filter .plsGo, html body .filter .plsGo2 {
   overflow: hidden;
   display: none;
 }
-html body .filter .plsGo.display, html body .filter .plsGo2.display {
+html body .filter .plsGo.display,
+html body .filter .plsGo2.display {
   display: block;
 }
-html body .filter .plsGo .content, html body .filter .plsGo2 .content {
+html body .filter .plsGo .content,
+html body .filter .plsGo2 .content {
   font-size: 14px;
   color: #666666;
   letter-spacing: 1px;
@@ -1349,30 +2101,35 @@ html body .filter .plsGo .content, html body .filter .plsGo2 .content {
   padding: 24px 80px 0;
   text-align: center;
 }
-html body .filter .plsGo .content p, html body .filter .plsGo2 .content p {
+html body .filter .plsGo .content p,
+html body .filter .plsGo2 .content p {
   line-height: 20px;
 }
-html body .filter .plsGo .btnBox, html body .filter .plsGo2 .btnBox {
+html body .filter .plsGo .btnBox,
+html body .filter .plsGo2 .btnBox {
   width: 100%;
   height: auto;
   padding: 20px 0;
   text-align: center;
 }
-html body .filter .plsGo .btnBox button, html body .filter .plsGo2 .btnBox button {
+html body .filter .plsGo .btnBox button,
+html body .filter .plsGo2 .btnBox button {
   width: 92%;
   height: 40px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
   border-radius: 1vw;
   letter-spacing: 1px;
 }
-html body .filter .plsGo .btnBox button:active, html body .filter .plsGo .btnBox button.active, html body .filter .plsGo2 .btnBox button:active, html body .filter .plsGo2 .btnBox button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+html body .filter .plsGo .btnBox button:active, html body .filter .plsGo .btnBox button.active,
+html body .filter .plsGo2 .btnBox button:active,
+html body .filter .plsGo2 .btnBox button.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .filter .loading {
   width: 92.27vw;
@@ -1517,9 +2274,9 @@ html body .filter .loginWindow form .realLogin {
   width: 77.6vw;
   height: 11.2vw;
   margin: 8vw 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -1527,8 +2284,8 @@ html body .filter .loginWindow form .realLogin {
   letter-spacing: 1px;
 }
 html body .filter .loginWindow form .realLogin:active, html body .filter .loginWindow form .realLogin.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .filter .loginWindow .registerBtn {
   color: #595757;
@@ -1590,9 +2347,9 @@ html body .filter .forgetWindow form button {
   width: 77.6vw;
   height: 11.2vw;
   margin-top: 15px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -1600,8 +2357,8 @@ html body .filter .forgetWindow form button {
   letter-spacing: 1px;
 }
 html body .filter .forgetWindow form button:active, html body .filter .forgetWindow form button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .filter .forgetWindow form .remind {
   width: 100%;
@@ -1696,7 +2453,7 @@ html body .filter .registerWindow form label.isCheck input[type=checkbox] {
   margin-right: 10px;
 }
 html body .filter .registerWindow form label.isCheck p {
-  color: #cfa678;
+  color: #b90b0a;
 }
 html body .filter .registerWindow form label .eye {
   position: absolute;
@@ -1716,10 +2473,10 @@ html body .filter .registerWindow form label .cellphoneCheck {
           transform: translateY(-50%);
   right: 10px;
   background: #ffffff;
-  border: solid 1px #cfa678;
+  border: solid 1px #b90b0a;
   font-size: 13px;
   font-weight: bold;
-  color: #cfa678;
+  color: #b90b0a;
   border-radius: 3px;
 }
 html body .filter .registerWindow form label .must {
@@ -1794,9 +2551,9 @@ html body .filter .registerWindow form .checkBtn {
   height: 9.6vw;
   padding: 10px 0;
   margin-bottom: 10px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -1804,8 +2561,8 @@ html body .filter .registerWindow form .checkBtn {
   letter-spacing: 1px;
 }
 html body .filter .registerWindow form .checkBtn:active, html body .filter .registerWindow form .checkBtn.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .filter .ruleWindow {
   width: 87.2vw;
@@ -1835,7 +2592,7 @@ html body .filter .ruleWindow .content .ruleBody h2 {
   color: #333333;
 }
 html body .filter .ruleWindow .content .ruleBody p {
-  font-size: 3.4vw;
+  font-size: 3.7vw;
   padding: 10px 5px;
   line-height: 1.8;
   font-weight: bold;
@@ -1865,9 +2622,9 @@ html body .filter .ruleWindow button {
   margin: 15px auto;
   width: 77.6vw;
   height: 11.2vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -1875,8 +2632,8 @@ html body .filter .ruleWindow button {
   letter-spacing: 1px;
 }
 html body .filter .ruleWindow button:active, html body .filter .ruleWindow button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .filter .news {
   width: 87.2vw;
@@ -2013,10 +2770,10 @@ html body .filter .gameWindow form .row.btnBox button {
   height: 35px;
   margin-bottom: 5px;
   background: #ffffff;
-  border: solid 1px #cfa678;
+  border: solid 1px #b90b0a;
   font-size: 13px;
   font-weight: bold;
-  color: #cfa678;
+  color: #b90b0a;
   border-radius: 3px;
 }
 html body .filter .gameWindow form .row.checkBtn {
@@ -2027,9 +2784,9 @@ html body .filter .gameWindow form .row.checkBtn {
 html body .filter .gameWindow form .row.checkBtn button {
   width: calc(100% - 20vw);
   height: 11.2vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -2037,8 +2794,8 @@ html body .filter .gameWindow form .row.checkBtn button {
   letter-spacing: 1px;
 }
 html body .filter .gameWindow form .row.checkBtn button:active, html body .filter .gameWindow form .row.checkBtn button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .filter .gameWindow form .row .smallTitle {
   margin-right: 6vw;
@@ -2075,9 +2832,9 @@ html body .filter .gameWindow .enterBtn {
   width: 77.33vw;
   height: 11.46vw;
   margin: 4.8vw auto 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -2085,8 +2842,8 @@ html body .filter .gameWindow .enterBtn {
   letter-spacing: 1px;
 }
 html body .filter .gameWindow .enterBtn:active, html body .filter .gameWindow .enterBtn.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .filter .langWindow {
   width: 92vw;
@@ -2139,10 +2896,10 @@ html body .filter .langWindow ul li {
   color: #808080;
 }
 html body .filter .langWindow ul li:active, html body .filter .langWindow ul li.active {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #cda273), to(#eec696));
-  background: linear-gradient(to bottom, #cda273 10%, #eec696 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c61515), to(#df1515));
+  background: linear-gradient(to bottom, #c61515 0%, #df1515 100%);
   color: #ffffff;
-  border-color: #cca172;
+  border-color: #b90b0a;
 }
 html body .filter .langWindow ul li:last-child {
   margin: 0;
@@ -2181,9 +2938,9 @@ html body .filter .eventWindow .btnBox {
 html body .filter .eventWindow .btnBox button {
   width: 92%;
   height: 40px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -2191,8 +2948,8 @@ html body .filter .eventWindow .btnBox button {
   letter-spacing: 1px;
 }
 html body .filter .eventWindow .btnBox button:active, html body .filter .eventWindow .btnBox button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .filter .passwordWindow {
   width: 92.27vw;
@@ -2228,9 +2985,9 @@ html body .filter .passwordWindow .content button {
   width: 77.6vw;
   height: 9.87vw;
   margin: 7.13vw 0 5vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -2238,8 +2995,8 @@ html body .filter .passwordWindow .content button {
   letter-spacing: 1px;
 }
 html body .filter .passwordWindow .content button:active, html body .filter .passwordWindow .content button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .filter .checkPoint {
   width: 92.27vw;
@@ -2366,9 +3123,9 @@ html body .filter .checkPoint ul li .point .info::before {
 html body .filter .checkPoint ul li button {
   width: 17.87vw;
   height: 6.13vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -2377,10 +3134,11 @@ html body .filter .checkPoint ul li button {
   font-size: 12px;
 }
 html body .filter .checkPoint ul li button:active, html body .filter .checkPoint ul li button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
-html body .filter .accWindow, html body .filter .platWindow {
+html body .filter .accWindow,
+html body .filter .platWindow {
   width: 92.27vw;
   height: auto;
   background: #ffffff;
@@ -2388,21 +3146,25 @@ html body .filter .accWindow, html body .filter .platWindow {
   overflow: hidden;
   display: none;
 }
-html body .filter .accWindow.display, html body .filter .platWindow.display {
+html body .filter .accWindow.display,
+html body .filter .platWindow.display {
   display: block;
 }
-html body .filter .accWindow .content, html body .filter .platWindow .content {
+html body .filter .accWindow .content,
+html body .filter .platWindow .content {
   width: 100%;
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 15px 18px;
 }
-html body .filter .accWindow .content .bigBox, html body .filter .platWindow .content .bigBox {
+html body .filter .accWindow .content .bigBox,
+html body .filter .platWindow .content .bigBox {
   width: 100%;
   height: auto;
 }
-html body .filter .accWindow .content .bigBox button, html body .filter .platWindow .content .bigBox button {
+html body .filter .accWindow .content .bigBox button,
+html body .filter .platWindow .content .bigBox button {
   width: 100%;
   height: 38px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #ffffff), to(#f4f4f4));
@@ -2422,19 +3184,23 @@ html body .filter .accWindow .content .bigBox button, html body .filter .platWin
           justify-content: center;
   border-radius: 3px;
 }
-html body .filter .accWindow .content .bigBox button:active, html body .filter .accWindow .content .bigBox button.active, html body .filter .platWindow .content .bigBox button:active, html body .filter .platWindow .content .bigBox button.active {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #cda273), to(#eec696));
-  background: linear-gradient(to bottom, #cda273 10%, #eec696 100%);
+html body .filter .accWindow .content .bigBox button:active, html body .filter .accWindow .content .bigBox button.active,
+html body .filter .platWindow .content .bigBox button:active,
+html body .filter .platWindow .content .bigBox button.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#c61515), to(#df1515));
+  background: linear-gradient(to bottom, #c61515 0%, #df1515 100%);
   color: #ffffff;
-  border-color: #cca172;
+  border-color: #b90b0a;
 }
-html body .filter .accWindow .content .smallBox, html body .filter .platWindow .content .smallBox {
+html body .filter .accWindow .content .smallBox,
+html body .filter .platWindow .content .smallBox {
   width: 100%;
   height: auto;
   margin-top: 10px;
   font-size: 0;
 }
-html body .filter .accWindow .content .smallBox button, html body .filter .platWindow .content .smallBox button {
+html body .filter .accWindow .content .smallBox button,
+html body .filter .platWindow .content .smallBox button {
   width: 32%;
   height: 38px;
   margin: 0 2% 2% 0;
@@ -2455,13 +3221,16 @@ html body .filter .accWindow .content .smallBox button, html body .filter .platW
           justify-content: center;
   border-radius: 3px;
 }
-html body .filter .accWindow .content .smallBox button:active, html body .filter .accWindow .content .smallBox button.active, html body .filter .platWindow .content .smallBox button:active, html body .filter .platWindow .content .smallBox button.active {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #cda273), to(#eec696));
-  background: linear-gradient(to bottom, #cda273 10%, #eec696 100%);
+html body .filter .accWindow .content .smallBox button:active, html body .filter .accWindow .content .smallBox button.active,
+html body .filter .platWindow .content .smallBox button:active,
+html body .filter .platWindow .content .smallBox button.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#c61515), to(#df1515));
+  background: linear-gradient(to bottom, #c61515 0%, #df1515 100%);
   color: #ffffff;
-  border-color: #cca172;
+  border-color: #b90b0a;
 }
-html body .filter .accWindow .content .smallBox button:nth-of-type(3n), html body .filter .platWindow .content .smallBox button:nth-of-type(3n) {
+html body .filter .accWindow .content .smallBox button:nth-of-type(3n),
+html body .filter .platWindow .content .smallBox button:nth-of-type(3n) {
   margin-right: 0;
 }
 html body .filter .bettingDetail {
@@ -2566,23 +3335,140 @@ html body .filter .bettingDetail .content .pageBox p {
 html body .filter .bettingDetail .content .pageBox p span {
   padding: 0 5px;
 }
-@media only screen and (max-width: 320px) {
-  html body .homeCenter .gameList li div {
-    padding: 0 !important;
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
-  }
-  html body .homeCenter .gameList li div i {
-    display: none !important;
-  }
-  html body .operate .btnBox {
-    padding: 0 3% !important;
-  }
-  html body .operate .btnBox button {
-    width: 36px !important;
-    height: 36px !important;
-  }
+html body .filter .pointWindow {
+  width: 92.27vw;
+  height: auto;
+  background: #ffffff;
+  border-radius: 1.5vw;
+  display: none;
+}
+html body .filter .pointWindow.display {
+  display: block;
+}
+html body .filter .pointWindow .content {
+  width: 100%;
+  height: auto;
+  max-height: 50vh;
+  padding: 24px 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-y: auto;
+}
+html body .filter .pointWindow .content table {
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0 0 0 1px #cccccc;
+          box-shadow: 0 0 0 1px #cccccc;
+}
+html body .filter .pointWindow .content table tr {
+  border-bottom: solid 1px #cccccc;
+}
+html body .filter .pointWindow .content table tr:first-child {
+  border-bottom: solid 1px #e11515;
+}
+html body .filter .pointWindow .content table tr:last-child {
+  border: none;
+}
+html body .filter .pointWindow .content table tr th {
+  vertical-align: middle;
+  height: 40px;
+  border-right: solid 1px #cccccc;
+}
+html body .filter .pointWindow .content table tr th:last-child {
+  border: none;
+}
+html body .filter .pointWindow .content table tr th p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+html body .filter .pointWindow .content table tr td {
+  width: 30%;
+  vertical-align: middle;
+  height: 40px;
+  border-right: solid 1px #cccccc;
+}
+html body .filter .pointWindow .content table tr td:last-child {
+  border: none;
+}
+html body .filter .pointWindow .content table tr td p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+html body .filter .pointWindow .content .noData {
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10vh;
+}
+html body .filter .problemAns {
+  width: 92.27vw;
+  height: auto;
+  background: #ffffff;
+  border-radius: 1.5vw;
+  overflow: hidden;
+  display: none;
+}
+html body .filter .problemAns.display {
+  display: block;
+}
+html body .filter .problemAns .content {
+  width: 100%;
+  height: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html body .filter .problemAns .content p {
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+html body .filter .problemAns .btnBox {
+  width: 100%;
+  height: auto;
+  padding: 0 0 20px;
+  text-align: center;
+}
+html body .filter .problemAns .btnBox button {
+  width: 92%;
+  height: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 1vw;
+  letter-spacing: 1px;
+}
+html body .filter .problemAns .btnBox button:active, html body .filter .problemAns .btnBox button.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .slotWrap {
   width: 100%;
@@ -2690,37 +3576,30 @@ html body .slotWrap .slotHeader .searchBox input {
           box-sizing: border-box;
 }
 html body .slotWrap .gameList {
-  width: calc(100% - 30px);
-  height: calc(100vh - 173px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 8px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
   margin: 0 auto;
-  overflow-y: auto;
+  padding: 0 14px;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 html body .slotWrap .gameList .gameBox {
-  width: calc((96vw - 30px)/2);
-  height: 175px;
+  width: auto;
+  height: auto;
   border: solid 1px #9a9b9b;
   border-radius: 1.5vw;
   overflow: hidden;
-  margin: 0 1vw 8px;
   position: relative;
   font-size: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 html body .slotWrap .gameList .gameBox p {
   width: 100%;
-  height: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 15px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #333333;
+  height: 8vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2730,14 +3609,26 @@ html body .slotWrap .gameList .gameBox p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 15px;
+}
+html body .slotWrap .gameList .gameBox p span {
+  width: 75%;
+  color: #333333;
+  font-size: 3.7vw;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 html body .slotWrap .gameList .gameBox p .love {
-  width: 17px;
-  height: 17px;
+  width: 4vw;
+  height: 4vw;
 }
 html body .slotWrap .gameList .gameBox .btnBox {
   width: 100%;
-  height: 32px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2747,10 +3638,13 @@ html body .slotWrap .gameList .gameBox .btnBox {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 5px 5px;
 }
 html body .slotWrap .gameList .gameBox .btnBox button {
-  width: 20vw;
-  height: 32px;
+  width: 100%;
+  height: 7vw;
   background: -webkit-gradient(linear, left bottom, left top, from(#8c1212), to(#ff4a4a));
   background: linear-gradient(to top, #8c1212 0%, #ff4a4a 100%);
   border: solid 1px #dc0000;
@@ -2771,6 +3665,7 @@ html body .slotWrap .gameList .gameBox .btnBox button.try {
   color: #ffffff;
   font-weight: bold;
   font-size: 3vw;
+  margin-left: 3px;
 }
 html body .slotWrap .gameList .gameBox .btnBox button.try:active, html body .slotWrap .gameList .gameBox .btnBox button.try.active {
   background: -webkit-gradient(linear, left top, left bottom, from(#384c79), to(#2b87e6));
@@ -2793,7 +3688,7 @@ html body .eventType ul {
 }
 html body .eventType ul li {
   width: 22.4vw;
-  height: 72px;
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2817,20 +3712,15 @@ html body .eventType ul li:active, html body .eventType ul li.active {
 html body .eventType ul li:active span, html body .eventType ul li.active span {
   color: #000000;
 }
-html body .eventType ul li .all_ic {
-  width: 25px;
-  height: 25px;
-  margin-bottom: 8px;
-}
 html body .eventType ul li span {
-  font-size: 12px;
+  font-size: 3.5vw;
   font-weight: bold;
   color: #808080;
 }
 html body .eventList {
   width: 100%;
   height: calc(100vh - 92px);
-  margin-top: 72px;
+  margin-top: 40px;
   overflow-y: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2847,7 +3737,7 @@ html body .eventList ul {
 html body .eventList ul li {
   width: 100%;
   height: auto;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 html body .eventList ul li .eventBox {
   width: 100%;
@@ -2857,40 +3747,12 @@ html body .eventList ul li .eventBox {
   overflow: hidden;
   -webkit-box-shadow: 0 0 13px 5px #dedede;
           box-shadow: 0 0 13px 5px #dedede;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 html body .eventList ul li .eventBox .eventImg {
   background: #f2f3f3;
-}
-html body .eventList ul li .eventBox p {
-  width: 100%;
-  height: 36px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 15px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-html body .eventList ul li .eventBox p button {
-  width: 95px;
-  height: 27px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9ddbec), color-stop(50%, #0282cc), to(#82aeeb));
-  background: linear-gradient(to bottom, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
-  border: solid 1px #0282cc;
-  border-radius: 1vw;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-}
-html body .eventList ul li .eventBox p button:active, html body .eventList ul li .eventBox p button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#9ddbec), color-stop(50%, #0282cc), to(#82aeeb));
-  background: linear-gradient(to top, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
 }
 html body .eventDetail {
   width: 100%;
@@ -2916,8 +3778,8 @@ html body .eventDetail .detailHeader, html body .eventDetail .detailContent {
   margin-top: 10px;
   background: #ffffff;
   border-radius: 1.5vw;
-  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
-          box-shadow: 0 0 5px 0 #c8c8c880;
+  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
 }
 html body .eventDetail .detailHeader ul .title, html body .eventDetail .detailContent ul .title {
   width: 100%;
@@ -2980,6 +3842,23 @@ html body .eventDetail .detailHeader .contentFooter, html body .eventDetail .det
           justify-content: center;
   padding: 20px 0 8px;
 }
+html body .eventDetail .applyBtn {
+  width: 80vw;
+  height: 42px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 1vw;
+  letter-spacing: 1px;
+  margin: 5vw 0;
+}
+html body .eventDetail .applyBtn:active, html body .eventDetail .applyBtn.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
+}
 html body .walletWrap {
   width: 100%;
   min-height: calc(100vh - 92px);
@@ -3006,8 +3885,8 @@ html body .walletWrap .walletBox .gradient .content {
   margin: 0 auto 16px;
   background: #ffffff;
   border-radius: 1.5vw;
-  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
-          box-shadow: 0 0 5px 0 #c8c8c880;
+  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
 }
 html body .walletWrap .walletBox .gradient .content .amount {
   width: 100%;
@@ -3065,6 +3944,13 @@ html body .walletWrap .walletBox .gradient .content .details {
   display: -ms-flexbox;
   display: flex;
   border-bottom: solid 1px #e6e6e6;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+html body .walletWrap .walletBox .gradient .content .details:last-child {
+  padding: 0;
 }
 html body .walletWrap .walletBox .gradient .content .details .items {
   display: -webkit-box;
@@ -3110,6 +3996,29 @@ html body .walletWrap .walletBox .gradient .content .details .items p.limit {
 html body .walletWrap .walletBox .gradient .content .details .items p.activeWallet {
   color: #ff8600;
 }
+html body .walletWrap .walletBox .gradient .content .details p {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+  white-space: nowrap;
+  margin: 0;
+}
+html body .walletWrap .walletBox .gradient .content .details p:nth-of-type(1) {
+  font-size: 12px;
+  text-align: center;
+}
+html body .walletWrap .walletBox .gradient .content .details p:nth-of-type(2) {
+  color: #e11515;
+  font-size: 15px;
+  padding: 0 27px;
+}
+html body .walletWrap .walletBox .gradient .content .details .problem {
+  width: 16.5px;
+  height: 16.5px;
+  position: absolute;
+  top: 14px;
+  left: 66px;
+}
 html body .walletWrap .walletBox ul {
   width: 100%;
   height: auto;
@@ -3141,7 +4050,8 @@ html body .walletWrap .walletBox ul li i {
   height: 11.47vw;
 }
 html body .walletWrap .walletBox ul li p {
-  font-size: 13px;
+  font-size: 16px;
+  font-weight: 900;
   letter-spacing: 1px;
   color: #595757;
   padding-top: 6px;
@@ -3221,7 +4131,7 @@ html body .walletWrap .walletList .forHistory .title {
   margin-bottom: 11px;
   font-size: 13px;
   letter-spacing: 1px;
-  color: #ad8047;
+  color: #b90b0a;
   font-weight: bold;
 }
 html body .walletWrap .walletList .forActive .title .refresh_ic,
@@ -3237,8 +4147,8 @@ html body .walletWrap .walletList .forHistory .pointBox {
   padding-bottom: 30px;
   margin: 0 auto 14px;
   background: #ffffff;
-  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
-          box-shadow: 0 0 5px 0 #c8c8c880;
+  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
 }
 html body .walletWrap .walletList .forActive .pointBox .smallTitle,
 html body .walletWrap .walletList .forHistory .pointBox .smallTitle {
@@ -3327,9 +4237,9 @@ html body .walletWrap .walletList .forActive .pointBox .pointBtnBox button,
 html body .walletWrap .walletList .forHistory .pointBox .pointBtnBox button {
   width: 41.33vw;
   height: 8.27vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -3340,16 +4250,16 @@ html body .walletWrap .walletList .forHistory .pointBox .pointBtnBox button {
 html body .walletWrap .walletList .forActive .pointBox .pointBtnBox button:active, html body .walletWrap .walletList .forActive .pointBox .pointBtnBox button.active,
 html body .walletWrap .walletList .forHistory .pointBox .pointBtnBox button:active,
 html body .walletWrap .walletList .forHistory .pointBox .pointBtnBox button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .walletWrap .walletList .forActive .pointBox .pointBtnBox button.check,
 html body .walletWrap .walletList .forHistory .pointBox .pointBtnBox button.check {
   background: #ffffff;
-  border: solid 1px #cfa678;
+  border: solid 1px #b90b0a;
   font-size: 13px;
   font-weight: bold;
-  color: #cfa678;
+  color: #b90b0a;
   border-radius: 3px;
   font-size: 13px;
 }
@@ -3378,15 +4288,15 @@ html body .walletWrap .walletList .forPlatform .title {
   margin-bottom: 11px;
   font-size: 13px;
   letter-spacing: 1px;
-  color: #ad8047;
+  color: #b90b0a;
   font-weight: bold;
 }
 html body .walletWrap .walletList .forPlatform .title button {
   width: 18.93vw;
   height: 6.13vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -3395,8 +4305,8 @@ html body .walletWrap .walletList .forPlatform .title button {
   font-size: 12px;
 }
 html body .walletWrap .walletList .forPlatform .title button:active, html body .walletWrap .walletList .forPlatform .title button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .walletWrap .walletList .forPlatform ul {
   display: -webkit-box;
@@ -3419,10 +4329,11 @@ html body .walletWrap .walletList .forPlatform ul li {
   min-height: 16.53vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px 0 0 11px;
+  padding: 10px 11px;
   margin: 0 0.26vw 0.26vw 0;
   border: solid 1px #e6e6e6;
   border-radius: 1.5vw;
+  box-sizing: border-box;
 }
 html body .walletWrap .walletList .forPlatform ul li:nth-of-type(3n) {
   margin-right: 0;
@@ -3461,7 +4372,7 @@ html body .walletWrap .walletList .forPlatform ul li div .smallInfo .inner {
   height: auto;
   padding: 6px 18px;
   color: #ffffff;
-  background: #cfa678;
+  background: #b90b0a;
   border-radius: 3px;
   position: absolute;
   left: 50%;
@@ -3481,7 +4392,7 @@ html body .walletWrap .walletList .forPlatform ul li div .smallInfo .inner::befo
   height: 0;
   border-style: solid;
   border-width: 0 4px 6px 4px;
-  border-color: #cfa678 transparent;
+  border-color: #b90b0a transparent;
 }
 html body .walletWrap .walletList .forPlatform ul li p {
   margin-top: 10px;
@@ -3575,7 +4486,7 @@ html body .memberWrap .user .info div .account .lv {
   padding: 0 5px;
   margin-right: 9px;
   border-radius: 1vw;
-  background: #cfa678;
+  background: #b90b0a;
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: bold;
@@ -3593,12 +4504,23 @@ html body .memberWrap .user .info div .date {
   font-weight: bold;
   color: #999999;
 }
-html body .memberWrap .user .info .arrow_ic {
-  display: block;
-  width: 1.7vw;
-  height: 3.2vw;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+html body .memberWrap .user .info .innerBtn {
+  width: auto;
+  height: 28px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 1vw;
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 0 10px;
+}
+html body .memberWrap .user .info .innerBtn:active, html body .memberWrap .user .info .innerBtn.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .memberWrap .user .wallet {
   display: -webkit-box;
@@ -3624,19 +4546,19 @@ html body .memberWrap .user .wallet p {
   background: #f2f3f3;
   border-style: solid;
   border-width: 1px 0 1px 1px;
-  border-color: #cca172;
+  border-color: #b90b0a;
   border-radius: 5vw 0 0 5vw;
   font-size: 15px;
   letter-spacing: 1px;
-  color: #ad8047;
+  color: #000000;
   font-weight: bold;
 }
 html body .memberWrap .user .wallet button {
   width: 27.73vw;
   height: 8.27vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -3646,8 +4568,8 @@ html body .memberWrap .user .wallet button {
   font-size: 15px;
 }
 html body .memberWrap .user .wallet button:active, html body .memberWrap .user .wallet button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .memberWrap .user .btnBox {
   display: -webkit-box;
@@ -3767,7 +4689,7 @@ html body .memberWrap .user ul li .bubble {
   right: 10px;
   border-radius: 50%;
   color: #ffffff;
-  background: #cfa678;
+  background: #b90b0a;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -3809,6 +4731,9 @@ html body .memberWrap .options div i {
   width: 5.6vw;
   height: 5.6vw;
 }
+html body .memberWrap .options div i.point_ic {
+  width: 6.6vw;
+}
 html body .memberWrap .options div p {
   font-size: 15px;
   letter-spacing: 2px;
@@ -3849,7 +4774,7 @@ html body .memberList ul li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-bottom: solid 2px transparent;
-  font-size: 3.4vw;
+  font-size: 3.7vw;
   font-weight: bold;
   color: #808080;
 }
@@ -3932,9 +4857,9 @@ html body .memberInfo form ul li input.active {
 }
 html body .memberInfo form ul li button {
   display: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -3945,17 +4870,17 @@ html body .memberInfo form ul li button {
   margin-bottom: 2px;
 }
 html body .memberInfo form ul li button:active, html body .memberInfo form ul li button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .memberInfo form ul .saveBtn {
   display: block;
   width: 92vw;
   height: 42px;
   margin: 12px auto 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -3963,8 +4888,8 @@ html body .memberInfo form ul .saveBtn {
   letter-spacing: 1px;
 }
 html body .memberInfo form ul .saveBtn:active, html body .memberInfo form ul .saveBtn.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .memberInfo .info_1, html body .memberInfo .info_2 {
   width: 100%;
@@ -4023,10 +4948,10 @@ html body .memberInfo .info_1 ul li span .copy, html body .memberInfo .info_2 ul
   width: 47px;
   height: 29px;
   background: #ffffff;
-  border: solid 1px #cfa678;
+  border: solid 1px #b90b0a;
   font-size: 13px;
   font-weight: bold;
-  color: #cfa678;
+  color: #b90b0a;
   border-radius: 3px;
   margin-left: 15px;
 }
@@ -4159,10 +5084,10 @@ html body .memberPlatform .platformBox .content li p button {
   height: 28px;
   margin-left: 10px;
   background: #ffffff;
-  border: solid 1px #cfa678;
+  border: solid 1px #b90b0a;
   font-size: 13px;
   font-weight: bold;
-  color: #cfa678;
+  color: #b90b0a;
   border-radius: 3px;
 }
 html body .memberPlatform .platformBox .content li p button.un {
@@ -4346,7 +5271,7 @@ html body .joinUsWrap .content .contentUl .items:nth-of-type(3) ul li .box .bott
   color: #ffffff;
   font-size: 13px;
   font-weight: bold;
-  background: #00000066;
+  background: rgba(0, 0, 0, 0.4);
 }
 html body .joinUsWrap .content .contentUl .items:nth-of-type(3) ul li .box .bottom p {
   margin: 0;
@@ -4610,8 +5535,8 @@ html body .helpWrap .helpBody ul li {
           justify-content: center;
   background: #ffffff;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
-          box-shadow: 0 0 5px 0 #c8c8c880;
+  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
   margin-bottom: 15px;
   font-size: 14px;
   font-weight: bold;
@@ -4651,8 +5576,8 @@ html body .helpInner ul li .title {
   width: 92.27vw;
   height: 52px;
   background: #ffffff;
-  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
-          box-shadow: 0 0 5px 0 #c8c8c880;
+  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4718,6 +5643,10 @@ html body .helpInner ul li .textBox p a {
   color: #009be4;
   text-decoration: none;
 }
+html body .helpInner ul li .textBox p .remind {
+  display: block;
+  color: #e11515;
+}
 html body .helpInner ul li .textBox .img {
   width: 100%;
   height: 0;
@@ -4729,6 +5658,336 @@ html body .helpInner ul li .textBox .img.transferWay {
 }
 html body .helpInner ul li .textBox .img.remote {
   padding-top: 137%;
+}
+html body .helpInner ul li .textBox .img.download01, html body .helpInner ul li .textBox .img.download02 {
+  padding-top: 59%;
+}
+html body .helpInner ul li .textBox .img.download03 {
+  padding-top: 125%;
+}
+html body .helpInner ul li .textBox .img.download04 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox .img.download05 {
+  padding-top: 69%;
+}
+html body .helpInner ul li .textBox .img.download06 {
+  padding-top: 60%;
+}
+html body .helpInner ul li .textBox .img.android.img_1 {
+  padding-top: 187%;
+}
+html body .helpInner ul li .textBox .img.android.img_4, html body .helpInner ul li .textBox .img.android.img_5 {
+  padding-top: 203%;
+}
+html body .helpInner ul li .textBox .img.android.img_6 {
+  padding-top: 206%;
+}
+html body .helpInner ul li .textBox .img.android.img_7 {
+  padding-top: 200%;
+}
+html body .helpInner ul li .textBox .img.android.img_8 {
+  padding-top: 107%;
+}
+html body .helpInner ul li .textBox .img.android.img_10 {
+  padding-top: 97%;
+}
+html body .helpInner ul li .textBox .img.android {
+  padding-top: 207%;
+}
+html body .helpInner ul li .textBox .img.ios.img_3, html body .helpInner ul li .textBox .img.ios.img_4, html body .helpInner ul li .textBox .img.ios.img_5, html body .helpInner ul li .textBox .img.ios.img_12, html body .helpInner ul li .textBox .img.ios.img_13 {
+  padding-top: 219%;
+}
+html body .helpInner ul li .textBox .img.ios.img_8, html body .helpInner ul li .textBox .img.ios.img_15 {
+  padding-top: 217%;
+}
+html body .helpInner ul li .textBox .img.ios.img_10, html body .helpInner ul li .textBox .img.ios.img_11 {
+  padding-top: 215%;
+}
+html body .helpInner ul li .textBox .img.ios {
+  padding-top: 221%;
+}
+html body .helpInner ul li .textBox img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 20px;
+}
+html body .helpInner ul li .textBox div.qPic {
+  width: 100%;
+  height: 0;
+  background-size: contain;
+  margin-bottom: 20px;
+}
+html body .helpInner ul li .textBox div.q1-01 {
+  padding-top: 165%;
+}
+html body .helpInner ul li .textBox div.q1-02 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q1-03 {
+  padding-top: 165%;
+}
+html body .helpInner ul li .textBox div.q2-01 {
+  padding-top: 165%;
+}
+html body .helpInner ul li .textBox div.q2-02 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q2-03 {
+  padding-top: 163%;
+}
+html body .helpInner ul li .textBox div.q2-04 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q2-05 {
+  padding-top: 165%;
+}
+html body .helpInner ul li .textBox div.q2-05 {
+  padding-top: 165%;
+}
+html body .helpInner ul li .textBox div.q3-01 {
+  padding-top: 164%;
+}
+html body .helpInner ul li .textBox div.q3-02 {
+  padding-top: 164%;
+}
+html body .helpInner ul li .textBox div.q3-03 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q3-04 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q3-05 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q4-01 {
+  padding-top: 165%;
+}
+html body .helpInner ul li .textBox div.q4-02 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q4-03 {
+  padding-top: 50%;
+}
+html body .helpInner ul li .textBox div.q4-04 {
+  padding-top: 165%;
+}
+html body .helpInner ul li .textBox div.q4-05 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q5-01 {
+  padding-top: 165%;
+}
+html body .helpInner ul li .textBox div.q5-02 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q5-03 {
+  padding-top: 55%;
+}
+html body .helpInner ul li .textBox div.q5-04 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q5-05 {
+  padding-top: 70%;
+}
+html body .helpInner ul li .textBox div.q6-01 {
+  padding-top: 170%;
+}
+html body .helpInner ul li .textBox div.q6-02 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q6-03 {
+  padding-top: 55%;
+}
+html body .helpInner ul li .textBox div.q6-04 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q6-05 {
+  padding-top: 169%;
+}
+html body .helpInner ul li .textBox div.q7-01 {
+  padding-top: 169%;
+}
+html body .helpInner ul li .textBox div.q7-02 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q7-03 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q7-04 {
+  padding-top: 159%;
+}
+html body .helpInner ul li .textBox div.q8-01 {
+  padding-top: 159%;
+}
+html body .helpInner ul li .textBox div.q8-02 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q8-03 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q8-04 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q8-05 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q8-06 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q9-01 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q9-02 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q10-01 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q10-02 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q10-03 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q10-04 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q11-01 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q11-02 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q11-03 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q11-04 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q12-01 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q12-02 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q12-03 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q13-01 {
+  padding-top: 165%;
+}
+html body .helpInner ul li .textBox div.q13-02 {
+  padding-top: 164%;
+}
+html body .helpInner ul li .textBox div.q13-03 {
+  padding-top: 165%;
+}
+html body .helpInner ul li .textBox div.q13-04 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.q13-05 {
+  padding-top: 165%;
+}
+html body .helpInner ul li .textBox div.q13-06 {
+  padding-top: 140%;
+}
+html body .helpInner ul li .textBox div.usdt-02 {
+  padding-top: 200%;
+}
+html body .helpInner ul li .textBox div.usdt-03 {
+  padding-top: 219%;
+}
+html body .helpInner ul li .textBox button {
+  width: 70%;
+  height: 9.87vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 1vw;
+  letter-spacing: 1px;
+}
+html body .helpInner ul li .textBox button:active, html body .helpInner ul li .textBox button.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
+}
+html body .csPage {
+  padding: 15px 6vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html body .csPage .title {
+  font-size: 4vw;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+html body .csPage .content {
+  font-size: 3.5vw;
+  line-height: 5vw;
+  margin-bottom: 25px;
+}
+html body .csPage .btn {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #cca172;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 4px 4px 4px rgba(126, 126, 126, 0.3490196078);
+          box-shadow: 4px 4px 4px rgba(126, 126, 126, 0.3490196078);
+}
+html body .csPage .btn i {
+  margin: 5px 10px 0 0;
+}
+html body .csPage .btn .cs_IC {
+  width: 25px;
+  height: 26px;
+  margin: 13px 10px 0 0;
+}
+html body .csPage .btn .line_IC {
+  width: 25px;
+  height: 24px;
+}
+html body .csPage .btn .main {
+  font-size: 4vw;
+  font-weight: bolder;
+  color: #ad8047;
+}
+html body .csPage .btn .sub {
+  font-size: 12px;
+  color: #cfa678;
+  margin: 5px 0 6px 0;
+}
+html body .csPage .btn .info {
+  font-size: 8px;
+  font-weight: bold;
+  color: #ad8047;
+}
+html body .csPage .LINE {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #00c300;
+  padding: 20px;
+  margin-top: 20px;
+}
+html body .csPage .LINE .main {
+  font-size: 4vw;
+  font-weight: bolder;
+  color: #00c300;
+}
+html body .csPage .LINE .id {
+  font-size: 3.5vw;
+  font-weight: bolder;
+  color: #00c300;
+  margin-top: 5px;
 }
 html body .eventApplyType {
   width: 100%;
@@ -4764,7 +6023,7 @@ html body .eventApplyType ul li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-bottom: solid 2px transparent;
-  font-size: 3.4vw;
+  font-size: 3.7vw;
   font-weight: bold;
   color: #808080;
 }
@@ -4788,14 +6047,15 @@ html body .applyList .listBox {
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px 4% 0;
 }
 html body .applyList .listBox .list {
-  margin-bottom: 15px;
+  margin-bottom: 50px;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 13px 2px #dedede;
           box-shadow: 0 0 13px 2px #dedede;
   background: #ffffff;
+  border: 2px solid #f00;
+  border-radius: 13px;
 }
 html body .applyList .listBox .list .title {
   width: 100%;
@@ -4809,9 +6069,11 @@ html body .applyList .listBox .list .title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: #ea232d;
+  border-radius: 10px 10px 0 0;
   border-bottom: solid 1px #e11515;
-  color: #000000;
-  font-size: 16px;
+  color: #ffffff;
+  font-size: 20px;
   font-weight: bold;
 }
 html body .applyList .listBox .list .tips {
@@ -4875,6 +6137,9 @@ html body .applyList .listBox .list ul li {
 html body .applyList .listBox .list ul li.cur {
   background: #fcf9f3;
 }
+html body .applyList .listBox .list ul li .limit {
+  white-space: nowrap;
+}
 html body .applyList .listBox .list ul li p {
   font-size: 13px;
   color: #000000;
@@ -4884,6 +6149,10 @@ html body .applyList .listBox .list ul li p em {
 }
 html body .applyList .listBox .list ul li p em.sp {
   color: #009245;
+}
+html body .applyList .listBox .list ul li p.platform {
+  width: 184px;
+  text-align: end;
 }
 html body .applyList .listBox .list .btnBox {
   width: 100%;
@@ -4902,10 +6171,13 @@ html body .applyList .listBox .list .btnBox button {
   width: calc((100% - 10px) / 2);
   height: 32px;
 }
+html body .applyList .listBox .list .btnBox button.full {
+  width: 100%;
+}
 html body .applyList .listBox .list .btnBox button.applyBtn {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -4913,15 +6185,15 @@ html body .applyList .listBox .list .btnBox button.applyBtn {
   letter-spacing: 1px;
 }
 html body .applyList .listBox .list .btnBox button.applyBtn:active, html body .applyList .listBox .list .btnBox button.applyBtn.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .applyList .listBox .list .btnBox button.checkBtn {
   background: #ffffff;
-  border: solid 1px #cfa678;
+  border: solid 1px #b90b0a;
   font-size: 13px;
   font-weight: bold;
-  color: #cfa678;
+  color: #b90b0a;
   border-radius: 3px;
   font-size: 16px;
 }
@@ -5036,10 +6308,10 @@ html body .applyRecord .searchContain form ul li .btnBox button {
           justify-content: center;
 }
 html body .applyRecord .searchContain form ul li .btnBox button:active, html body .applyRecord .searchContain form ul li .btnBox button.active {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #cda273), to(#eec696));
-  background: linear-gradient(to bottom, #cda273 10%, #eec696 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c61515), to(#df1515));
+  background: linear-gradient(to bottom, #c61515 0%, #df1515 100%);
   color: #ffffff;
-  border-color: #cca172;
+  border-color: #b90b0a;
 }
 html body .applyRecord .searchContain form ul li .btnBox button:nth-of-type(1) {
   border-radius: 5px 0 0 5px;
@@ -5053,9 +6325,9 @@ html body .applyRecord .searchContain form ul li.bigBtn {
 html body .applyRecord .searchContain form ul li.bigBtn button {
   width: 100%;
   height: 42px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -5063,8 +6335,8 @@ html body .applyRecord .searchContain form ul li.bigBtn button {
   letter-spacing: 1px;
 }
 html body .applyRecord .searchContain form ul li.bigBtn button:active, html body .applyRecord .searchContain form ul li.bigBtn button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .applyRecord .reviewBody {
   width: 100%;
@@ -5095,8 +6367,8 @@ html body .applyRecord .reviewBody .recordBox {
   margin-bottom: 10px;
   background: #ffffff;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
-          box-shadow: 0 0 5px 0 #c8c8c880;
+  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
 }
 html body .applyRecord .reviewBody .recordBox.display {
   display: block;
@@ -5171,7 +6443,7 @@ html body .vipWrap .topBox .board {
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 4vw 7.46vw;
+  padding: 0 4vw 1vw;
   border-radius: 0 0 40px 40px;
   -webkit-box-shadow: 0 0 13px 2px #dedede;
           box-shadow: 0 0 13px 2px #dedede;
@@ -5204,18 +6476,18 @@ html body .vipWrap .topBox .board .content .textBox span {
   font-size: 14px;
   color: #595757;
 }
-html body .vipWrap .topBox .board .content .medal {
-  width: 20.93vw;
-  height: 30.13vw;
-  position: absolute;
-  top: 0;
-  right: 5.6vw;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 6vw 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+html body .vipWrap .topBox .board .content .btn {
+  width: auto;
+  height: 28px;
+  background: #ce1515;
+  border-radius: 25px;
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+  padding: 0 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -5223,12 +6495,12 @@ html body .vipWrap .topBox .board .content .medal {
       -ms-flex-pack: center;
           justify-content: center;
 }
-html body .vipWrap .topBox .board .content .medal p {
-  font-size: 18px;
-  font-weight: bold;
-  color: #000000;
-  text-align: center;
-  line-height: 22px;
+html body .vipWrap .topBox .board .content .medal {
+  width: 20.93vw;
+  height: 30.13vw;
+  position: absolute;
+  top: 0;
+  right: 5.6vw;
 }
 html body .vipWrap .topBox .board .exBar {
   width: 100%;
@@ -5306,9 +6578,9 @@ html body .vipWrap .topBox .board .btnBox {
 html body .vipWrap .topBox .board .btnBox button {
   width: 43.2vw;
   height: 42px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -5317,15 +6589,15 @@ html body .vipWrap .topBox .board .btnBox button {
   font-size: 3.7vw;
 }
 html body .vipWrap .topBox .board .btnBox button:active, html body .vipWrap .topBox .board .btnBox button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .vipWrap .topBox .board .btnBox button.check {
   background: #ffffff;
-  border: solid 1px #cfa678;
+  border: solid 1px #b90b0a;
   font-size: 13px;
   font-weight: bold;
-  color: #cfa678;
+  color: #b90b0a;
   border-radius: 3px;
   font-size: 3.7vw;
 }
@@ -5450,35 +6722,12 @@ html body .vipWrap .topBox .cardBox .card ul li {
           box-sizing: border-box;
   padding: 0 6.67vw;
 }
-html body .vipWrap .topBox .cardBox .card ul li.cur .textBox {
-  color: #ffffff;
-}
-html body .vipWrap .topBox .cardBox .card ul li.cur .textBox p {
-  color: #ffffff;
-}
 html body .vipWrap .topBox .cardBox .card ul li .medal {
   position: absolute;
   top: 0;
   left: 5.6vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 19.47vw;
   height: 25.87vw;
-  padding-top: 6vw;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-html body .vipWrap .topBox .cardBox .card ul li .medal p {
-  font-weight: bold;
-  font-size: 18px;
-  color: #000000;
 }
 html body .vipWrap .topBox .cardBox .card ul li .textBox {
   display: -webkit-box;
@@ -5493,13 +6742,15 @@ html body .vipWrap .topBox .cardBox .card ul li .textBox {
           align-items: center;
   margin-bottom: 6.4vw;
   font-size: 14px;
-  color: #999999;
+  color: #ffffff;
   font-weight: bold;
+  text-align: center;
+  line-height: 16px;
 }
 html body .vipWrap .topBox .cardBox .card ul li .textBox p {
   margin-top: 2.4vw;
   font-size: 18px;
-  color: #595757;
+  color: #ffffff;
 }
 html body .vipWrap .enjoyBox {
   width: 100%;
@@ -5553,9 +6804,6 @@ html body .vipWrap .enjoyBox ul li p {
   font-size: 22px;
   color: #e11515;
   margin-top: 8px;
-}
-html body .vipWrap .enjoyBox ul s {
-  width: 45.33vw;
 }
 html body .vipWrap .checkBtn {
   width: 100%;
@@ -5616,8 +6864,8 @@ html body .vipDetail .lvWrap .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
-          box-shadow: 0 0 5px 0 #c8c8c880;
+  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 15px;
@@ -5701,7 +6949,6 @@ html body .vipDetail .lvWrap .list .right {
   display: -ms-flexbox;
   display: flex;
   overflow-x: auto;
-  position: relative;
 }
 html body .vipDetail .lvWrap .list .right ul {
   width: auto;
@@ -5862,6 +7109,29 @@ html body .vipDetail .lvWrap .list .right .finger::after {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+}
+html body .vipDetail .remindBox {
+  width: 100%;
+  height: auto;
+  padding: 24px 18px;
+  background: #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html body .vipDetail .remindBox p {
+  color: #595757;
+  font-size: 3.7vw;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 4.2vw;
+}
+html body .vipDetail .remindBox p:last-child {
+  margin: 0;
+}
+html body .vipDetail .remindBox p.title {
+  color: #000000;
+  font-size: 4.5vw;
+  margin-bottom: 20px;
 }
 html body .topList {
   width: 100%;
@@ -6309,7 +7579,7 @@ html body .cardList .cardBox ul li {
   width: 250px;
   height: 150px;
   border-radius: 5px;
-  background: linear-gradient(120deg, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: linear-gradient(120deg, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6326,13 +7596,15 @@ html body .cardList .cardBox ul li {
 }
 html body .cardList .cardBox ul li.empty {
   background: linear-gradient(120deg, #e8ebf2 0%, #cbcdd3 30%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 html body .cardList .cardBox ul li.wait .ing {
   opacity: 1;
-}
-html body .cardList .cardBox ul li .add {
-  width: 100%;
-  height: 123px;
 }
 html body .cardList .cardBox ul li .status {
   width: 100%;
@@ -6340,7 +7612,6 @@ html body .cardList .cardBox ul li .status {
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
-  margin-bottom: 8px;
 }
 html body .cardList .cardBox ul li .innerTitle {
   padding-left: 21px;
@@ -6370,7 +7641,7 @@ html body .cardList .cardBox ul li .ing {
   text-align: center;
   background: #ffffff;
   border-radius: 0 0 5px 5px;
-  color: #ad8047;
+  color: #666666;
   margin: 10px auto 5px;
   font-size: 12px;
 }
@@ -6421,9 +7692,9 @@ html body .cardContent ul button {
   width: 100%;
   height: 42px;
   margin: 25px 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -6431,8 +7702,409 @@ html body .cardContent ul button {
   letter-spacing: 1px;
 }
 html body .cardContent ul button:active, html body .cardContent ul button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
+}
+html body .friendWrap {
+  width: 100%;
+  height: calc(100vh - 95px);
+  background: #f2f3f3;
+  overflow-y: auto;
+  padding-top: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html body .friendWrap .searchContent {
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 13px 14px;
+  background: #ffffff;
+}
+html body .friendWrap .searchContent .top {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+html body .friendWrap .searchContent .top .helf {
+  width: 50%;
+}
+html body .friendWrap .searchContent .top .helf p {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #000000;
+}
+html body .friendWrap .searchContent .top .helf button {
+  width: 44vw;
+  height: 42px;
+  background: #ffffff;
+  border-radius: 3px;
+  border: solid 1px #e6e6e6;
+  color: #000000;
+  font-size: 16px;
+  padding: 0 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: bold;
+}
+html body .friendWrap .searchContent .top .helf button i {
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 4px 0 4px;
+  border-color: #e11515 transparent;
+}
+html body .friendWrap .searchContent .top .full {
+  width: 100%;
+}
+html body .friendWrap .searchContent .top .full p {
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #000000;
+}
+html body .friendWrap .searchContent .top .full .inputBox {
+  width: 100%;
+  height: 42px;
+  border: solid 1px #e6e6e6;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+}
+html body .friendWrap .searchContent .top .full .inputBox input {
+  width: auto;
+  height: 100%;
+  border: none;
+  background: none;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+}
+html body .friendWrap .searchContent .top .full .selectBox {
+  width: 100%;
+  height: auto;
+}
+html body .friendWrap .searchContent .top .full .selectBox select {
+  width: 100%;
+  height: 42px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+  background-image: linear-gradient(45deg, transparent 50%, #e11515 0), linear-gradient(135deg, #e11515 50%, transparent 0);
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  border: solid 1px #e6e6e6;
+  padding-left: 15px;
+}
+html body .friendWrap .searchContent .date {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0;
+}
+html body .friendWrap .searchContent .date button {
+  width: 25%;
+  height: 38px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #ffffff), to(#f4f4f4));
+  background: linear-gradient(#ffffff 40%, #f4f4f4 100%);
+  font-size: 4vw;
+  font-weight: bold;
+  color: #808080;
+  border: solid 1px #e6e6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .friendWrap .searchContent .date button:active, html body .friendWrap .searchContent .date button.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#c61515), to(#df1515));
+  background: linear-gradient(to bottom, #c61515 0%, #df1515 100%);
+  color: #ffffff;
+  border-color: #b90b0a;
+}
+html body .friendWrap .searchContent .date button:nth-of-type(1) {
+  border-radius: 5px 0 0 5px;
+}
+html body .friendWrap .searchContent .date button:last-child {
+  border-radius: 0 5px 5px 0;
+}
+html body .friendWrap .searchContent .check {
+  width: 100%;
+  height: 42px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 1vw;
+  letter-spacing: 1px;
+}
+html body .friendWrap .searchContent .check:active, html body .friendWrap .searchContent .check.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
+}
+html body .friendWrap .list {
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 14px;
+}
+html body .friendWrap .list .noData {
+  display: none;
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 80px;
+  color: #999999;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+}
+html body .friendWrap .list .noData.display {
+  display: block;
+}
+html body .friendWrap .list .recordBox {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: solid 1px #e6e6e6;
+  background: #ffffff;
+  margin-bottom: 10px;
+}
+html body .friendWrap .list .recordBox.display {
+  display: block;
+}
+html body .friendWrap .list .recordBox .title {
+  width: 100%;
+  height: 38px;
+  border-bottom: solid 1px #e11515;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 18px;
+}
+html body .friendWrap .list .recordBox .title .readMore {
+  font-size: 13px;
+  font-weight: bold;
+  background: none;
+  color: #b90b0a;
+  border: solid 1px #b90b0a;
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+html body .friendWrap .list .recordBox ul {
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 18px;
+}
+html body .friendWrap .list .recordBox ul li {
+  width: 100%;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+}
+html body .friendWrap .list .recordBox ul li p {
+  font-size: 13px;
+}
+html body .friendWrap .list .recordBox ul li p.num {
+  color: #666666;
+}
+html body .friendWrap .list .recordBox ul li p.num.readMore {
+  text-decoration: underline;
+  color: #009be4;
+}
+html body .friendWrap .list .recInfo {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  border-radius: 5px;
+  border: solid 1px #e6e6e6;
+  margin-bottom: 10px;
+}
+html body .friendWrap .list .recInfo .lineBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  padding: 6px 70px 6px 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html body .friendWrap .list .recInfo .lineBox p {
+  width: 60%;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+}
+html body .friendWrap .list .recInfo .lineBox .copy {
+  width: auto;
+  height: 30px;
+  position: absolute;
+  right: 16px;
+  top: 53%;
+  padding: 1px 5px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #ffffff;
+  border: solid 1px #b90b0a;
+  font-size: 13px;
+  font-weight: bold;
+  color: #b90b0a;
+  border-radius: 3px;
+}
+html body .friendWrap .list .recInfo .lineBox img {
+  width: 18vh;
+  height: 18vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+html body .friendWrap .list .recInfo .lineBox.sp {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 16px;
+}
+html body .friendWrap .list .recInfo label {
+  width: 65px;
+  height: auto;
+  text-align: left;
+  line-height: 30px;
+  display: inline;
+  margin-right: 50px;
+  font-size: 14px;
+  font-weight: bold;
+}
+html body .friendWrap .list .recInfo input {
+  width: 60%;
+  height: auto;
+}
+html body .friendWrap .list .eventInfo {
+  height: auto;
+  background: #ffffff;
+  border-radius: 5px;
+  border: solid 1px #e6e6e6;
+  padding: 30px 10px;
+}
+html body .friendWrap .list .eventInfo .mainTitle {
+  font-size: 20px;
+  color: #e11515;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+html body .friendWrap .list .eventInfo .textBox {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+html body .friendWrap .list .eventInfo .textBox .subTitle {
+  font-size: 16px;
+  color: #e11515;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+html body .friendWrap .list .eventInfo .textBox .content {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+html body .friendWrap .list .eventInfo .textBox .content:last-child {
+  margin: 0;
+}
+html body .friendWrap .list .eventInfo .textBox .content span {
+  color: #e11515;
+  font-size: 14px;
+  font-weight: bold;
+}
+html body .friendWrap .list .eventInfo .textBox .content ul {
+  margin-left: 15px;
+}
+html body .friendWrap .list .eventInfo .textBox .content ul li {
+  list-style: decimal;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+html body .friendWrap .list .eventInfo .textBox .content ul li:last-child {
+  margin: 0;
+}
+html body .friendWrap .list .eventInfo .textBox .content .remind {
+  color: #e11515;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 html body .bettingWrap {
   width: 100%;
@@ -6586,10 +8258,10 @@ html body .bettingWrap .searchContent .date button {
           justify-content: center;
 }
 html body .bettingWrap .searchContent .date button:active, html body .bettingWrap .searchContent .date button.active {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #cda273), to(#eec696));
-  background: linear-gradient(to bottom, #cda273 10%, #eec696 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c61515), to(#df1515));
+  background: linear-gradient(to bottom, #c61515 0%, #df1515 100%);
   color: #ffffff;
-  border-color: #cca172;
+  border-color: #b90b0a;
 }
 html body .bettingWrap .searchContent .date button:nth-of-type(1) {
   border-radius: 5px 0 0 5px;
@@ -6600,9 +8272,9 @@ html body .bettingWrap .searchContent .date button:last-child {
 html body .bettingWrap .searchContent .check {
   width: 100%;
   height: 42px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -6610,8 +8282,8 @@ html body .bettingWrap .searchContent .check {
   letter-spacing: 1px;
 }
 html body .bettingWrap .searchContent .check:active, html body .bettingWrap .searchContent .check.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .bettingWrap .list {
   width: 100%;
@@ -6706,550 +8378,6 @@ html body .bettingWrap .list .recordBox ul li p.num.win {
 html body .bettingWrap .list .recordBox ul li p.num.lose {
   color: #009245;
 }
-html body .walletWrap {
-  width: 100%;
-  min-height: calc(100vh - 92px);
-  height: auto;
-  background: #f2f3f3;
-  padding-bottom: 10px;
-}
-html body .walletWrap .walletBox {
-  width: 100%;
-  height: auto;
-  padding-bottom: 15px;
-  margin-bottom: 10px;
-  background: #ffffff;
-}
-html body .walletWrap .walletBox .gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e11515), color-stop(23%, #e11515), color-stop(24%, #ffffff), to(#ffffff));
-  background: linear-gradient(to bottom, #e11515 0%, #e11515 23%, #ffffff 24%, #ffffff 100%);
-  width: 100%;
-  height: auto;
-}
-html body .walletWrap .walletBox .gradient .content {
-  width: 92vw;
-  height: auto;
-  margin: 0 auto 16px;
-  background: #ffffff;
-  border-radius: 1.5vw;
-  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
-          box-shadow: 0 0 5px 0 #c8c8c880;
-}
-html body .walletWrap .walletBox .gradient .content .amount {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-bottom: solid 1px #e6e6e6;
-}
-html body .walletWrap .walletBox .gradient .content .amount .half {
-  width: 50%;
-  height: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 12px 0 12px 15px;
-}
-html body .walletWrap .walletBox .gradient .content .amount .half .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 10px;
-  color: #595757;
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-html body .walletWrap .walletBox .gradient .content .amount .half .title.all {
-  color: #009245;
-}
-html body .walletWrap .walletBox .gradient .content .amount .half .title .icon {
-  width: 4.27vw;
-  height: 4.27vw;
-  margin-left: 6px;
-}
-html body .walletWrap .walletBox .gradient .content .amount .half .money {
-  color: #000000;
-  font-size: 25px;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 33px;
-  width: 100%;
-}
-html body .walletWrap .walletBox .gradient .content .details {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-bottom: solid 1px #e6e6e6;
-}
-html body .walletWrap .walletBox .gradient .content .details .items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 6px;
-  height: 10.67vw;
-  border-right: solid 1px #e6e6e6;
-}
-html body .walletWrap .walletBox .gradient .content .details .items:nth-of-type(2) {
-  border: none;
-}
-html body .walletWrap .walletBox .gradient .content .details .items p {
-  font-size: 15px;
-  font-weight: bold;
-  color: #333333;
-  white-space: nowrap;
-}
-html body .walletWrap .walletBox .gradient .content .details .items p:nth-of-type(1) {
-  width: 40%;
-  font-size: 14px;
-  text-align: center;
-}
-html body .walletWrap .walletBox .gradient .content .details .items p:nth-of-type(2) {
-  width: 60%;
-  text-align: right;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 5px;
-}
-html body .walletWrap .walletBox .gradient .content .details .items p.mainWallet {
-  color: #e11515;
-}
-html body .walletWrap .walletBox .gradient .content .details .items p.limit {
-  color: #595757;
-}
-html body .walletWrap .walletBox .gradient .content .details .items p.activeWallet {
-  color: #ff8600;
-}
-html body .walletWrap .walletBox ul {
-  width: 100%;
-  height: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 12.8vw;
-}
-html body .walletWrap .walletBox ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-html body .walletWrap .walletBox ul li i {
-  display: block;
-  width: 11.47vw;
-  height: 11.47vw;
-}
-html body .walletWrap .walletBox ul li p {
-  font-size: 13px;
-  letter-spacing: 1px;
-  color: #595757;
-  padding-top: 6px;
-}
-html body .walletWrap .btnBox {
-  width: 100%;
-  height: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 5px 10px;
-}
-html body .walletWrap .btnBox button {
-  width: 46.4vw;
-  height: 10.67vw;
-  background: #cccccc;
-  border: solid 1px #e5e5e5;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 3.7vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-html body .walletWrap .btnBox button:active, html body .walletWrap .btnBox button.active {
-  border-color: #ff6464;
-  background: -webkit-gradient(linear, left top, left bottom, from(#c61515), to(#df1515));
-  background: linear-gradient(to bottom, #c61515 0%, #df1515 100%);
-}
-html body .walletWrap .btnBox button:nth-of-type(1) {
-  border-radius: 1.5vw 0 0 1.5vw;
-}
-html body .walletWrap .btnBox button:last-child {
-  border-radius: 0 1.5vw 1.5vw 0;
-}
-html body .walletWrap .walletList {
-  width: 100%;
-  height: auto;
-  background: #ffffff;
-}
-html body .walletWrap .walletList .forActive,
-html body .walletWrap .walletList .forHistory {
-  padding-bottom: 15px;
-  display: none;
-}
-html body .walletWrap .walletList .forActive.display,
-html body .walletWrap .walletList .forHistory.display {
-  display: block;
-}
-html body .walletWrap .walletList .forActive .title,
-html body .walletWrap .walletList .forHistory .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  height: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 8px 15px 0;
-  margin-bottom: 11px;
-  font-size: 13px;
-  letter-spacing: 1px;
-  color: #ad8047;
-  font-weight: bold;
-}
-html body .walletWrap .walletList .forActive .title .refresh_ic,
-html body .walletWrap .walletList .forHistory .title .refresh_ic {
-  display: block;
-  width: 18px;
-  height: 18px;
-}
-html body .walletWrap .walletList .forActive .pointBox,
-html body .walletWrap .walletList .forHistory .pointBox {
-  width: 92.27vw;
-  height: auto;
-  padding-bottom: 30px;
-  margin: 0 auto 14px;
-  background: #ffffff;
-  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
-          box-shadow: 0 0 5px 0 #c8c8c880;
-}
-html body .walletWrap .walletList .forActive .pointBox .smallTitle,
-html body .walletWrap .walletList .forHistory .pointBox .smallTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 40px;
-  border-bottom: solid 1px #e11515;
-  font-size: 14px;
-  font-weight: bold;
-  color: #000000;
-  padding: 0 17px;
-}
-html body .walletWrap .walletList .forActive .pointBox .barBox,
-html body .walletWrap .walletList .forHistory .pointBox .barBox {
-  width: 88vw;
-  height: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px 20px 15px;
-  background: #fcf9f3;
-  border-radius: 3px;
-  margin: 10px auto 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-html body .walletWrap .walletList .forActive .pointBox .barBox .not,
-html body .walletWrap .walletList .forHistory .pointBox .barBox .not {
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #808080;
-}
-html body .walletWrap .walletList .forActive .pointBox ul,
-html body .walletWrap .walletList .forHistory .pointBox ul {
-  width: 100%;
-  height: auto;
-}
-html body .walletWrap .walletList .forActive .pointBox ul li,
-html body .walletWrap .walletList .forHistory .pointBox ul li {
-  width: 100%;
-  height: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 12px 0 0 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-html body .walletWrap .walletList .forActive .pointBox ul li p,
-html body .walletWrap .walletList .forHistory .pointBox ul li p {
-  font-size: 13px;
-  letter-spacing: 1px;
-  color: #595757;
-  font-weight: bold;
-}
-html body .walletWrap .walletList .forActive .pointBox ul li p:nth-of-type(1),
-html body .walletWrap .walletList .forHistory .pointBox ul li p:nth-of-type(1) {
-  margin-right: 20px;
-}
-html body .walletWrap .walletList .forActive .pointBox .pointBtnBox,
-html body .walletWrap .walletList .forHistory .pointBox .pointBtnBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  height: auto;
-  padding: 20px 14px 10px;
-}
-html body .walletWrap .walletList .forActive .pointBox .pointBtnBox button,
-html body .walletWrap .walletList .forHistory .pointBox .pointBtnBox button {
-  width: 41.33vw;
-  height: 8.27vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
-  border-radius: 1vw;
-  letter-spacing: 1px;
-  font-size: 13px;
-}
-html body .walletWrap .walletList .forActive .pointBox .pointBtnBox button:active, html body .walletWrap .walletList .forActive .pointBox .pointBtnBox button.active,
-html body .walletWrap .walletList .forHistory .pointBox .pointBtnBox button:active,
-html body .walletWrap .walletList .forHistory .pointBox .pointBtnBox button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-}
-html body .walletWrap .walletList .forActive .pointBox .pointBtnBox button.check,
-html body .walletWrap .walletList .forHistory .pointBox .pointBtnBox button.check {
-  background: #ffffff;
-  border: solid 1px #cfa678;
-  font-size: 13px;
-  font-weight: bold;
-  color: #cfa678;
-  border-radius: 3px;
-  font-size: 13px;
-}
-html body .walletWrap .walletList .forPlatform {
-  padding-bottom: 15px;
-  display: none;
-}
-html body .walletWrap .walletList .forPlatform.display {
-  display: block;
-}
-html body .walletWrap .walletList .forPlatform .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  height: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 8px 15px 0;
-  margin-bottom: 11px;
-  font-size: 13px;
-  letter-spacing: 1px;
-  color: #ad8047;
-  font-weight: bold;
-}
-html body .walletWrap .walletList .forPlatform .title button {
-  width: 18.93vw;
-  height: 6.13vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
-  border-radius: 1vw;
-  letter-spacing: 1px;
-  font-size: 12px;
-}
-html body .walletWrap .walletList .forPlatform .title button:active, html body .walletWrap .walletList .forPlatform .title button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-}
-html body .walletWrap .walletList .forPlatform ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  max-height: 67.16vw;
-  padding: 0 3.6vw;
-  overflow: hidden;
-}
-html body .walletWrap .walletList .forPlatform ul.active {
-  max-height: none;
-}
-html body .walletWrap .walletList .forPlatform ul li {
-  width: 30.66vw;
-  min-height: 16.53vw;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px 0 0 11px;
-  margin: 0 0.26vw 0.26vw 0;
-  border: solid 1px #e6e6e6;
-  border-radius: 1.5vw;
-}
-html body .walletWrap .walletList .forPlatform ul li:nth-of-type(3n) {
-  margin-right: 0;
-}
-html body .walletWrap .walletList .forPlatform ul li div {
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: #595757;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-html body .walletWrap .walletList .forPlatform ul li div .smallInfo {
-  display: block;
-  width: 18px;
-  height: 18px;
-  margin-left: 5px;
-  position: relative;
-  opacity: 0;
-  pointer-events: none;
-}
-html body .walletWrap .walletList .forPlatform ul li div .smallInfo.display {
-  opacity: 1;
-  pointer-events: visible;
-}
-html body .walletWrap .walletList .forPlatform ul li div .smallInfo:hover .inner, html body .walletWrap .walletList .forPlatform ul li div .smallInfo:active .inner, html body .walletWrap .walletList .forPlatform ul li div .smallInfo.active .inner {
-  display: block;
-}
-html body .walletWrap .walletList .forPlatform ul li div .smallInfo .inner {
-  display: none;
-  width: auto;
-  height: auto;
-  padding: 6px 18px;
-  color: #ffffff;
-  background: #cfa678;
-  border-radius: 3px;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: -30px;
-  white-space: nowrap;
-}
-html body .walletWrap .walletList .forPlatform ul li div .smallInfo .inner::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: -6px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 4px 6px 4px;
-  border-color: #cfa678 transparent;
-}
-html body .walletWrap .walletList .forPlatform ul li p {
-  margin-top: 10px;
-  font-size: 17px;
-  color: #000000;
-  font-weight: bold;
-}
-html body .walletWrap .walletList .forPlatform .openBtn {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: auto;
-  margin-top: 15px;
-}
-html body .walletWrap .walletList .forPlatform .openBtn div {
-  font-size: 13px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  color: #000000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-html body .walletWrap .walletList .forPlatform .openBtn div.active .db_arrow {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-html body .walletWrap .walletList .forPlatform .openBtn div .db_arrow {
-  display: block;
-  width: 12px;
-  height: 12px;
-  margin-left: 9px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
 html body .depositWrap {
   width: 100%;
   height: calc(100vh - 95px);
@@ -7317,6 +8445,8 @@ html body .depositWrap .depList .listWrap ul li {
           flex-direction: column;
   position: relative;
   overflow: hidden;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 html body .depositWrap .depList .listWrap ul li:active, html body .depositWrap .depList .listWrap ul li.active {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(40%, #ffffff), to(#f4f4f4));
@@ -7381,6 +8511,9 @@ html body .depositWrap .depContent .title:not(:nth-of-type(1)) {
 html body .depositWrap .depContent .title .remind {
   margin-left: 10px;
 }
+html body .depositWrap .depContent .title span {
+  margin-right: 5px;
+}
 html body .depositWrap .depContent select {
   width: 100%;
   height: 42px;
@@ -7409,6 +8542,16 @@ html body .depositWrap .depContent .remind .num {
   color: #e11515;
   margin-left: 10px;
 }
+html body .depositWrap .depContent .remind .num:last-child {
+  margin-left: 0;
+}
+html body .depositWrap .depContent .btn_remind {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #e11515;
+  padding-top: 3px;
+}
 html body .depositWrap .depContent input {
   width: 100%;
   height: 42px;
@@ -7425,9 +8568,9 @@ html body .depositWrap .depContent input {
 html body .depositWrap .depContent .check {
   width: 100%;
   height: 42px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -7436,8 +8579,8 @@ html body .depositWrap .depContent .check {
   margin-top: 20px;
 }
 html body .depositWrap .depContent .check:active, html body .depositWrap .depContent .check.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .depositWrap .depContent.already .title {
   color: #e11515;
@@ -7475,17 +8618,17 @@ html body .depositWrap .depContent.already ul li p button {
 }
 html body .depositWrap .depContent.already ul li p button.copy {
   background: #ffffff;
-  border: solid 1px #cfa678;
+  border: solid 1px #b90b0a;
   font-size: 13px;
   font-weight: bold;
-  color: #cfa678;
+  color: #b90b0a;
   border-radius: 3px;
   font-size: 14px;
 }
 html body .depositWrap .depContent.already ul li p button.change {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -7494,8 +8637,8 @@ html body .depositWrap .depContent.already ul li p button.change {
   font-size: 14px;
 }
 html body .depositWrap .depContent.already ul li p button.change:active, html body .depositWrap .depContent.already ul li p button.change.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .depositWrap .depContent.already ul li .checkBox {
   width: 95%;
@@ -7551,6 +8694,10 @@ html body .depositWrap .remindBox {
   background: #fcf9f3;
   border: solid 1px #cca172;
   border-radius: 5px;
+  display: none;
+}
+html body .depositWrap .remindBox.display {
+  display: block;
 }
 html body .depositWrap .remindBox p {
   font-size: 12px;
@@ -7563,10 +8710,14 @@ html body .depositWrap .remindBox p.title {
   margin-bottom: 10px;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #cfa678;
+  color: #b90b0a;
 }
-html body .depositWrap .remindBox p.sp {
+html body .depositWrap .remindBox p .sp {
   color: #e11515;
+}
+html body .depositWrap .remindBox.atm p:nth-of-type(2) {
+  color: #e11515;
+  font-weight: bold;
 }
 html body .transWrap {
   width: 100%;
@@ -7585,8 +8736,8 @@ html body .transWrap .wallet {
   padding: 12px 15px 10px;
   border-radius: 5px;
   background: #ffffff;
-  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
-          box-shadow: 0 0 5px 0 #c8c8c880;
+  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
   margin: 0 auto 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7663,7 +8814,7 @@ html body .transWrap .transBox .selectBox select {
   font-size: 14px;
 }
 html body .transWrap .transBox .selectBox .smallWord {
-  color: #cfa678;
+  color: #b90b0a;
   font-size: 12px;
   font-weight: bold;
   position: absolute;
@@ -7685,9 +8836,9 @@ html body .transWrap .transBox .btnBox {
 html body .transWrap .transBox .btnBox button {
   width: 45%;
   height: 42px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -7695,15 +8846,15 @@ html body .transWrap .transBox .btnBox button {
   letter-spacing: 1px;
 }
 html body .transWrap .transBox .btnBox button:active, html body .transWrap .transBox .btnBox button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .transWrap .transBox .check {
   width: 100%;
   height: 42px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -7711,8 +8862,8 @@ html body .transWrap .transBox .check {
   letter-spacing: 1px;
 }
 html body .transWrap .transBox .check:active, html body .transWrap .transBox .check.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .transWrap .subClass {
   width: 100%;
@@ -7793,8 +8944,8 @@ html body .transWrap .forActive .pointBox {
   padding-bottom: 30px;
   margin: 0 auto 14px;
   background: #ffffff;
-  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
-          box-shadow: 0 0 5px 0 #c8c8c880;
+  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
 }
 html body .transWrap .forActive .pointBox .smallTitle {
   display: -webkit-box;
@@ -7874,9 +9025,9 @@ html body .transWrap .forActive .pointBox .pointBtnBox {
 html body .transWrap .forActive .pointBox .pointBtnBox button {
   width: 41.33vw;
   height: 8.27vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -7885,15 +9036,15 @@ html body .transWrap .forActive .pointBox .pointBtnBox button {
   font-size: 13px;
 }
 html body .transWrap .forActive .pointBox .pointBtnBox button:active, html body .transWrap .forActive .pointBox .pointBtnBox button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .transWrap .forActive .pointBox .pointBtnBox button.check {
   background: #ffffff;
-  border: solid 1px #cfa678;
+  border: solid 1px #b90b0a;
   font-size: 13px;
   font-weight: bold;
-  color: #cfa678;
+  color: #b90b0a;
   border-radius: 3px;
   font-size: 13px;
 }
@@ -7929,9 +9080,9 @@ html body .transWrap .forPlatform .title {
 html body .transWrap .forPlatform .title button {
   width: 18.93vw;
   height: 6.13vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -7940,8 +9091,8 @@ html body .transWrap .forPlatform .title button {
   font-size: 12px;
 }
 html body .transWrap .forPlatform .title button:active, html body .transWrap .forPlatform .title button.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .transWrap .forPlatform ul {
   display: -webkit-box;
@@ -7964,7 +9115,8 @@ html body .transWrap .forPlatform ul li {
   min-height: 16.53vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px 0 0 11px;
+  padding: 10px 11px;
+  box-sizing: border-box;
   margin: 0 0.26vw 0.26vw 0;
   border: solid 1px #e6e6e6;
   border-radius: 1.5vw;
@@ -8006,7 +9158,7 @@ html body .transWrap .forPlatform ul li div .smallInfo .inner {
   height: auto;
   padding: 6px 18px;
   color: #ffffff;
-  background: #cfa678;
+  background: #b90b0a;
   border-radius: 3px;
   position: absolute;
   left: 50%;
@@ -8026,7 +9178,7 @@ html body .transWrap .forPlatform ul li div .smallInfo .inner::before {
   height: 0;
   border-style: solid;
   border-width: 0 4px 6px 4px;
-  border-color: #cfa678 transparent;
+  border-color: #b90b0a transparent;
 }
 html body .transWrap .forPlatform ul li p {
   margin-top: 10px;
@@ -8095,8 +9247,8 @@ html body .withWrap .walletBox .gradient .content {
   margin: 0 auto 16px;
   background: #ffffff;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 0 #c8c8c880;
-          box-shadow: 0 0 5px 0 #c8c8c880;
+  -webkit-box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
+          box-shadow: 0 0 5px 0 rgba(200, 200, 200, 0.5019607843);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8112,6 +9264,17 @@ html body .withWrap .walletBox .gradient .content {
   padding: 10px 14px;
 }
 html body .withWrap .walletBox .gradient .content .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+html body .withWrap .walletBox .gradient .content .title span {
   color: #e11515;
   font-size: 14px;
   font-weight: bold;
@@ -8122,11 +9285,29 @@ html body .withWrap .walletBox .gradient .content .title {
       -ms-flex-align: center;
           align-items: center;
 }
-html body .withWrap .walletBox .gradient .content .title i {
+html body .withWrap .walletBox .gradient .content .title span i {
   display: block;
   margin-left: 10px;
   width: 4.27vw;
   height: 4.27vw;
+}
+html body .withWrap .walletBox .gradient .content .title .reBtn {
+  width: auto;
+  height: 28px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 1vw;
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 0 10px;
+}
+html body .withWrap .walletBox .gradient .content .title .reBtn:active, html body .withWrap .walletBox .gradient .content .title .reBtn.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .withWrap .walletBox .gradient .content .amount {
   font-size: 29px;
@@ -8159,6 +9340,39 @@ html body .withWrap .walletBox .gradient .detail p.num {
   color: #000000;
   font-size: 17px;
 }
+html body .withWrap .walletBox .gradient .detail .waterBtn {
+  width: auto;
+  height: 28px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 1vw;
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 5px 7px;
+  margin-top: 8px;
+}
+html body .withWrap .walletBox .gradient .detail .waterBtn:active, html body .withWrap .walletBox .gradient .detail .waterBtn.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
+}
+html body .withWrap .walletBox .gradient .last {
+  width: 100%;
+  height: 65px;
+}
+html body .withWrap .walletBox .gradient .last div {
+  position: relative;
+}
+html body .withWrap .walletBox .gradient .last div .problem {
+  width: 16.5px;
+  height: 16.5px;
+  position: absolute;
+  top: -1px;
+  right: -10px;
+}
 html body .withWrap .walletBox .walletDetail {
   width: 100%;
   height: 42px;
@@ -8173,18 +9387,35 @@ html body .withWrap .walletBox .walletDetail .check {
   margin: 0 auto;
   width: 92.8vw;
   height: 42px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
   border-radius: 1vw;
   letter-spacing: 1px;
+  position: relative;
 }
 html body .withWrap .walletBox .walletDetail .check:active, html body .withWrap .walletBox .walletDetail .check.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
+}
+html body .withWrap .walletBox .walletDetail .check P {
+  font-size: 16px;
+  color: #ffffff;
+  position: relative;
+}
+html body .withWrap .walletBox .walletDetail .check P::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #ffffff transparent;
+  position: absolute;
+  top: 9px;
+  right: 13vh;
 }
 html body .withWrap .walletBox .walletDetail .detailBox {
   padding-bottom: 15px;
@@ -8253,7 +9484,7 @@ html body .withWrap .walletBox .walletDetail .detailBox ul li div .smallInfo .in
   height: auto;
   padding: 6px 18px;
   color: #ffffff;
-  background: #cfa678;
+  background: #b90b0a;
   border-radius: 3px;
   position: absolute;
   left: 50%;
@@ -8273,7 +9504,7 @@ html body .withWrap .walletBox .walletDetail .detailBox ul li div .smallInfo .in
   height: 0;
   border-style: solid;
   border-width: 0 4px 6px 4px;
-  border-color: #cfa678 transparent;
+  border-color: #b90b0a transparent;
 }
 html body .withWrap .walletBox .walletDetail .detailBox ul li p {
   margin-top: 10px;
@@ -8334,10 +9565,14 @@ html body .withWrap .withContent .remind {
   border: solid 1px #cca172;
   border-radius: 5px;
   color: #595757;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
-  font-weight: bold;
+  font-weight: bolder;
   margin-bottom: 10px;
+}
+html body .withWrap .withContent option {
+  font-size: 15px;
+  font-weight: bolder;
 }
 html body .withWrap .withContent select {
   width: 100%;
@@ -8363,6 +9598,14 @@ html body .withWrap .withContent .smallRemind {
   font-size: 12px;
   font-weight: bold;
 }
+html body .withWrap .withContent .smallRemind.sp {
+  color: #e11515;
+}
+html body .withWrap .withContent .smallRemind .lastNum {
+  color: #b90b0a;
+  font-weight: bolder;
+  margin-left: 10px;
+}
 html body .withWrap .withContent input {
   width: 100%;
   height: 42px;
@@ -8380,9 +9623,9 @@ html body .withWrap .withContent input {
 html body .withWrap .withContent .check {
   width: 100%;
   height: 42px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to bottom, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
-  border: solid 1px #cca172;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ea232d), color-stop(50%, #a80d0c), to(#ea232d));
+  background: linear-gradient(to bottom, #ea232d 0%, #a80d0c 50%, #ea232d 100%);
+  border: solid 1px #b90b0a;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -8391,8 +9634,8 @@ html body .withWrap .withContent .check {
   margin-top: 10px;
 }
 html body .withWrap .withContent .check:active, html body .withWrap .withContent .check.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0%, #cca172 50%, #f1c999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90b0a), to(#ea232d));
+  background: linear-gradient(to bottom, #b90b0a 0%, #ea232d 100%);
 }
 html body .withWrap .remindBox {
   width: 92.27vw;
@@ -8416,8 +9659,116 @@ html body .withWrap .remindBox p.title {
   margin-bottom: 10px;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #cfa678;
+  color: #b90b0a;
 }
 html body .withWrap .remindBox p .sp {
   color: #e11515;
+}
+html body .fixWrap {
+  width: 100%;
+  height: calc(100vh - 96px);
+  overflow-y: auto;
+}
+html body .fixWrap .content {
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 32px 16px;
+}
+html body .fixWrap .content table {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 0 1px #e11515;
+          box-shadow: 0 0 0 1px #e11515;
+  border-radius: 16px;
+}
+html body .fixWrap .content table tr th {
+  height: 40px;
+  background: #e11515;
+  vertical-align: middle;
+}
+html body .fixWrap .content table tr th p {
+  color: #ffffff;
+  font-size: 4vw;
+  font-weight: bold;
+}
+html body .fixWrap .content table tr td {
+  height: 40px;
+  background: #ffffff;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: #e6e6e6;
+  vertical-align: middle;
+}
+html body .fixWrap .content table tr td:nth-of-type(1) {
+  width: 25%;
+}
+html body .fixWrap .content table tr td:nth-of-type(2) {
+  width: 25%;
+}
+html body .fixWrap .content table tr td:nth-of-type(3) {
+  width: 50%;
+}
+html body .fixWrap .content table tr td p {
+  width: 100%;
+  color: #000000;
+  font-size: 3.7vw;
+  font-weight: bold;
+  text-align: center;
+}
+html body .specialWrap {
+  width: 100%;
+  height: calc(100vh - 95px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  overflow-y: auto;
+}
+html body .specialWrap ul {
+  width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 8px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 8px;
+}
+html body .specialWrap ul li {
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5019607843);
+          box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5019607843);
+  font-size: 0;
+  overflow: hidden;
+}
+html body .specialWrap ul li .textBox {
+  width: 100%;
+  height: 9vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e60000), to(#800808));
+  background: linear-gradient(to bottom, #e60000 0%, #800808 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 8px;
+}
+html body .specialWrap ul li .textBox p {
+  color: #ffffff;
+  font-size: 3.7vw;
+  font-weight: bold;
+}
+html body .specialWrap ul li .textBox i {
+  display: block;
+  width: 4vw;
+  height: 4vw;
 }

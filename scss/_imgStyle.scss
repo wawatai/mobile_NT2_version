@@ -11,6 +11,10 @@
 }
 
 //gameList ic
+.gameList .hotBtn .hot_ic {
+    background: url('../images/icon/svg/hot.svg') no-repeat;
+    background-size: 100%;
+}
 .gameList .slotBtn .slot_ic {
     background: url('../images/icon/svg/slot.svg') no-repeat;
     background-size: 100%;
@@ -131,6 +135,12 @@ footer li.active .center_ic {
     background-position-y: 100%;
 }
 
+//header 推薦好友
+header .recFbtn {
+    background: url(../images/recommendBTN.gif) no-repeat;
+    background-size: 153%;
+}
+
 //header back_arrow
 header .back_arrow {
     background: url('../images/icon/svg/arrow_w.svg') no-repeat;
@@ -151,7 +161,8 @@ header .refresh_ic {
     background: url('../images/icon/svg/popular.svg') no-repeat;
     background-size: 100%;
 }
-.slotHeader li .love_ic {
+.slotHeader li .love_ic,
+.gameBox.hotBox .love {
     background: url('../images/icon/svg/favorite.svg') no-repeat;
     background-size: 100%;
 }
@@ -164,7 +175,8 @@ header .refresh_ic {
     background: url('../images/icon/svg/popular2.svg') no-repeat;
     background-size: 100%;
 }
-.slotHeader li.active .love_ic {
+.slotHeader li.active .love_ic,
+.gameBox.hotBox .love.active  {
     background: url('../images/icon/svg/favorite2.svg') no-repeat;
     background-size: 100%;
 }
@@ -282,6 +294,26 @@ header .refresh_ic {
     background: url('../images/icon/svg/exit.svg') no-repeat center;
     background-size: 100%;
 }
+.memberWrap .point_ic {
+    background: url('../images/icon/svg/point.svg') no-repeat;
+    background-size: contain;
+}
+.memberWrap .fix_ic {
+    background: url('../images/icon/svg/fixing.svg') no-repeat;
+    background-size: contain;
+}
+.memberWrap .special_ic {
+    background: url('../images/icon/svg/special.svg') no-repeat;
+    background-size: contain;
+}
+.memberWrap .partner_ic {
+    background: url('../images/icon/svg/partner.svg') no-repeat;
+    background-size: contain;
+}
+.memberWrap .recFriend_ic {
+    background: url('../images/icon/svg/innerNav_recFriend.svg') no-repeat;
+    background-size: contain;
+}
 
 //app .download_ic
 .appWrap .download_ic {
@@ -370,10 +402,10 @@ header .refresh_ic {
     background-size: contain;
 }
 //helpInner .img
-.helpInner .img.depositWay {
-    background: url('../images/explain/withdraw.png') no-repeat;
-    background-size: 100%;
-}
+// .helpInner .img.depositWay {
+//     background: url('../images/explain/withdraw.png') no-repeat;
+//     background-size: 100%;
+// }
 .helpInner .img.deposit_water {
     background: url('../images/explain/online01.png') no-repeat;
     background-size: 100%;
@@ -395,6 +427,322 @@ header .refresh_ic {
     background-size: 100%;
 }
 
+.helpInner .img.download01 {
+    background: url('../images/explain/download01.jpg') no-repeat;
+    background-size: 100%;
+}
+.helpInner .img.download02 {
+    background: url('../images/explain/download02.jpg') no-repeat;
+    background-size: 100%;
+}
+.helpInner .img.download03 {
+    background: url('../images/explain/download03.jpg') no-repeat;
+    background-size: 100%;
+}
+.helpInner .img.download04 {
+    background: url('../images/explain/download04.jpg') no-repeat;
+    background-size: 100%;
+}
+.helpInner .img.download05 {
+    background: url('../images/explain/download05.jpg') no-repeat;
+    background-size: 100%;
+}
+.helpInner .img.download06 {
+    background: url('../images/explain/download06.jpg') no-repeat;
+    background-size: 100%;
+}
+
+.helpInner .q1-01 {
+    background: url('../images/help/01.jpg') no-repeat;
+}
+.helpInner .q1-02 {
+    background: url('../images/help/02.jpg') no-repeat;
+}
+.helpInner .q1-03 {
+    background: url('../images/help/03.jpg') no-repeat;
+}
+.helpInner .q2-01 {
+    background: url('../images/help/08.jpg') no-repeat;
+}
+.helpInner .q2-02 {
+    background: url('../images/help/09.jpg') no-repeat;
+}
+.helpInner .q2-03 {
+    background: url('../images/help/10.jpg') no-repeat;
+}
+.helpInner .q2-04 {
+    background: url('../images/help/11.jpg') no-repeat;
+}
+.helpInner .q2-05 {
+    background: url('../images/help/12.jpg') no-repeat;
+}
+.helpInner .q3-01 {
+    background: url('../images/help/17.jpg') no-repeat;
+}
+.helpInner .q3-02 {
+    background: url('../images/help/18.jpg') no-repeat;
+}
+.helpInner .q3-03 {
+    background: url('../images/help/19.jpg') no-repeat;
+}
+.helpInner .q3-04 {
+    background: url('../images/help/100.jpg') no-repeat;
+}
+.helpInner .q3-05 {
+    background: url('../images/help/20.jpg') no-repeat;
+}
+.helpInner .q4-01 {
+    background: url('../images/help/26.jpg') no-repeat;
+}
+.helpInner .q4-02 {
+    background: url('../images/help/27.jpg') no-repeat;
+}
+.helpInner .q4-03 {
+    background: url('../images/help/28.jpg') no-repeat;
+}
+.helpInner .q4-04 {
+    background: url('../images/help/29.jpg') no-repeat;
+}
+.helpInner .q4-05 {
+    background: url('../images/help/30.jpg') no-repeat;
+}
+.helpInner .q5-01 {
+    background: url('../images/help/34.jpg') no-repeat;
+}
+.helpInner .q5-02 {
+    background: url('../images/help/35.jpg') no-repeat;
+}
+.helpInner .q5-03 {
+    background: url('../images/help/36.jpg') no-repeat;
+}
+.helpInner .q5-04 {
+    background: url('../images/help/37.jpg') no-repeat;
+}
+.helpInner .q5-05 {
+    background: url('../images/help/38.jpg') no-repeat;
+}
+.helpInner .q6-01 {
+    background: url('../images/help/42.jpg') no-repeat;
+}
+.helpInner .q6-02 {
+    background: url('../images/help/43.jpg') no-repeat;
+}
+.helpInner .q6-03 {
+    background: url('../images/help/44.jpg') no-repeat;
+}
+.helpInner .q6-04 {
+    background: url('../images/help/45.jpg') no-repeat;
+}
+.helpInner .q6-05 {
+    background: url('../images/help/46.jpg') no-repeat;
+}
+.helpInner .q7-01 {
+    background: url('../images/help/73.jpg') no-repeat;
+}
+.helpInner .q7-02 {
+    background: url('../images/help/74.jpg') no-repeat;
+}
+.helpInner .q7-03 {
+    background: url('../images/help/75.jpg') no-repeat;
+}
+.helpInner .q7-04 {
+    background: url('../images/help/76.jpg') no-repeat;
+}
+.helpInner .q8-01 {
+    background: url('../images/help/50.jpg') no-repeat;
+}
+.helpInner .q8-02 {
+    background: url('../images/help/51.jpg') no-repeat;
+}
+.helpInner .q8-03 {
+    background: url('../images/help/52.jpg') no-repeat;
+}
+.helpInner .q8-04 {
+    background: url('../images/help/53.jpg') no-repeat;
+}
+.helpInner .q8-05 {
+    background: url('../images/help/54.jpg') no-repeat;
+}
+.helpInner .q8-06 {
+    background: url('../images/help/55.jpg') no-repeat;
+}
+.helpInner .q9-01 {
+    background: url('../images/help/86.jpg') no-repeat;
+}
+.helpInner .q9-02 {
+    background: url('../images/help/87.jpg') no-repeat;
+}
+.helpInner .q10-01 {
+    background: url('../images/help/59.jpg') no-repeat;
+}
+.helpInner .q10-02 {
+    background: url('../images/help/60.jpg') no-repeat;
+}
+.helpInner .q10-03 {
+    background: url('../images/help/61.jpg') no-repeat;
+}
+.helpInner .q10-04 {
+    background: url('../images/help/62.jpg') no-repeat;
+}
+.helpInner .q11-01 {
+    background: url('../images/help/66.jpg') no-repeat;
+}
+.helpInner .q11-02 {
+    background: url('../images/help/67.jpg') no-repeat;
+}
+.helpInner .q11-03 {
+    background: url('../images/help/68.jpg') no-repeat;
+}
+.helpInner .q11-04 {
+    background: url('../images/help/69.jpg') no-repeat;
+}
+.helpInner .q12-01 {
+    background: url('../images/help/80.jpg') no-repeat;
+}
+.helpInner .q12-02 {
+    background: url('../images/help/81.jpg') no-repeat;
+}
+.helpInner .q12-03 {
+    background: url('../images/help/82.jpg') no-repeat;
+}
+.helpInner .q13-01 {
+    background: url('../images/help/90.jpg') no-repeat;
+}
+.helpInner .q13-02 {
+    background: url('../images/help/91.jpg') no-repeat;
+}
+.helpInner .q13-03 {
+    background: url('../images/help/92.jpg') no-repeat;
+}
+.helpInner .q13-04 {
+    background: url('../images/help/93.jpg') no-repeat;
+}
+.helpInner .q13-05 {
+    background: url('../images/help/94.jpg') no-repeat;
+}
+.helpInner .q13-06 {
+    background: url('../images/help/95.jpg') no-repeat;
+}
+.helpInner .usdt-01 {
+    background: url('../images/help/usdt-01.jpg') no-repeat;
+}
+.helpInner .usdt-02 {
+    background: url('../images/help/usdt-02.jpg') no-repeat;
+}
+.helpInner .usdt-03 {
+    background: url('../images/help/usdt-03.jpg') no-repeat;
+}
+.helpInner .android.img_1 {
+    background: url('../images/download_new/1-1.png') no-repeat;
+    background-size: contain;
+}
+.helpInner .android.img_2 {
+    background: url('../images/download_new/1-2.png') no-repeat;
+    background-size: contain;
+}
+.helpInner .android.img_3 {
+    background: url('../images/download_new/1-3.png') no-repeat;
+    background-size: contain;
+}
+.helpInner .android.img_4 {
+    background: url('../images/download_new/1-4.png') no-repeat;
+    background-size: contain;
+}
+.helpInner .android.img_5 {
+    background: url('../images/download_new/1-5.png') no-repeat;
+    background-size: contain;
+}
+.helpInner .android.img_6 {
+    background: url('../images/download_new/1-6.png') no-repeat;
+    background-size: contain;
+}
+.helpInner .android.img_7 {
+    background: url('../images/download_new/1-7.png') no-repeat;
+    background-size: contain;
+}
+.helpInner .android.img_8 {
+    background: url('../images/download_new/1-8.png') no-repeat;
+    background-size: contain;
+}
+.helpInner .android.img_9 {
+    background: url('../images/download_new/1-9.png') no-repeat;
+    background-size: contain;
+}
+.helpInner .android.img_10 {
+    background: url('../images/download_new/1-10.png') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_1 {
+    background: url('../images/download_new/2-1.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_2 {
+    background: url('../images/download_new/2-2.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_3 {
+    background: url('../images/download_new/2-3.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_4 {
+    background: url('../images/download_new/2-4.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_5 {
+    background: url('../images/download_new/2-5.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_6 {
+    background: url('../images/download_new/2-6.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_7 {
+    background: url('../images/download_new/2-7.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_8 {
+    background: url('../images/download_new/2-8.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_9 {
+    background: url('../images/download_new/2-9.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_10 {
+    background: url('../images/download_new/2-10.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_11 {
+    background: url('../images/download_new/2-11.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_12 {
+    background: url('../images/download_new/2-12.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_13 {
+    background: url('../images/download_new/2-13.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_14 {
+    background: url('../images/download_new/2-14.jpg') no-repeat;
+    background-size: contain;
+}
+.helpInner .ios.img_15 {
+    background: url('../images/download_new/2-15.jpg') no-repeat;
+    background-size: contain;
+}
+
+.csPage .cs_IC {
+    background: url('../images/icon/svg/cs_new.svg');
+    background-size: 100%;
+}
+.csPage .line_IC {
+    background: url('../images/icon/svg/line.svg');
+    background-size: 100%;
+}
+
+
 //member_info
 .memberInfo .info_2 .check {
     background: url('../images/icon/svg/check.svg') no-repeat;
@@ -414,6 +762,30 @@ header .refresh_ic {
     background: url('../images/medal.png') no-repeat center;
     background-size: contain;
 }
+.vipWrap .medal.v2 {
+    background: url('../images/medal_2.png') no-repeat center;
+    background-size: contain;
+}
+.vipWrap .medal.v3 {
+    background: url('../images/medal_3.png') no-repeat center;
+    background-size: contain;
+}
+.vipWrap .medal.v4 {
+    background: url('../images/medal_4.png') no-repeat center;
+    background-size: contain;
+}
+.vipWrap .medal.v5 {
+    background: url('../images/medal_5.png') no-repeat center;
+    background-size: contain;
+}
+.vipWrap .medal.v6 {
+    background: url('../images/medal_6.png') no-repeat center;
+    background-size: contain;
+}
+.vipWrap .medal.v7 {
+    background: url('../images/medal_7.png') no-repeat center;
+    background-size: contain;
+}
 //vip cardBox arrow
 .vipWrap .cardBox i {
     background: url('../images/icon/svg/arrow_r.svg') no-repeat;
@@ -430,11 +802,7 @@ header .refresh_ic {
 //vip .card
 .vipWrap .cardBox .card li {
     background: url('../images/vip_card.png') no-repeat;
-    background-size: cover;
-}
-.vipWrap .cardBox .card li.cur {
-    background: url('../images/vip_card_a.png') no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 //mail
@@ -443,11 +811,11 @@ header .editBtn {
     background-size: 100%;
 }
 
-//card
-.cardList .cardBox .add {
-    background: url('../images/icon/svg/add.svg') no-repeat center;
-    background-size: 20%;
-}
+// //card
+// .cardList .cardBox .add {
+//     background: url('../images/icon/svg/add.svg') no-repeat center;
+//     background-size: 20%;
+// }
 
 //deposit
 .depositWrap .card_ic {
@@ -455,7 +823,15 @@ header .editBtn {
     background-size: contain;
 }
 .depositWrap .atm_ic {
-    background: url('../images/icon/svg/shop.svg') no-repeat center;
+    background: url('../images/icon/svg/atm.svg') no-repeat center;
+    background-size: contain;
+}
+.depositWrap .usdt_ic {
+    background: url('../images/icon/svg/usdt.svg') no-repeat;
+    background-size: contain;
+}
+.depositWrap .shop_ic {
+    background: url('../images/icon/svg/shop.svg') no-repeat;
     background-size: contain;
 }
 .depositWrap .listWrap li.active::after {
@@ -481,6 +857,11 @@ header .editBtn {
 .withWrap .openBtn .db_arrow {
     background: url('../images/icon/svg/unfold.svg') no-repeat;
     background-size: 100%;
+}
+.withWrap .detail.last div .problem,
+.walletWrap .details .problem {
+    background: url('../images/icon/svg/problem_red.svg') no-repeat;
+    background-size: 93%;
 }
 
 //loading
@@ -509,6 +890,36 @@ header .editBtn {
     background-size: contain;
 }
 
+//operate
+.operate .deposit_ic {
+    background: url('../images/icon/svg/ope_deposit.svg') no-repeat;
+    background-size: contain;
+}
+.operate .transfer_ic {
+    background: url('../images/icon/svg/ope_transfer.svg') no-repeat;
+    background-size: contain;
+}
+.operate .withdrawal_ic {
+    background: url('../images/icon/svg/ope_withdrawal.svg') no-repeat;
+    background-size: contain;
+}
+.operate .vip_ic {
+    background: url('../images/icon/ope_vip.png') no-repeat;
+    background-size: contain;
+}
+
+//header
+header {
+    background: url('../images/headerBG.png') no-repeat;
+    background-size: cover;
+}
+
+//special
+.specialWrap .arrow_ic {
+    background: url('../images/special/arrow.png') no-repeat;
+    background-size: contain;
+}
+
 
 ////////img↓
 
@@ -521,7 +932,8 @@ header .logo {
 
 //ad - banner
 .single-item {
-    width: 97vw;
+    // width: 97vw;
+    width: 100%;
     height: 43.73vw;
 
     img {
@@ -530,11 +942,16 @@ header .logo {
         object-fit: cover;
     }
 }
+//home - aside
+aside .sharetoEarnBTN {
+    background: url(../images/sharetoEarn.png) no-repeat center;
+    background-size: 100%;
+}
 
 //home - 遊戲platform
 .homeCenter .gameBox img {
-    width: 28.27vw;
-    height: 17.4vw;
+    width: 100%;
+    // height: 17.4vw;
     object-fit: contain;
 }
 
@@ -548,22 +965,21 @@ header .logo {
 //eventImg
 .eventList .eventImg {
     width: 100%;
-    height: 38.28vw;
+    height: auto;
 
     img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        border-radius: 5px;
     }
 }
 .eventDetail .eventImg {
     width: 100%;
-    height: 41vw;
+    height: auto;
 
     img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        object-fit: contain;
     }
 }
 
@@ -581,4 +997,10 @@ header .logo {
         width: 100%;
         height: auto;
     }
+}
+
+//special
+.specialWrap img {
+    width: 100%;
+    object-fit: contain;
 }

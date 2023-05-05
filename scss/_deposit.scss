@@ -47,6 +47,7 @@
                     flex-direction: column;
                     position: relative;
                     overflow: hidden;
+                    flex-shrink: 0;
 
                     &.active {
                         border-color: $borderColor_3;
@@ -116,6 +117,10 @@
             .remind {
                 margin-left: 10px;
             }
+
+            span {
+                margin-right: 5px;
+            }
         }
 
         select {
@@ -133,7 +138,20 @@
             .num {
                 color: $font-color_3;
                 margin-left: 10px;
+
+                &:last-child {
+                    margin-left: 0;
+                }
             }
+        }
+
+        .btn_remind {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            color: $font-color_3;
+            padding-top: 3px;
+            
         }
 
         input {
@@ -241,6 +259,11 @@
         background: $backgroundColor_8;
         border: solid 1px $borderColor_5;
         border-radius: 5px;
+        display: none;
+
+        &.display {
+            display: block;
+        }
 
         p {
             font-size: 12px;
@@ -256,8 +279,17 @@
                 color: $font-color_13;
             }
 
-            &.sp {
+            .sp {
                 color: $font-color_3;
+            }
+        }
+
+        &.atm {
+            p {
+                &:nth-of-type(2){
+                    color: $font-color_3;
+                    font-weight: bold;
+                }
             }
         }
     }

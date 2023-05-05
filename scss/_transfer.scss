@@ -286,7 +286,8 @@
                 width: 30.66vw;
                 min-height: 16.53vw;
                 box-sizing: border-box;
-                padding: 10px 0 0 11px;
+                padding: 10px 11px;
+                box-sizing: border-box;
                 margin: 0 0.26vw 0.26vw 0;
                 border: solid 1px $borderColor_1;
                 border-radius: 1.5vw;
@@ -330,7 +331,7 @@
                             height: auto;
                             padding: 6px 18px;
                             color: $font-color_5;
-                            background: $backgroundColor_6;
+                            background: $backgroundColor_10;
                             border-radius: 3px;
                             position: absolute;
                             left: 50%;
@@ -348,7 +349,7 @@
                                 height: 0;
                                 border-style: solid;
                                 border-width: 0 4px 6px 4px;
-                                border-color: $backgroundColor_6 transparent;
+                                border-color: $backgroundColor_10 transparent;
                             }
                         }
                     }

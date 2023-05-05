@@ -196,6 +196,11 @@
                         color: $font-color_7;
                         text-decoration: none;
                     }
+
+                    .remind {
+                        display: block;
+                        color: $font-color_3;
+                    }
                 }
 
                 .img {
@@ -211,8 +216,358 @@
                     &.remote {
                         padding-top: 137%;
                     }
+
+                    &.download01,
+                    &.download02 {
+                        padding-top: 59%;
+                    }
+
+                    &.download03 {
+                        padding-top: 125%;
+                    }
+
+                    &.download04 {
+                        padding-top: 140%;
+                    }
+
+                    &.download05 {
+                        padding-top: 69%;
+                    }
+
+                    &.download06 {
+                        padding-top: 60%;
+                    }
+
+                    &.android.img_1 {
+                        padding-top: 187%;
+                    }
+                    &.android.img_4,
+                    &.android.img_5 {
+                        padding-top: 203%;
+                    }
+                    &.android.img_6 {
+                        padding-top: 206%;
+                    }
+                    &.android.img_7 {
+                        padding-top: 200%;
+                    }
+                    &.android.img_8 {
+                        padding-top: 107%;
+                    }
+                    &.android.img_10 {
+                        padding-top: 97%;
+                    }
+                    &.android {
+                        padding-top: 207%;
+                    }
+
+                    &.ios.img_3,
+                    &.ios.img_4,
+                    &.ios.img_5,
+                    &.ios.img_12,
+                    &.ios.img_13 {
+                        padding-top: 219%;
+                    }
+                    &.ios.img_8,
+                    &.ios.img_15 {
+                        padding-top: 217%;
+                    }
+                    &.ios.img_10,
+                    &.ios.img_11 {
+                        padding-top: 215%;
+                    }
+                    &.ios {
+                        padding-top: 221%;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                    margin-bottom: 20px;
+                }
+
+                //幫助中心-教學示意圖
+                div {
+                    &.qPic {
+                        width: 100%;
+                        height: 0;
+                        background-size: contain;
+                        margin-bottom: 20px;
+                    }   
+
+                    &.q1-01 {
+                        padding-top: 165%;
+                    }
+                    &.q1-02 {
+                        padding-top: 140%;
+                    }
+                    &.q1-03 {
+                        padding-top: 165%;
+                    }
+                    &.q2-01 {
+                        padding-top: 165%;
+                    }
+                    &.q2-02 {
+                        padding-top: 140%;
+                    }
+                    &.q2-03 {
+                        padding-top: 163%;
+                    }
+                    &.q2-04 {
+                        padding-top: 140%;
+                    }
+                    &.q2-05 {
+                        padding-top: 165%;
+                    }
+                    &.q2-05 {
+                        padding-top: 165%;
+                    }
+                    &.q3-01 {
+                        padding-top: 164%;
+                    }
+                    &.q3-02 {
+                        padding-top: 164%;
+                    }
+                    &.q3-03 {
+                        padding-top: 140%;
+                    }
+                    &.q3-04 {
+                        padding-top: 140%;
+                    }
+                    &.q3-05 {
+                        padding-top: 140%;
+                    }
+                    &.q4-01 {
+                        padding-top: 165%;
+                    }
+                    &.q4-02 {
+                        padding-top: 140%;
+                    }
+                    &.q4-03 {
+                        padding-top: 50%;
+                    }
+                    &.q4-04 {
+                        padding-top: 165%;
+                    }
+                    &.q4-05 {
+                        padding-top: 140%;
+                    }
+                    &.q5-01 {
+                        padding-top: 165%;
+                    }
+                    &.q5-02 {
+                        padding-top: 140%;
+                    }
+                    &.q5-03 {
+                        padding-top: 55%;
+                    }
+                    &.q5-04 {
+                        padding-top: 140%;
+                    }
+                    &.q5-05 {
+                        padding-top: 70%;
+                    }
+                    &.q6-01 {
+                        padding-top: 170%;
+                    }
+                    &.q6-02 {
+                        padding-top: 140%;
+                    }
+                    &.q6-03 {
+                        padding-top: 55%;
+                    }
+                    &.q6-04 {
+                        padding-top: 140%;
+                    }
+                    &.q6-05 {
+                        padding-top: 169%;
+                    }
+                    &.q7-01 {
+                        padding-top: 169%;
+                    }
+                    &.q7-02 {
+                        padding-top: 140%;
+                    }
+                    &.q7-03 {
+                        padding-top: 140%;
+                    }
+                    &.q7-04 {
+                        padding-top: 159%;
+                    }
+                    &.q8-01 {
+                        padding-top: 159%;
+                    }
+                    &.q8-02 {
+                        padding-top: 140%;
+                    }
+                    &.q8-03 {
+                        padding-top: 140%;
+                    }
+                    &.q8-04 {
+                        padding-top: 140%;
+                    }
+                    &.q8-05 {
+                        padding-top: 140%;
+                    }
+                    &.q8-06 {
+                        padding-top: 140%;
+                    }
+                    &.q9-01 {
+                        padding-top: 140%;
+                    }
+                    &.q9-02 {
+                        padding-top: 140%;
+                    }
+                    &.q10-01 {
+                        padding-top: 140%;
+                    }
+                    &.q10-02 {
+                        padding-top: 140%;
+                    }
+                    &.q10-03 {
+                        padding-top: 140%;
+                    }
+                    &.q10-04 {
+                        padding-top: 140%;
+                    }
+                    &.q11-01 {
+                        padding-top: 140%;
+                    }
+                    &.q11-02 {
+                        padding-top: 140%;
+                    }
+                    &.q11-03 {
+                        padding-top: 140%;
+                    }
+                    &.q11-04 {
+                        padding-top: 140%;
+                    }
+                    &.q12-01 {
+                        padding-top: 140%;
+                    }
+                    &.q12-02 {
+                        padding-top: 140%;
+                    }
+                    &.q12-03 {
+                        padding-top: 140%;
+                    }
+                    &.q13-01 {
+                        padding-top: 165%;
+                    }
+                    &.q13-02 {
+                        padding-top: 164%;
+                    }
+                    &.q13-03 {
+                        padding-top: 165%;
+                    }
+                    &.q13-04 {
+                        padding-top: 140%;
+                    }
+                    &.q13-05 {
+                        padding-top: 165%;
+                    }
+                    &.q13-06 {
+                        padding-top: 140%;
+                    }
+
+                    &.usdt-02 {
+                        padding-top: 200%;
+                    }
+                    &.usdt-03 {
+                        padding-top: 219%;
+                    }
+                }
+                
+                
+
+                button {
+                    width: 70%;
+                    height: 9.87vw;
+                    @include buttonStyle_2;
                 }
             }
+        }
+    }
+}
+
+//客服頁
+.csPage {
+    padding: 15px 6vw;
+    box-sizing: border-box;
+
+    .title {
+        font-size: 4vw;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        font-size: 3.5vw;
+        line-height: 5vw;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        width: 100%;
+        height: 80px;
+        border: 1px solid $borderColor_5;
+        border-radius: 10px;
+        display: flex;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        box-shadow: 4px 4px 4px $boxshadow_3;
+
+        i {
+            margin: 5px 10px 0 0;
+        }
+
+        .cs_IC {
+            width: 25px;
+            height: 26px;
+            margin: 13px 10px 0 0;
+        }
+        .line_IC {
+            width: 25px;
+            height: 24px;
+        }
+
+        .main {
+            font-size: 4vw;
+            font-weight: bolder;
+            color: $font-color_4;
+        }
+
+        .sub {
+            font-size: 12px;
+            color: $backgroundColor_6;
+            margin: 5px 0 6px 0;
+        }
+        .info {
+            font-size: 8px;
+            font-weight: bold;
+            color: $font-color_4; 
+        }
+    }
+
+    .LINE {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #00c300;
+        padding: 20px;
+        margin-top: 20px;
+
+        .main {
+            font-size: 4vw;
+            font-weight: bolder;
+            color: $borderColor_7;
+        }
+
+        .id {
+            font-size: 3.5vw;
+            font-weight: bolder;
+            color: $borderColor_7;
+            margin-top: 5px;
         }
     }
 }

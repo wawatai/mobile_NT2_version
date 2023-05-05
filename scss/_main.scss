@@ -9,15 +9,15 @@ html {
         box-sizing: border-box;
 
         main {
-            padding: 45px 0 48px;
+            width: 100%;
+            height: 100%;
+            padding: 45px 0 50px;
+            box-sizing: border-box;
+            overflow-y: auto;
 
             &.index {
                 display: flex;
                 flex-direction: column;
-                width: 100%;
-                height: 100%;
-                box-sizing: border-box;
-                padding: 45px 0 50px;
             }
         }
 
@@ -38,10 +38,12 @@ html {
         @import "./vip";
         @import "./mail";
         @import "./card";
+        @import "./recFriend";
         @import "./record";
-        @import "./wallet";
         @import "./deposit";
         @import "./transfer";
         @import "./withdrawal";
+        @import "./fixing";
+        @import "./special";
     }
 }

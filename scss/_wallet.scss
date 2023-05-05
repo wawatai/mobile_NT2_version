@@ -71,13 +71,20 @@
                         }
                     }
                 }
-
+                
                 .details {
                     width: 100%;
                     height: auto;
                     display: flex;
                     border-bottom: solid 1px $borderColor_1;
-                    
+                    padding: 15px;
+                    box-sizing: border-box;
+                    position: relative;
+
+                    &:last-child {
+                        padding: 0;
+                    }
+
                     .items {
                         display: flex;
                         width: 50%;
@@ -121,6 +128,34 @@
                             }
                         }
                     }
+
+                    
+                    p {
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: $font-color_14;
+                        white-space: nowrap;
+                        margin: 0;
+
+                        &:nth-of-type(1) {
+                            font-size: 12px;
+                            text-align: center;
+                        }
+
+                        &:nth-of-type(2) {
+                            color: $font-color_3;
+                            font-size: 15px;
+                            padding: 0 27px;
+                        }
+                    }
+
+                    .problem {
+                        width: 16.5px;
+                        height: 16.5px;
+                        position: absolute;
+                        top: 14px;
+                        left: 66px;
+                    } 
                 }
             }
         }
@@ -146,7 +181,8 @@
                 }
 
                 p {
-                    font-size: 13px;
+                    font-size: 16px;
+                    font-weight: 900;
                     letter-spacing: 1px;
                     color: $font-color_8;
                     padding-top: 6px;
@@ -204,7 +240,7 @@
                 margin-bottom: 11px;
                 font-size: 13px;
                 letter-spacing: 1px;
-                color: $font-color_4;
+                color: $font-color_13;
                 font-weight: bold;
 
                 .refresh_ic {
@@ -319,7 +355,7 @@
                 margin-bottom: 11px;
                 font-size: 13px;
                 letter-spacing: 1px;
-                color: $font-color_4;
+                color: $font-color_13;
                 font-weight: bold;
 
                 button {
@@ -347,10 +383,11 @@
                     width: 30.66vw;
                     min-height: 16.53vw;
                     box-sizing: border-box;
-                    padding: 10px 0 0 11px;
+                    padding: 10px 11px;
                     margin: 0 0.26vw 0.26vw 0;
                     border: solid 1px $borderColor_1;
                     border-radius: 1.5vw;
+                    box-sizing: border-box;
 
                     &:nth-of-type(3n) {
                         margin-right: 0;
@@ -391,7 +428,7 @@
                                 height: auto;
                                 padding: 6px 18px;
                                 color: $font-color_5;
-                                background: $backgroundColor_6;
+                                background: $backgroundColor_10;
                                 border-radius: 3px;
                                 position: absolute;
                                 left: 50%;
@@ -409,7 +446,7 @@
                                     height: 0;
                                     border-style: solid;
                                     border-width: 0 4px 6px 4px;
-                                    border-color: $backgroundColor_6 transparent;
+                                    border-color: $backgroundColor_10 transparent;
                                 }
                             }
                         }

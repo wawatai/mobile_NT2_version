@@ -1,0 +1,208 @@
+//查詢紅利
+.pointWrap {
+    width: 100%;
+    height: calc(100vh - 95px);
+    background: $backgroundColor_4;
+    overflow-y: auto;
+    padding-top: 10px;
+    box-sizing: border-box;
+
+    .searchContent {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 13px 14px;
+        background: $backgroundColor_2;
+        margin-bottom: 10px;
+
+        .top {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            .helf {
+                width: 50%;
+
+                p {
+                    margin-bottom: 5px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    color: $font-color_12;
+                }
+    
+                button {
+                    width: 44vw;
+                    height: 42px;
+                    @include buttonStyle_10;
+                }
+            }
+
+            .full {
+                width: 100%;
+
+                p {
+                    margin: 10px 0;
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    color: $font-color_12;
+                }
+
+                .inputBox {
+                    width: 100%;
+                    height: 42px;
+                    border: solid 1px $borderColor_1;
+                    border-radius: 3px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    color: $font-color_12;
+                    font-size: 16px;
+                    font-weight: bold;
+
+                    input {
+                        width: auto;
+                        height: 100%;
+                        border: none;
+                        background: none;
+                        color: $font-color_12;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                }
+
+                .selectBox {
+                    width: 100%;
+                    height: auto;
+
+                    select {
+                        width: 100%;
+                        height: 42px;
+                        @include selectStyle_1;
+                    }
+                }
+            }
+        }
+
+        .date {
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin: 20px 0;
+
+            button {
+                width: 25%;
+                height: 38px;
+                @include buttonStyle_9;
+
+                &:nth-of-type(1) {
+                    border-radius: 5px 0 0 5px;
+                }
+            
+                &:last-child {
+                    border-radius: 0 5px 5px 0;
+                }
+            }
+        }
+
+        .check {
+            width: 100%;
+            height: 42px;
+            @include buttonStyle_2;
+        }
+    }
+
+    .list {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 10px 14px;
+
+        .noData {
+            display: none;
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 80px;
+            color: $font-color_1;
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+
+            &.display {
+                display: block;
+            }
+        }
+
+        .recordBox {
+            display: none;
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: solid 1px $borderColor_1;
+            background: $backgroundColor_2;
+            margin-bottom: 10px;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                width: 100%;
+                height: 38px;
+                border-bottom: solid 1px $borderColor_3;
+                color: $font-color_12;
+                font-size: 14px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-sizing: border-box;
+                padding: 0 18px;
+                
+                .readMore {
+                    font-size: 13px;
+                    font-weight: bold;
+                    background: none;
+                    color: $font-color_13;
+                    border: solid 1px $borderColor_6;
+                    border-radius: 3px;
+                    padding: 1px 5px;
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding: 0 18px;
+
+                li {
+                    width: 100%;
+                    height: 38px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: $font-color_12;
+                    font-size: 14px;
+                    font-weight: bold;
+
+                    p {
+                        font-size: 13px;
+
+                        &.num {
+                            color: $font-color_6;
+    
+                            &.readMore {
+                                text-decoration: underline;
+                                color: $font-color_7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

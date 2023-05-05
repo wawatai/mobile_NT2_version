@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/myIco.ico" type="image/x-icon">
+</head>
+<body>
+    <!--header-->
+    <header>
+        <!--content-->
+        <div class="content">
+            <i class="back_arrow" onclick="window.location.href='./member.html'"></i>
+            <div class="title">查詢紅利</div>
+        </div>
+    </header>
+    <!--main-->
+    <main>
+        <!--查詢紅利-->
+        <div class="pointWrap">
+            <div class="searchContent">
+                <div class="top">
+                    <div class="full">
+                        <p>選擇日期</p>
+                        <div class="inputBox">
+                            <input type="date">
+                            ~
+                            <input type="date">
+                        </div>
+                    </div>
+                </div>
+                <div class="date">
+                    <button>昨天</button>
+                    <button class="active">今天</button>
+                    <button>本週</button>
+                    <button>本月</button>
+                </div>
+                <button class="check">查詢</button>
+            </div>
+            <div class="list">
+                <p class="noData">目前無資料</p>
+                <div class="recordBox display">
+                    <p class="title">
+                        一代會員
+                        <button class="readMore 1st">查看詳情</button>
+                    </p>
+                    <ul>
+                        <li>
+                            人數
+                            <p class="num readMore memberData">1</p>
+                        </li>
+                        <li>
+                            有效投注
+                            <p class="num win">256.0000</p>
+                        </li>
+                        <li>
+                            預估紅利
+                            <p class="num win">1.0060</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="recordBox display">
+                    <p class="title">
+                        二代會員
+                        <button class="readMore 2st">查看詳情</button>
+                    </p>
+                    <ul>
+                        <li>
+                            人數
+                            <p class="num">0</p>
+                        </li>
+                        <li>
+                            有效投注
+                            <p class="num win">0</p>
+                        </li>
+                        <li>
+                            預估紅利
+                            <p class="num win">0</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="recordBox display">
+                    <p class="title">
+                        三代會員
+                        <button class="readMore 3st">查看詳情</button>
+                    </p>
+                    <ul>
+                        <li>
+                            人數
+                            <p class="num">0</p>
+                        </li>
+                        <li>
+                            有效投注
+                            <p class="num win">0</p>
+                        </li>
+                        <li>
+                            預估紅利
+                            <p class="num win">0</p>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <footer>
+        <ul>
+            <li onclick="window.location.href='./index_inner.html'">
+                <i class="menu_ic"></i>
+                <p>首頁</p>
+            </li>
+            <li onclick="window.location.href='./event.html'">
+                <i class="event_ic"></i>
+                <p>優惠</p>
+            </li>
+            <li onclick="window.location.href='./wallet.html'">
+                <i class="wallet_ic"></i>
+                <p>存轉提</p>
+            </li>
+            <li onclick="window.location.href='./help_often_contact.html'">
+                <i class="service_ic"></i>
+                <p>客服</p>
+            </li>
+            <li onclick="window.location.href='./member.html'">
+                <i class="center_ic"></i>
+                <p>會員中心</p>
+            </li>
+        </ul>
+    </footer>
+    <!--彈窗-->
+    <div class="filter">
+        <!--帳戶平台彈窗-->
+        <div class="jumpWindow accWindow">
+            <div class="title">
+                帳戶
+                <i class="close"></i>
+            </div>
+            <div class="content">
+                <div class="bigBox">
+                    <button class="active">全帳戶</button>
+                </div>
+            </div>
+        </div>
+        <div class="jumpWindow platWindow">
+            <div class="title">
+                平台
+                <i class="close"></i>
+            </div>
+            <div class="content">
+                <div class="bigBox">
+                    <button class="active">全平台</button>
+                </div>
+                <div class="smallBox">
+                    <button>BNG娛樂</button>
+                    <button>BNG娛樂</button>
+                    <button>BNG娛樂</button>
+                    <button>BNG娛樂</button>
+                    <button>BNG娛樂</button>
+                    <button>BNG娛樂</button>
+                    <button>BNG娛樂</button>
+                    <button>BNG娛樂</button>
+                    <button>BNG娛樂</button>
+                    <button>BNG娛樂</button>
+                </div>
+            </div>
+        </div>
+        <!--紅利查詢-->
+        <!-- 一代會員 -->
+        <div class="jumpWindow pointWindow 1st ">
+            <div class="title">
+                <p>一代會員 - 詳情</p>
+                <i class="close"></i>
+            </div>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th>
+                            <p>會員帳號</p>
+                        </th>
+                        <th>
+                            <p>會員名稱</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>xxoo08</p>
+                        </td>
+                        <td>
+                            <p>蚵仔煎</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>lo0026</p>
+                        </td>
+                        <td>
+                            <p>Shado</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>tete17</p>
+                        </td>
+                        <td>
+                            <p>停電</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- 一代會員/明細 -->
+        <div class="jumpWindow pointWindow memberData">
+            <div class="title">
+                <p>一代會員 - 明細</p>
+                <i class="close"></i>
+            </div>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th>
+                            <p>會員帳號</p>
+                        </th>
+                        <th>
+                            <p>有效投注</p>
+                        </th>
+                        <th>
+                            <p>預估紅利</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>xxoo08</p>
+                        </td>
+                        <td>
+                            <p>13440.0000</p>
+                        </td>
+                        <td>
+                            <p>26.8800</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>lo0026</p>
+                        </td>
+                        <td>
+                            <p>200.0000</p>
+                        </td>
+                        <td>
+                            <p>0.4000</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>tete17</p>
+                        </td>
+                        <td>
+                            <p>15000.0000</p>
+                        </td>
+                        <td>
+                            <p>30.0000</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>3000.0000</p>
+                        </td>
+                        <td>
+                            <p>6.0000</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- 二代會員 -->
+        <div class="jumpWindow pointWindow 2st">
+            <div class="title">
+                <p>二代會員 - 詳情</p>
+                <i class="close"></i>
+            </div>
+            <div class="content nD">
+                <p class="noData">目前無資料</p>
+                <!-- <table>
+                    <tr>
+                        <th>
+                            <p>會員帳號</p>
+                        </th>
+                        <th>
+                            <p>會員名稱</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>xxoo08</p>
+                        </td>
+                        <td>
+                            <p>蚵仔煎</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>lo0026</p>
+                        </td>
+                        <td>
+                            <p>Shado</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>tete17</p>
+                        </td>
+                        <td>
+                            <p>停電</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                    </tr>
+                </table> -->
+            </div>
+        </div>
+        <div class="jumpWindow pointWindow 3st">
+            <div class="title">
+                <p>三代會員 - 詳情</p>
+                <i class="close"></i>
+            </div>
+            <div class="content">
+                <p class="noData">目前無資料</p>
+                <!-- <table>
+                    <tr>
+                        <th>
+                            <p>會員帳號</p>
+                        </th>
+                        <th>
+                            <p>會員名稱</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>xxoo08</p>
+                        </td>
+                        <td>
+                            <p>蚵仔煎</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>lo0026</p>
+                        </td>
+                        <td>
+                            <p>Shado</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>tete17</p>
+                        </td>
+                        <td>
+                            <p>停電</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>sn778888</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                    </tr>
+                </table> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

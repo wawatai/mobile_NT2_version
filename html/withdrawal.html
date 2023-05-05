@@ -33,8 +33,11 @@
                 <div class="gradient">
                     <div class="content">
                         <p class="title">
-                            中心錢包
-                            <i class="refresh_ic"></i>
+                            <span>
+                                中心錢包
+                                <i class="refresh_ic"></i>
+                            </span>
+                            <button class="reBtn">一鍵回收</button>
                         </p>
                         <p class="amount">$9999</p>
                     </div>
@@ -42,13 +45,17 @@
                         <p>可提資金</p>
                         <p class="num">$999959</p>
                     </div>
-                    <div class="detail">
-                        <p>提款限制</p>
+                    <div class="detail last">
+                        <div>
+                            <p>流水限制</p>
+                            <div class="problem"></div>
+                            <button class="waterBtn">流水紀錄</button>
+                        </div>
                         <p class="num">$0</p>
                     </div>
                 </div>
                 <div class="walletDetail">
-                    <button class="check">查看錢包明細</button>
+                    <button class="check"><p>查看錢包明細</p></button>
                     <div class="detailBox">
                         <ul>
                             <li>
@@ -158,19 +165,23 @@
             <div class="withContent">
                 <div class="remind"> 今天可用提款次數 : 3 次 ; 今天可用提款額度 : 3000000元 ; 單次最高提款額度 : 1000000元</div>
                 <select>
-                    <option value="">上海銀行</option>
+                    <option value="">中國信託-***01233</option>
                 </select>
-                <p class="smallRemind">尾號 :</p>
+                <p class="smallRemind">尾號 :<span class="lastNum">***01233</span></p>
                 <input type="text" placeholder="請輸入提款金額">
+                <p class="smallRemind sp">為了方便您快速取款，請先將所有館錢包回收至中心錢包</p>
+                <p class="smallRemind sp">單筆提款金額需介於NT$500~NT$500,000</p>
                 <button class="check">確認送出</button>
             </div>
             <!--提醒-->
             <div class="remindBox">
                 <p class="title">重要提醒</p>
-                <p>1.您每<span class="sp">日</span>可免費提領<span class="sp">1</span>次<span class="sp">(每日00:00重置)</span>，每<span class="sp">日</span>提領次數上限<span class="sp">1</span>次，每日提款點數上限<span class="sp">2000000000</span>點。</p>
-                <p>2.須達到近期存款金額的<span class="sp">50%</span>有效投注才可提出申請。如未達提款標準，將酌收存款金額<span class="sp">5%</span>的行政處理費。</p>
-                <p>3.如欲取消提款申請，請至會員中心>交易紀錄>取消申請操作。</p>
-                <p><span class="sp">PS.如利用本平台進行任何洗錢詐騙行為，本公司將保留權利終止會員服務及凍結其帳戶。</span></p>
+                <p>1. 會員首次提款前需與完成實名及銀行驗證，審核通過即可提款。</p>
+                <p>2. 提款前請先將金額轉回中心錢包，每筆提款最低限額500元，溫馨提醒您提款前務必確認帳號是否正確；若提供的帳號錯誤，一經出款恕本公司概不負責。</p>
+                <p>3. 提款時需達到近期存款總金額的1倍有效投注量才可提出申請。</p>
+                <p>
+                    <span class="sp">PS.如利用本平台進行任何洗錢詐騙行為，本公司將保留權利終止會員服務及凍結其帳戶。</span>
+                </p>
             </div>
         </div>
     </main>
@@ -207,6 +218,17 @@
             <div class="content">
                 <div class="img"></div>
                 <p>loading...</p>
+            </div>
+        </div>
+        <div class="jumpWindow problemAns display">
+            <div class="title">
+                說明
+            </div>
+            <div class="content">
+                <p>流水限制=提領門檻，當流水限制數字歸零，</br>即符合提款資格。</p>
+            </div>
+            <div class="btnBox">
+                <button class="close">確認</button>
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@
 
         li {
             width: 22.4vw;
-            height: 72px;
+            height: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -30,14 +30,14 @@
                 }
             }
 
-            .all_ic {
-                width: 25px;
-                height: 25px;
-                margin-bottom: 8px;
-            }
+            // .all_ic {
+            //     width: 25px;
+            //     height: 25px;
+            //     margin-bottom: 8px;
+            // }
 
             span {
-                font-size: 12px;
+                font-size: 3.5vw;
                 font-weight: bold;
                 color: $font-color_2;
             }
@@ -49,7 +49,7 @@
 .eventList {
     width: 100%;
     height: calc(100vh - 92px);
-    margin-top: 72px;
+    margin-top: 40px;
     overflow-y: auto;
     box-sizing: border-box;
     padding: 10px 14px 0;
@@ -62,7 +62,7 @@
         li {
             width: 100%;
             height: auto;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
 
             .eventBox {
                 width: 100%;
@@ -71,26 +71,28 @@
                 border-radius: 1.5vw;
                 overflow: hidden;
                 box-shadow: 0 0 13px 5px $boxshadow_1;
+                padding: 5px;
+                box-sizing: border-box;
 
                 .eventImg {
                     background: $backgroundColor_4;
                 }
 
-                p {
-                    width: 100%;
-                    height: 36px;
-                    display: flex;
-                    align-items: center;
-                    box-sizing: border-box;
-                    padding: 0 15px;
-                    justify-content: flex-end;
+                // p {
+                //     width: 100%;
+                //     height: 36px;
+                //     display: flex;
+                //     align-items: center;
+                //     box-sizing: border-box;
+                //     padding: 0 15px;
+                //     justify-content: flex-end;
 
-                    button {
-                        width: 95px;
-                        height: 27px;
-                        @include buttonStyle_5;
-                    }
-                }
+                //     button {
+                //         width: 95px;
+                //         height: 27px;
+                //         @include buttonStyle_5;
+                //     }
+                // }
             }
         }
     }
@@ -171,5 +173,12 @@
             justify-content: center;
             padding: 20px 0 8px;
         }
+    }
+
+    .applyBtn {
+        width: 80vw;
+        height: 42px;
+        @include buttonStyle_2;
+        margin: 5vw 0;
     }
 }

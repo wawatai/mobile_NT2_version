@@ -28,11 +28,12 @@
         <div class="eventApplyType">
             <ul>
                 <li class="active">優惠申請</li>
+                <li>已申請優惠</li>
                 <li>優惠申請紀錄</li>
             </ul>
         </div>
         <!--優惠申請-->
-        <div class="applyList display">
+        <div class="applyList eventList display">
             <ul class="listBox">
                 <li class="list">
                     <div class="title">前派</div>
@@ -82,9 +83,71 @@
                             <label>有效流水量</label>
                             <p>100</p>
                         </li>
+                        <li>
+                            <label class="limit">限定遊戲平台</label>
+                            <p class="platform">BNG</p>
+                        </li>
                     </ul>
                     <div class="btnBox">
-                        <button class="applyBtn">申請提領</button>
+                        <button class="applyBtn">申請優惠</button>
+                        <button class="checkBtn">查看活動</button>
+                    </div>
+                </li>
+                <li class="list">
+                    <div class="title">前派</div>
+                    <div class="tips">
+                        <em>2022-02-15 11:39:59</em>
+                        任務將結束
+                    </div>
+                    <ul>
+                        <li>
+                            <label>活動時間</label>
+                            <p>
+                                <em>不限制</em>
+                            </p>
+                        </li>
+                        <li>
+                            <label>活動週期</label>
+                            <p>
+                                <em>每日</em>
+                            </p>
+                        </li>
+                        <li>
+                            <label>活動名稱</label>
+                            <p>公司活動前派固定型</p>
+                        </li>
+                        <li>
+                            <label>贈點紀錄</label>
+                            <p>
+                                <em class="sp">1</em>
+                                 / 3
+                            </p>
+                        </li>
+                        <li class="cur">
+                            <label>現在流水量</label>
+                            <p>
+                                <em>0</em>
+                            </p>
+                        </li>
+                        <li>
+                            <label>當下可領贈點</label>
+                            <p>1000.00</p>
+                        </li>
+                        <li>
+                            <label>贈送點數</label>
+                            <p>1000.00</p>
+                        </li>
+                        <li>
+                            <label>有效流水量</label>
+                            <p>100</p>
+                        </li>
+                        <li>
+                            <label class="limit">限定遊戲平台</label>
+                            <p class="platform">BNG&nbsp;PLS&nbsp;DG真人&nbsp;SP&nbsp;歐博真人<br>RTG&nbsp;沙龍真人&nbsp;WM真人&nbsp;必贏</p>
+                        </li>
+                    </ul>
+                    <div class="btnBox">
+                        <button class="applyBtn" disabled>申請優惠</button>
                         <button class="checkBtn">查看活動</button>
                     </div>
                 </li>
@@ -138,61 +201,7 @@
                         </li>
                     </ul>
                     <div class="btnBox">
-                        <button class="applyBtn" disabled>申請提領</button>
-                        <button class="checkBtn">查看活動</button>
-                    </div>
-                </li>
-                <li class="list">
-                    <div class="title">前派</div>
-                    <div class="tips">
-                        <em>2022-02-15 11:39:59</em>
-                        任務將結束
-                    </div>
-                    <ul>
-                        <li>
-                            <label>活動時間</label>
-                            <p>
-                                <em>不限制</em>
-                            </p>
-                        </li>
-                        <li>
-                            <label>活動週期</label>
-                            <p>
-                                <em>每日</em>
-                            </p>
-                        </li>
-                        <li>
-                            <label>活動名稱</label>
-                            <p>公司活動前派固定型</p>
-                        </li>
-                        <li>
-                            <label>贈點紀錄</label>
-                            <p>
-                                <em class="sp">1</em>
-                                 / 3
-                            </p>
-                        </li>
-                        <li class="cur">
-                            <label>現在流水量</label>
-                            <p>
-                                <em>0</em>
-                            </p>
-                        </li>
-                        <li>
-                            <label>當下可領贈點</label>
-                            <p>1000.00</p>
-                        </li>
-                        <li>
-                            <label>贈送點數</label>
-                            <p>1000.00</p>
-                        </li>
-                        <li>
-                            <label>有效流水量</label>
-                            <p>100</p>
-                        </li>
-                    </ul>
-                    <div class="btnBox">
-                        <button class="applyBtn" disabled>申請提領</button>
+                        <button class="applyBtn" disabled>申請優惠</button>
                         <button class="checkBtn" disabled>查看活動</button>
                     </div>
                 </li>
@@ -246,14 +255,173 @@
                         </li>
                     </ul>
                     <div class="btnBox">
-                        <button class="applyBtn">申請提領</button>
+                        <button class="applyBtn">申請優惠</button>
                         <button class="checkBtn" disabled>查看活動</button>
                     </div>
                 </li>
             </ul>
         </div>
+        <div class="applyList eventList">
+            <ul class="listBox">
+                <li class="list">
+                    <div class="title">前派</div>
+                    <ul>
+                        <li>
+                            <label>活動時間</label>
+                            <p>
+                                <em>不限制</em>
+                            </p>
+                        </li>
+                        <li>
+                            <label>活動週期</label>
+                            <p>
+                                <em>每日</em>
+                            </p>
+                        </li>
+                        <li>
+                            <label>活動名稱</label>
+                            <p>公司活動前派固定型</p>
+                        </li>
+                        <li>
+                            <label>贈點紀錄</label>
+                            <p>
+                                <em class="sp">1</em>
+                                 / 3
+                            </p>
+                        </li>
+                        <li class="cur">
+                            <label>現在流水量</label>
+                            <p>
+                                <em>0</em>
+                            </p>
+                        </li>
+                        <li>
+                            <label>當下可領贈點</label>
+                            <p>1000.00</p>
+                        </li>
+                        <li>
+                            <label>贈送點數</label>
+                            <p>1000.00</p>
+                        </li>
+                        <li>
+                            <label>有效流水量</label>
+                            <p>100</p>
+                        </li>
+                    </ul>
+                    <div class="btnBox">
+                        <button class="checkBtn full" disabled>查看活動</button>
+                    </div>
+                </li>
+                <li class="list">
+                    <div class="title">前派</div>
+                    <div class="tips">
+                        <em>2022-02-15 11:39:59</em>
+                        任務將結束
+                    </div>
+                    <ul>
+                        <li>
+                            <label>活動時間</label>
+                            <p>
+                                <em>不限制</em>
+                            </p>
+                        </li>
+                        <li>
+                            <label>活動週期</label>
+                            <p>
+                                <em>每日</em>
+                            </p>
+                        </li>
+                        <li>
+                            <label>活動名稱</label>
+                            <p>公司活動前派固定型</p>
+                        </li>
+                        <li>
+                            <label>贈點紀錄</label>
+                            <p>
+                                <em class="sp">1</em>
+                                 / 3
+                            </p>
+                        </li>
+                        <li class="cur">
+                            <label>現在流水量</label>
+                            <p>
+                                <em>0</em>
+                            </p>
+                        </li>
+                        <li>
+                            <label>當下可領贈點</label>
+                            <p>1000.00</p>
+                        </li>
+                        <li>
+                            <label>贈送點數</label>
+                            <p>1000.00</p>
+                        </li>
+                        <li>
+                            <label>有效流水量</label>
+                            <p>100</p>
+                        </li>
+                    </ul>
+                    <div class="btnBox">
+                        <button class="checkBtn full">查看活動</button>
+                    </div>
+                </li>
+                <li class="list">
+                    <div class="title">前派</div>
+                    <div class="tips">
+                        <em>2022-02-15 11:39:59</em>
+                        任務將結束
+                    </div>
+                    <ul>
+                        <li>
+                            <label>活動時間</label>
+                            <p>
+                                <em>不限制</em>
+                            </p>
+                        </li>
+                        <li>
+                            <label>活動週期</label>
+                            <p>
+                                <em>每日</em>
+                            </p>
+                        </li>
+                        <li>
+                            <label>活動名稱</label>
+                            <p>公司活動前派固定型</p>
+                        </li>
+                        <li>
+                            <label>贈點紀錄</label>
+                            <p>
+                                <em class="sp">1</em>
+                                 / 3
+                            </p>
+                        </li>
+                        <li class="cur">
+                            <label>現在流水量</label>
+                            <p>
+                                <em>0</em>
+                            </p>
+                        </li>
+                        <li>
+                            <label>當下可領贈點</label>
+                            <p>1000.00</p>
+                        </li>
+                        <li>
+                            <label>贈送點數</label>
+                            <p>1000.00</p>
+                        </li>
+                        <li>
+                            <label>有效流水量</label>
+                            <p>100</p>
+                        </li>
+                    </ul>
+                    <div class="btnBox">
+                        <button class="checkBtn full" disabled>查看活動</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
         <!--優惠申請紀錄-->
-        <div class="applyRecord">
+        <div class="applyRecord eventList">
             <div class="searchContain">
                 <form>
                     <ul>
@@ -375,7 +543,7 @@
         <div class="jumpWindow eventWindow">
             <div class="title">任務詳情</div>
             <div class="content">
-                <img src="../images/eventImg.jpeg" alt="">
+                <img src="../images/eventImg.jpg" alt="">
                 <p>詳情詳情詳情詳情詳情詳情詳情詳情詳情詳情</p>
             </div>
             <div class="btnBox">

@@ -17,6 +17,10 @@ $(function(){
         $(this).siblings().removeClass('active');
     })
 
+    $('.gameList .hotBtn').click(function(){
+        $('.gameBox.hotBox').addClass('display');
+        $('.gameBox.hotBox').siblings().removeClass('display');
+    })
     $('.gameList .slotBtn').click(function(){
         $('.gameBox.slotBox').addClass('display');
         $('.gameBox.slotBox').siblings().removeClass('display');
@@ -40,6 +44,12 @@ $(function(){
     $('.gameList .boardBtn').click(function(){
         $('.gameBox.boardBox').addClass('display');
         $('.gameBox.boardBox').siblings().removeClass('display');
+    })
+})
+//asideBtn close
+$(function(){
+    $('aside .closeBtn').click(function(){
+        $('aside').removeClass('display');
     })
 })
 
@@ -111,6 +121,22 @@ $(function(){
         $('.jumpWindow').removeClass('display');
         $('.filter,.bettingDetail').addClass('display');
     })
+    //推薦好友彈窗
+    $('.friendWrap  .readMore.1st').click(function(){
+        $('.filter,.pointWindow.1st').addClass('display');
+        $('.filter,.pointWindow.1st').siblings().removeClass('display');
+    })
+    $('.friendWrap  .readMore.memberData').click(function(){
+        $('.filter,.pointWindow.memberData').addClass('display');
+        $('.filter,.pointWindow.memberData').siblings().removeClass('display');
+    })
+    //流水限制說明
+    $('.withWrap .detail.last div.problem').click(function(){
+        $('.filter,.problemAns').addClass('display');
+    })
+    $('.walletWrap .details .problem').click(function(){
+        $('.filter,.problemAns').addClass('display');
+    })
 })
 //請先登入
 function unlogin(){
@@ -155,29 +181,7 @@ $(function(){
 })
 
 //realLogin
-$(function(){
-    $('.realLogin').click(function(){
-        $('.jumpWindow,.loginBtn').removeClass('display');
-        $('.filter,.news,.alLogin').addClass('display');
-        
-        $('.gameBox.slotBox li').attr('onclick',"window.location.href='./html/slotPage.html'");
-        $('.gameBox.fishBox li').attr('onclick',"callFish()");
-        $('.gameBox.liveBox li').attr('onclick',"callLive()");
-        $('.gameBox.sportBox li').attr('onclick',"callSport()");
-        $('.gameBox.lotteryBox li').attr('onclick',"callLottery()");
-        $('.gameBox.boardBox li').attr('onclick',"callBoard()");
 
-        $('.operate button:eq(0)').attr('onclick',"window.location.href='./html/deposit.html'");
-        $('.operate button:eq(1)').attr('onclick',"window.location.href='./html/transfer.html'");
-        $('.operate button:eq(2)').attr('onclick',"window.location.href='./html/withdrawal.html'");
-        $('.operate button:eq(3)').attr('onclick',"window.location.href='./html/vip.html'");
-
-        $('footer li:nth-of-type(2)').attr('onclick',"window.location.href='./html/event.html'");
-        $('footer li:nth-of-type(3)').attr('onclick',"window.location.href='./html/wallet.html'");
-        $('footer li:nth-of-type(4)').attr('onclick',"window.location.href='./html/help_often_contact.html'");
-        $('footer li:nth-of-type(5)').attr('onclick',"window.location.href='./html/member.html'");
-    })
-})
 function callSport() {
     $('.jumpWindow').removeClass('display');
     $('.filter,.gameWindow.sport').addClass('display');
@@ -202,6 +206,13 @@ function callSlot() {
     $('.jumpWindow').removeClass('display');
     $('.filter,.gameWindow.slot').addClass('display');
 }
+
+//hotBox love
+$(function(){
+    $('.gameBox.hotBox li p .love').click(function(){
+        $(this).toggleClass('active');
+    })
+})
 
 //slotPage .gameBox .love
 $(function(){
@@ -288,73 +299,34 @@ function backToPage(){
     $(".helpWrap").addClass("display");
 }
 $(function(){
-    $(".helpInner li").click(function(){
-        $(this).toggleClass("active");
+    $(".helpInner li .title").click(function(){
+        $($(this).closest("li")).toggleClass("active");
     })
 
-    $(".helpBody li:eq(0)").click(function(){
-        $("header .helpPage").removeClass("display");
-        $("header .helpPage.q1").addClass("display");
+    $(".helpBody li").click(function(){
+        $("header .helpPage,.helpWrap,.helpInner ul")
+        .removeClass("display");
 
-        $(".helpWrap,.helpInner ul").removeClass("display");
-        $(".helpInner,.helpInner .q1").addClass("display");
-    })
+        var n = $(this).index();
 
-    $(".helpBody li:eq(1)").click(function(){
-        $("header .helpPage").removeClass("display");
-        $("header .helpPage.q2").addClass("display");
-
-        $(".helpWrap,.helpInner ul").removeClass("display");
-        $(".helpInner,.helpInner .q2").addClass("display");
-    })
-
-    $(".helpBody li:eq(2)").click(function(){
-        $("header .helpPage").removeClass("display");
-        $("header .helpPage.q3").addClass("display");
-
-        $(".helpWrap,.helpInner ul").removeClass("display");
-        $(".helpInner,.helpInner .q3").addClass("display");
-    })
-
-    $(".helpBody li:eq(3)").click(function(){
-        $("header .helpPage").removeClass("display");
-        $("header .helpPage.q4").addClass("display");
-
-        $(".helpWrap,.helpInner ul").removeClass("display");
-        $(".helpInner,.helpInner .q4").addClass("display");
-    })
-
-    $(".helpBody li:eq(4)").click(function(){
-        $("header .helpPage").removeClass("display");
-        $("header .helpPage.q5").addClass("display");
-
-        $(".helpWrap,.helpInner ul").removeClass("display");
-        $(".helpInner,.helpInner .q5").addClass("display");
-    })
-
-    $(".helpBody li:eq(5)").click(function(){
-        $("header .helpPage").removeClass("display");
-        $("header .helpPage.q6").addClass("display");
-
-        $(".helpWrap,.helpInner ul").removeClass("display");
-        $(".helpInner,.helpInner .q6").addClass("display");
+        $("header .helpPage:eq("+ (n + 1) +"),.helpInner,.helpInner ul:eq("+ n +")")
+        .addClass("display")
+        .siblings().removeClass("display");
     })
 })
 
 //eventApply
 $(function(){
     $(".eventApplyType li").click(function(){
-        $(this).addClass("active");
-        $(this).siblings().removeClass("active");
-    })
+        $(this)
+        .addClass("active")
+        .siblings().removeClass("active");
 
-    $(".eventApplyType li:eq(0)").click(function(){
-        $(".applyList").addClass("display");
-        $(".applyRecord").removeClass("display");
-    })
-    $(".eventApplyType li:eq(1)").click(function(){
-        $(".applyList").removeClass("display");
-        $(".applyRecord").addClass("display");
+        var n = $(this).index();
+
+        $(".eventList:eq("+ n +")")
+        .addClass("display")
+        .siblings().removeClass("display");
     })
 
     $(".applyRecord .bigBtn button").click(function(){
@@ -459,26 +431,30 @@ $(function(){
 //deposit
 $(function(){
     $(".depList li").click(function(){
-        $(this).addClass("active");
-        $(this).siblings().removeClass("active");
-    })
+        $(this)
+        .addClass("active")
+        .siblings().removeClass("active")
 
-    $(".depList li:eq(0)").click(function(){
-        $(".depContent").removeClass("display");
-        $(".depContent.card").addClass("display");
-    })
-    $(".depList li:eq(1)").click(function(){
-        $(".depContent").removeClass("display");
-        $(".depContent.atm").addClass("display");
+        var n = $(this).index();
+
+        $(".depContent:eq("+ n +")")
+        .addClass("display")
+        .siblings(".depContent").removeClass("display");
+
+        $(".remindBox:eq("+ n +")")
+        .addClass("display")
+        .siblings(".remindBox").removeClass("display");
+
+        $(".depList")
+        .addClass("display");
+
+        $(".remindBox")
     })
 
     $(".depContent.card .check").click(function(){
-        $(".depList,.depContent").removeClass("display");
-        $(".depContent.already").addClass("display");
-    })
-    $(".depContent.already .change").click(function(){
-        $(".depContent").removeClass("display");
-        $(".depList,.depContent.card").addClass("display");
+        $(".depContent.already")
+        .addClass("display")
+        .siblings().removeClass("display");
     })
 })
 

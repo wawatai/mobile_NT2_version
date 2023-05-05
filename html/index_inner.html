@@ -20,10 +20,14 @@
         <div class="content">
             <!--logo-->
             <img src="../images/icon/svg/logo.svg" class="logo">
+             <!-- 推薦好友 -->
+             <form action="https://tb588.net/mobile/#/bonus-log">
+                <button class="recFbtn" type="submit"></button>
+             </form>
         </div>
     </header>
     <!--main-->
-    <main>
+    <main class="index">
         <!--圖片輪播-->
         <div class="ad">
             <section class="single-item">
@@ -47,7 +51,7 @@
                 <ul>
                     <li>
                         <span class="name">user898</span>
-                        <div class="lv">工程測試階級</div>
+                        <div class="lv">尊龍</div>
                     </li>
                     <li class="amount">$9883</li>
                 </ul>
@@ -55,10 +59,22 @@
             <!--轉存提+vip-->
             <div class="operate">
                 <div class="btnBox">
-                    <button onclick="window.location.href='./deposit.html'">存</button>
-                    <button onclick="window.location.href='./transfer.html'">轉</button>
-                    <button onclick="window.location.href='./withdrawal.html'">提</button>
-                    <button class="vipBtn" onclick="window.location.href='./vip.html'">VIP</button>
+                    <button onclick="window.location.href='./deposit.html'">
+                        <i class="deposit_ic"></i>
+                        存款
+                    </button>
+                    <button onclick="window.location.href='./transfer.html'">
+                        <i class="transfer_ic"></i>
+                        轉帳
+                    </button>
+                    <button onclick="window.location.href='./withdrawal.html'">
+                        <i class="withdrawal_ic"></i>
+                        提款
+                    </button>
+                    <button class="vipBtn" onclick="window.location.href='./vip.html'">
+                        <i class="vip_ic"></i>
+                        VIP
+                    </button>
                 </div>
             </div>
         </div>
@@ -66,7 +82,19 @@
         <div class="homeCenter">
             <!--遊戲種類選單-->
             <ul class="gameList">
-                <li class="slotBtn active">
+                <li class="hotBtn active">
+                    <div>
+                        <i class="hot_ic"></i>
+                        <p>熱門</p>
+                    </div>
+                </li>
+                <li class="liveBtn">
+                    <div>
+                        <i class="live_ic"></i>
+                        <p>真人</p>
+                    </div>
+                </li>
+                <li class="slotBtn">
                     <div>
                         <i class="slot_ic"></i>
                         <p>老虎機</p>
@@ -78,22 +106,10 @@
                         <p>捕魚機</p>
                     </div>
                 </li>
-                <li class="liveBtn">
-                    <div>
-                        <i class="live_ic"></i>
-                        <p>真人</p>
-                    </div>
-                </li>
                 <li class="sportBtn">
                     <div>
                         <i class="sport_ic"></i>
                         <p>體育</p>
-                    </div>
-                </li>
-                <li class="lotteryBtn">
-                    <div>
-                        <i class="lottery_ic"></i>
-                        <p>彩票</p>
                     </div>
                 </li>
                 <li class="boardBtn">
@@ -102,76 +118,198 @@
                         <p>棋牌</p>
                     </div>
                 </li>
+                <li class="lotteryBtn">
+                    <div>
+                        <i class="lottery_ic"></i>
+                        <p>彩票</p>
+                    </div>
+                </li>
             </ul>
             <!--遊戲選擇-->
-            <ul class="gameBox slotBox display">
+            <ul class="gameBox hotBox display">
+                <li>
+                    <img src="../images/platform/slot/slotGame_1.png">
+                    <div>
+                        <p>12發財星</p>
+                        <button class="love"></button>
+                    </div>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callSlot()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/platform/slot/slotGame_2.png">
+                    <div>
+                        <p>8星報喜</p>
+                        <button class="love"></button>
+                    </div>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callSlot()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/platform/slot/slotGame_3.png">
+                    <div>
+                        <p>福大門</p>
+                        <button class="love"></button>
+                    </div>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callSlot()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/platform/slot/slotGame_4.jpg">
+                    <div>
+                        <p>法老寶典</p>
+                        <button class="love"></button>
+                    </div>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callSlot()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/platform/slot/slotGame_5.png">
+                    <div>
+                        <p>快樂鳥</p>
+                        <button class="love"></button>
+                    </div>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callSlot()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/platform/slot/slotGame_6.png">
+                    <div>
+                        <p>福財神</p>
+                        <button class="love"></button>
+                    </div>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callSlot()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/platform/slot/slotGame_7.jpg">
+                    <div>
+                        <p>掏金猴</p>
+                        <button class="love"></button>
+                    </div>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callSlot()">進入遊戲</button>
+                    </div>
+                </li>
+                <li>
+                    <img src="../images/platform/slot/slotGame_8.jpg">
+                    <div>
+                        <p>超級7</p>
+                        <button class="love"></button>
+                    </div>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callSlot()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </li>
+            </ul>
+            <ul class="gameBox slotBox">
                 <li onclick="window.location.href='./slotPage.html'">
                     <img src="../images/platform/slot/bng.png">
-                    <p>BNG娛樂</p>
+                    <p>BNG 電子娛樂</p>
                 </li>
                 <li onclick="window.location.href='./slotPage.html'">
-                    <img src="../images/platform/slot/pls.png">
-                    <p>pls</p>
-                </li>
-                <li onclick="window.location.href='./slotPage.html'">
-                    <img src="../images/platform/slot/simplePlay.png">
-                    <p>SimplePlay</p>
-                </li>
-                <li onclick="window.location.href='./slotPage.html'">
-                    <img src="../images/platform/slot/rtg.png">
-                    <p>RTG</p>
-                </li>
-                <li onclick="window.location.href='./slotPage.html'">
-                    <img src="../images/platform/slot/ifun.png">
-                    <p>IFUN</p>
-                </li>
-                <li onclick="window.location.href='./slotPage.html'">
-                    <img src="../images/platform/slot/bwin.png">
-                    <p>必贏</p>
+                    <img src="../images/platform/slot/gr.png">
+                    <p>好路棋牌</p>
                 </li>
                 <li onclick="window.location.href='./slotPage.html'">
                     <img src="../images/platform/slot/png.png">
-                    <p>PNG</p>
+                    <p>PNG 電子娛樂</p>
                 </li>
-            </ul>
-            <ul class="gameBox fishBox">
-                <li onclick="callFish()">
-                    <img src="../images/platform/fish/fish_1.jpeg">
-                    <p>魚樂無窮</p>
+                <li onclick="window.location.href='./slotPage.html'">
+                    <img src="../images/platform/slot/rsg.png">
+                    <p>RSG 電子娛樂</p>
                 </li>
-                <li onclick="callFish()">
-                    <img src="../images/platform/fish/fish_2.jpeg">
-                    <p>捕魚</p>
+                <li onclick="window.location.href='./slotPage.html'" class="fixing">
+                    <img src="../images/platform/slot/pls.png">
+                    <p>PLS 電子娛樂</p>
+                    <div class="fixBox">
+                        <p class="title">維護中</p>
+                        <div class="timeBox">
+                            <div>
+                                <span>22-07-01</span>
+                                <p>13:00</p>
+                            </div>
+                            <div>
+                                <span>&ensp;</span>
+                                <p>-</p>
+                            </div>
+                            <div>
+                                <span>22-07-01</span>
+                                <p>15:00</p>
+                            </div>
+                        </div>
+                    </div>
                 </li>
-                <li onclick="callFish()">
-                    <img src="../images/platform/fish/fish_3.jpg">
-                    <p>霸王虞姬</p>
+                <li onclick="window.location.href='./slotPage.html'">
+                    <img src="../images/platform/slot/bwin.png">
+                    <p>必贏 電子娛樂</p>
                 </li>
-                <li onclick="callFish()">
-                    <img src="../images/platform/fish/fish_4.jpg">
-                    <p>龍珠捕魚</p>
+                <li onclick="window.location.href='./slotPage.html'">
+                    <img src="../images/platform/slot/funta.png">
+                    <p>福星 電子娛樂</p>
                 </li>
-                <li onclick="callFish()">
-                    <img src="../images/platform/fish/fish_5.jpg">
-                    <p>中國神魔捕魚</p>
+                <li onclick="window.location.href='./slotPage.html'">
+                    <img src="../images/platform/slot/simplePlay.png">
+                    <p>SP 電子娛樂</p>
                 </li>
-                <li onclick="callFish()">
-                    <img src="../images/platform/fish/fish_6.jpg">
-                    <p>中國神魔塔防</p>
+                <li onclick="window.location.href='./slotPage.html'">
+                    <img src="../images/platform/slot/ufo.png">
+                    <p>UFO 電子娛樂</p>
                 </li>
-                <li onclick="callFish()">
-                    <img src="../images/platform/fish/fish_6.jpg">
-                    <p>海龍王之八爪天下</p>
+                <li onclick="window.location.href='./slotPage.html'">
+                    <img src="../images/platform/slot/rtg.png">
+                    <p>RTG 電子娛樂</p>
+                </li>
+                <li onclick="window.location.href='./slotPage.html'">
+                    <img src="../images/platform/slot/tpg.png">
+                    <p>TPG 電子娛樂</p>
+                </li>
+                <li onclick="window.location.href='./slotPage.html'">
+                    <img src="../images/platform/slot/ifun.png">
+                    <p>iFun 電子娛樂</p>
+                </li>
+                <li onclick="window.location.href='./slotPage.html'">
+                    <img src="../images/platform/slot/tc.png">
+                    <p>TC SLOT</p>
                 </li>
             </ul>
             <ul class="gameBox liveBox">
                 <li onclick="callLive()">
+                    <img src="../images/platform/live/dg.png">
+                    <p>DG真人娛樂</p>
+                </li>
+                <li onclick="callLive()">
                     <img src="../images/platform/live/allbet.png">
-                    <p>歐博</p>
+                    <p>歐博真人娛樂</p>
+                </li>
+                <li onclick="callLive()">
+                    <img src="../images/platform/live/sa.png">
+                    <p>沙龍真人娛樂</p>
+                </li>
+                <li onclick="callLive()">
+                    <img src="../images/platform/live/og.png">
+                    <p>OG PLUS真人娛樂</p>
                 </li>
                 <li onclick="callLive()">
                     <img src="../images/platform/live/wm.png">
-                    <p>WM</p>
+                    <p>WM真人娛樂</p>
+                </li>
+                <li onclick="callLive()">
+                    <img src="../images/platform/live/wg.png">
+                    <p>WG真人娛樂</p>
                 </li>
             </ul>
             <ul class="gameBox sportBox">
@@ -179,100 +317,100 @@
                     <img src="../images/platform/sport/36588.png">
                     <p>36588體育</p>
                 </li>
+                <li onclick="callSport()">
+                    <img src="../images/platform/sport/pb.png">
+                    <p>平博</p>
+                </li>
             </ul>
             <ul class="gameBox lotteryBox">
                 <li onclick="callLottery()">
-                    <img src="../images/platform/lottery/SG.png">
-                    <p>SG</p>
+                    <img src="../images/platform/lottery/wg.png">
+                    <p>WIN539</p>
                 </li>
                 <li onclick="callLottery()">
                     <img src="../images/platform/lottery/GS.png">
-                    <p>GS</p>
+                    <p>京彩彩票</p>
+                </li>
+                <li onclick="callLottery()">
+                    <img src="../images/platform/lottery/SG.png">
+                    <p>SG88六合大樂539</p>
+                </li>
+                <li onclick="callLottery()">
+                    <img src="../images/platform/lottery/rwd.png">
+                    <p>白鹿</p>
                 </li>
             </ul>
             <ul class="gameBox boardBox">
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>奪寶小靈猴</p>
+                <li onclick="window.location.href='./boardPage.html'">
+                    <img src="../images/platform/board/da.png">
+                    <p>大運</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>三開德州撲克</p>
+                <li onclick="window.location.href='./boardPage.html'">
+                    <img src="../images/platform/board/png.png">
+                    <p>PNG</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>多手21點</p>
+                <li onclick="window.location.href='./boardPage.html'">
+                    <img src="../images/platform/board/ifun.png">
+                    <p>iFUN</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>蟲蟲派對</p>
+                <li onclick="window.location.href='./boardPage.html'">
+                    <img src="../images/platform/board/funta.png">
+                    <p>福星電子</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>賭場Hold'em</p>
+                <li onclick="window.location.href='./boardPage.html'">
+                    <img src="../images/platform/board/gr.png">
+                    <p>好路棋牌</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>賭場桩牌撲克</p>
+                <li onclick="window.location.href='./boardPage.html'">
+                    <img src="../images/platform/board/rwd.png">
+                    <p>白鹿</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>德賽斯野生</p>
+                <li onclick="window.location.href='./boardPage.html'">
+                    <img src="../images/platform/board/ufo.png">
+                    <p>UFO</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>雙開式21點</p>
+            </ul>
+            <ul class="gameBox fishBox">
+                <li onclick="window.location.href='./fishPage.html'">
+                    <img src="../images/platform/fish/rsg.png">
+                    <p>RSG</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>歐洲21點</p>
+                <li onclick="window.location.href='./fishPage.html'">
+                    <img src="../images/platform/fish/da.png">
+                    <p>大運</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>歐洲輪盤</p>
+                <li onclick="window.location.href='./fishPage.html'">
+                    <img src="../images/platform/fish/funta.png">
+                    <p>福星電子</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>飛翔小豬</p>
+                <li onclick="window.location.href='./fishPage.html'">
+                    <img src="../images/platform/fish/sp.png">
+                    <p>SP</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>累積獎金撲克</p>
+                <li onclick="window.location.href='./fishPage.html'">
+                    <img src="../images/platform/fish/tpg.png">
+                    <p>TPG</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>杰克高手</p>
+                <li onclick="window.location.href='./fishPage.html'">
+                    <img src="../images/platform/fish/rtg.png">
+                    <p>RTG</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>小丑撲克</p>
+                <li onclick="window.location.href='./fishPage.html'">
+                    <img src="../images/platform/fish/bwin.png">
+                    <p>必贏</p>
                 </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>迷你百家樂</p>
-                </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>財運之輪</p>
-                </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>雨林魔法賓果</p>
-                </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>單副牌21點</p>
-                </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>超級旋轉</p>
-                </li>
-                <li onclick="callBoard()">
-                    <img src="../images/platform/board/board_1.jpeg">
-                    <p>魔力小甜心賓果</p>
+                <li onclick="window.location.href='./fishPage.html'">
+                    <img src="../images/platform/fish/gr.png">
+                    <p>好路棋牌</p>
                 </li>
             </ul>
         </div>
+        <aside class="display">
+            <form action="https://tb588.net/mobile/#/bonus-log">
+                <button class="sharetoEarnBTN" type="submit"></button>
+                <i class="closeBtn"></i>
+            </form>
+        </aside>
     </main>
     <!--footer-->
     <footer>
@@ -371,41 +509,6 @@
             <hr>
             <button class="enterBtn">進入遊戲</button>
         </div>
-        <!--捕魚機彈窗-->
-        <div class="jumpWindow gameWindow fish">
-            <div class="title">
-                <p>捕魚機</p>
-                <i class="close"></i>
-            </div>
-            <form>
-                <div class="row">
-                    <p class="smallTitle">中心錢包</p>
-                    <div class="moneyText">$999</div>
-                </div>
-                <div class="row">
-                    <p class="smallTitle">轉帳金額</p>
-                    <input type="text">
-                </div>
-                <div class="row btnBox">
-                    <button type="button">$100</button>
-                    <button type="button">$500</button>
-                    <button type="button">$1000</button>
-                    <button type="button">$3000</button>
-                    <button type="button">$5000</button>
-                    <button type="button">$10000</button>
-                    <button type="button">全部</button>
-                </div>
-                <div class="row checkBtn">
-                    <button>確認</button>
-                </div>
-                <div class="row">
-                    <p class="smallTitle">鳳凰棋牌</p>
-                    <div class="moneyText">$0</div>
-                </div>
-            </form>
-            <hr>
-            <button class="enterBtn">進入遊戲</button>
-        </div>
         <!--彩票彈窗-->
         <div class="jumpWindow gameWindow lottery">
             <div class="title">
@@ -441,10 +544,10 @@
             <hr>
             <button class="enterBtn">進入遊戲</button>
         </div>
-        <!--棋牌彈窗-->
-        <div class="jumpWindow gameWindow board">
+         <!-- 老虎機 -->
+         <div class="jumpWindow gameWindow slot">
             <div class="title">
-                <p>棋牌遊戲</p>
+                <p>老虎機</p>
                 <i class="close"></i>
             </div>
             <form>
@@ -469,7 +572,7 @@
                     <button>確認</button>
                 </div>
                 <div class="row">
-                    <p class="smallTitle">鳳凰棋牌</p>
+                    <p class="smallTitle">12發財星</p>
                     <div class="moneyText">$0</div>
                 </div>
             </form>

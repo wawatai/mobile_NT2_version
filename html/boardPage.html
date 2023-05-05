@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/myIco.ico" type="image/x-icon">
+</head>
+<body>
+    <!--header-->
+    <header>
+        <!--content-->
+        <div class="content">
+            <i class="back_arrow" onclick="window.location.href='./index_inner.html'"></i>
+            <div class="title">棋牌遊戲</div>
+        </div>
+    </header>
+    <!--main-->
+    <main>
+        <!--slot頁-->
+        <div class="slotWrap">
+            <!--slot上選單-->
+            <div class="slotHeader">
+                <!--選單-->
+                <div class="listBox">
+                    <ul>
+                        <li class="active">
+                            <i class="all_ic"></i>
+                            全部
+                        </li>
+                        <li>
+                            <i class="hot_ic"></i>
+                            熱門遊戲
+                        </li>
+                        <li>
+                            <i class="love_ic"></i>
+                            我的最愛
+                        </li>
+                    </ul>
+                </div>
+                <!--搜尋列-->
+                <div class="searchBox">
+                    <i class="search_ic"></i>
+                    <input type="text" placeholder="搜尋遊戲名稱">
+                </div>
+            </div>
+            <!--slot遊戲列-->
+            <div class="gameList">
+                <div class="gameBox">
+                    <img src="../images/platform/board/board_1.jpeg">
+                    <p>
+                        <span>3-Hand Casino Hold'em</span>
+                        <button class="love"></button>
+                    </p>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callBoard()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </div>
+                <div class="gameBox">
+                    <img src="../images/platform/board/board_2.jpeg">
+                    <p>
+                        <span>魔力小甜心宾果</span>
+                        <button class="love"></button>
+                    </p>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callBoard()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </div>
+                <div class="gameBox">
+                    <img src="../images/platform/board/board_3.jpeg">
+                    <p>
+                        <span>超级旋转</span>
+                        <button class="love"></button>
+                    </p>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callBoard()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </div>
+                <div class="gameBox">
+                    <img src="../images/platform/board/board_4.jpeg">
+                    <p>
+                        <span>单副牌21点</span>
+                        <button class="love"></button>
+                    </p>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callBoard()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </div>
+                <div class="gameBox">
+                    <img src="../images/platform/board/board_5.jpeg">
+                    <p>
+                        <span>雨林魔法宾果</span>
+                        <button class="love"></button>
+                    </p>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callBoard()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </div>
+                <div class="gameBox">
+                    <img src="../images/platform/board/board_6.jpeg">
+                    <p>
+                        <span>财运之轮</span>
+                        <button class="love"></button>
+                    </p>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callBoard()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </div>
+                <div class="gameBox">
+                    <img src="../images/platform/board/board_7.jpeg">
+                    <p>
+                        <span>迷你百家乐</span>
+                        <button class="love"></button>
+                    </p>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callBoard()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </div>
+                <div class="gameBox">
+                    <img src="../images/platform/board/board_8.jpeg">
+                    <p>
+                        <span>小丑扑克</span>
+                        <button class="love"></button>
+                    </p>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callBoard()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </div>
+                <div class="gameBox">
+                    <img src="../images/platform/board/board_9.jpeg">
+                    <p>
+                        <span>杰克高手</span>
+                        <button class="love"></button>
+                    </p>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callBoard()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </div>
+                <div class="gameBox">
+                    <img src="../images/platform/board/board_10.jpeg">
+                    <p>
+                        <span>欧洲轮盘</span>
+                        <button class="love"></button>
+                    </p>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callBoard()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </div>
+                <div class="gameBox">
+                    <img src="../images/platform/board/board_11.jpeg">
+                    <p>
+                        <span>欧洲21点</span>
+                        <button class="love"></button>
+                    </p>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callBoard()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </div>
+                <div class="gameBox">
+                    <img src="../images/platform/board/board_12.jpeg">
+                    <p>
+                        <span>双开式21点</span>
+                        <button class="love"></button>
+                    </p>
+                    <div class="btnBox">
+                        <button class="enter" onclick="callBoard()">進入遊戲</button>
+                        <button class="try">試玩看看</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <footer>
+        <ul>
+            <li onclick="window.location.href='./index_inner.html'">
+                <i class="menu_ic"></i>
+                <p>首頁</p>
+            </li>
+            <li onclick="window.location.href='./event.html'">
+                <i class="event_ic"></i>
+                <p>優惠</p>
+            </li>
+            <li onclick="window.location.href='./wallet.html'">
+                <i class="wallet_ic"></i>
+                <p>存轉提</p>
+            </li>
+            <li onclick="window.location.href='./help_often_contact.html'">
+                <i class="service_ic"></i>
+                <p>客服</p>
+            </li>
+            <li onclick="window.location.href='./member.html'">
+                <i class="center_ic"></i>
+                <p>會員中心</p>
+            </li>
+        </ul>
+    </footer>
+    <!--彈窗-->
+    <div class="filter">
+        <!--棋牌彈窗-->
+        <div class="jumpWindow gameWindow board">
+            <div class="title">
+                <p>棋牌遊戲</p>
+                <i class="close"></i>
+            </div>
+            <form>
+                <div class="row">
+                    <p class="smallTitle">中心錢包</p>
+                    <div class="moneyText">$999</div>
+                </div>
+                <div class="row">
+                    <p class="smallTitle">轉帳金額</p>
+                    <input type="text">
+                </div>
+                <div class="row btnBox">
+                    <button type="button">$100</button>
+                    <button type="button">$500</button>
+                    <button type="button">$1000</button>
+                    <button type="button">$3000</button>
+                    <button type="button">$5000</button>
+                    <button type="button">$10000</button>
+                    <button type="button">全部</button>
+                </div>
+                <div class="row checkBtn">
+                    <button>確認</button>
+                </div>
+                <div class="row">
+                    <p class="smallTitle">鳳凰棋牌</p>
+                    <div class="moneyText">$0</div>
+                </div>
+            </form>
+            <hr>
+            <button class="enterBtn">進入遊戲</button>
+        </div>
+    </div>
+</body>
+</html>

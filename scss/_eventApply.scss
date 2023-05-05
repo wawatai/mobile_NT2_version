@@ -21,7 +21,7 @@
             align-items: center;
             box-sizing: border-box;
             border-bottom: solid 2px transparent;
-            font-size: 3.4vw;
+            font-size: 3.7vw;
             font-weight: bold;
             color: $font-color_2;
 
@@ -50,13 +50,14 @@
         width: 100%;
         height: auto;
         box-sizing: border-box;
-        padding: 10px 4% 0;
 
         .list {
-            margin-bottom: 15px;
+            margin-bottom: 50px;
             border-radius: 5px;
             box-shadow: 0 0 13px 2px $boxshadow_1;
             background: $backgroundColor_2;
+            border: 2px solid $borderColor_9;
+            border-radius: 13px;
 
             .title {
                 width: 100%;
@@ -64,9 +65,11 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background: $backgroundColor_12;
+                border-radius: 10px 10px 0 0;
                 border-bottom: solid 1px $borderColor_3;
-                color: $font-color_12;
-                font-size: 16px;
+                color: $font-color_5;
+                font-size: 20px;
                 font-weight: bold;
             }
 
@@ -127,6 +130,10 @@
                         background: $backgroundColor_8;
                     }
 
+                    .limit {
+                        white-space: nowrap;
+                    }
+
                     p {
                         font-size: 13px;
                         color: $font-color_12;
@@ -137,6 +144,11 @@
                             &.sp {
                                 color: $font-color_10;
                             }
+                        }
+
+                        &.platform {
+                            width: 184px;
+                            text-align: end;
                         }
                     }
                 }
@@ -153,6 +165,10 @@
                 button {
                     width: calc((100% - 10px) / 2);
                     height: 32px;
+
+                    &.full {
+                        width: 100%;
+                    }
 
                     &.applyBtn {
                         @include buttonStyle_2;

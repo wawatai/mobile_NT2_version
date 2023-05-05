@@ -36,14 +36,23 @@
                             <p>銀行卡轉帳</p>
                         </li>
                         <li>
+                            <i class="usdt_ic"></i>
+                            <p>USDT</p>
+                        </li>
+                        <li>
+                            <i class="shop_ic"></i>
+                            <p>超商代碼</p>
+                        </li>
+                        <li>
                             <i class="atm_ic"></i>
-                            <p>網路ATM</p>
+                            <p>ATM轉帳</p>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="depContent card display">
                 <p class="title">
+                    
                     選擇銀行
                     <span class="remind">僅接受綁定銀行轉入之款項</span>
                 </p>
@@ -58,6 +67,30 @@
                 </span>
                 <p class="title">存款金額</p>
                 <input type="text" placeholder="請輸入存款金額">
+                <span class="remind">單筆存款金額需介於 0 - 不限制</span></br>
+                <button class="check">下一步</button>
+            </div>
+            <div class="depContent usdt">
+                <p class="title">選擇帳號</p>
+                <select>
+                    <option value="">TRC20</option>
+                    <option value="">TRC20</option>
+                    <option value="">TRC20</option>
+                </select>
+                <p class="title">存款金額</p>
+                <input type="text" placeholder="請輸入存款金額">
+                <span class="remind">單筆存款金額需介於 0 - 不限制</span>
+                <button class="check">立即存款</button>
+            </div>
+            <div class="depContent shop">
+                <p class="title">選擇帳號</p>
+                <select>
+                    <option value="">測試用商店</option>
+                    <option value="">測試用商店</option>
+                    <option value="">測試用商店</option>
+                </select>
+                <p class="title">存款金額</p>
+                <input type="text" placeholder="請輸入存款金額">
                 <span class="remind">單筆存款金額需介於 0 - 不限制</span>
                 <button class="check">立即存款</button>
             </div>
@@ -70,7 +103,10 @@
                 </select>
                 <p class="title">存款金額</p>
                 <input type="text" placeholder="請輸入存款金額">
-                <span class="remind">單筆存款金額需介於 0 - 不限制</span>
+                <span class="remind">單筆存款金額需介於 0 - 不限制</span></br>
+                <span class="remind">
+                    <span class="num">注意:【請勿重複儲值】每筆訂單編號只能儲值一次，再次存款請重新填寫金額並送出申請。</span>
+                </span>
                 <button class="check">立即存款</button>
             </div>
             <div class="depContent already">
@@ -100,15 +136,31 @@
                         </div>
                     </li>
                     <li>
-                        <button class="check">確認轉帳</button>
+                        <button class="check">我已匯款</button>
                     </li>
+                    <p class="btn_remind">轉帳完成後，請點選我已匯款，提交申請</p>
                 </ul>
             </div>
-            <div class="remindBox">
+            <div class="remindBox card display">
                 <p class="title">重要提醒</p>
-                <p>1.系統將發配一組專屬交易單號，請至您選擇的超商門市進行繳費。</p>
-                <p><span class="sp">2.繳費完成後請妥善保管交易收據，以便查證。</span></p>
-                <p>3.為了加快上分速度，請至交易紀錄上傳交易成功的明細。</p>
+                <p>1. 僅接受<span class="sp">綁定銀行卡</span>轉入之款項，若使用非綁定銀行卡進行轉帳，款項將退回原帳戶。</p>
+                <p>2. 本公司銀行帳號不定期變動，存款前請務必依照指定的銀行帳號進行存款，若將款項匯款至非系統提供之銀行帳號，恕不負責。</p>
+                <p>3. 存款金額需與申請提交金額相同，如不相同會以實際入帳金額為主。</p>
+            </div>
+            <div class="remindBox usdt">
+                <p class="title">重要提醒</p>
+                <p>1. 僅接受USDT-TRC20儲值方式。請確認您的錢包類型，避免USDT遺失。</p>
+            </div>
+            <div class="remindBox shop">
+                <p class="title">重要提醒</p>
+                <p>1. 超商代碼訂單開立後再請於存款期限內進行存款，逾期訂單將失效。</p>
+                <p>2. <span class="sp">繳費完成後請妥善保留交易收據，以便查證。</span></p>
+            </div>
+            <div class="remindBox atm">
+                <p class="title">重要提醒</p>
+                <p>1. ATM轉帳須按照提交金額繳款，如未依規定繳交錯誤金額，將造成系統判斷錯誤導致無法自動派發點數。</p>
+                <p>2. 完成繳款後請保留【繳款單據】，存款金額將於10~30分內到帳，若訂單異常或尚未到帳，請聯繫線上客服。</p>
+                <p>3. 使用ATM櫃員機【轉帳】每日上限3萬元。使用【繳費功能】則無上限3萬元限制，適用繳費ATM：玉山銀行、臺灣銀行、中國信託、土地銀行、富邦銀行、第一銀行、華南銀行、台新銀行、彰化銀行。</p>
             </div>
         </div>
     </main>
